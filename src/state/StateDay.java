@@ -17,7 +17,7 @@ public class StateDay implements Statelike {
 	
 	@Override
 	public void updateState(StateContext context) {
-		System.out.println("Day Time"); //Day time
+		System.out.println("--------------Day Time--------------"); //Day time
 		context.setCurrentState(StateNight.instance()); //Switch to nightime
 	}
 	

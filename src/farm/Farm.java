@@ -9,7 +9,7 @@ public class Farm {
 	
 	private int size;
 	private int numFarmers;
-	private double currency;
+	public static int currency = 0;
 	private int maxNumFarmers;
 	ArrayList<Farmers> farmers = new ArrayList<Farmers>();
 	ArrayList<Predators> predators = new ArrayList<Predators>();

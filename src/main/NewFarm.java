@@ -9,9 +9,9 @@ import farm.HybridFarm;
 public class NewFarm {
     
     public static void buildFarm() {
-        Chicken chicken = new Chicken();
-        Cow cow = new Cow();
-        Sheep sheep = new Sheep();
+        Chicken chicken = new Chicken("Chicken", 100, 0, 0);
+        Cow cow = new Cow("Chicken", 100, 0, 0);
+        Sheep sheep = new Sheep("Sheep", 100, 0, 0);
         
         Corn corn = new Corn();
         Rice rice = new Rice();
