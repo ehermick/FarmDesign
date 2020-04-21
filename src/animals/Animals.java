@@ -1,7 +1,7 @@
 package animals;
 
-import farm.AnimalFarm;
 import affinities.AnimalAffinities;
+import farm.AnimalFarm;
 import farm.HybridFarm;
 
 public class Animals {

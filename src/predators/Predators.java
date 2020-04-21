@@ -1,6 +1,7 @@
 package predators;
 
 import java.util.ArrayList;
+
 import farm.Farm;
 
 public class Predators {
