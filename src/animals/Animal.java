@@ -45,6 +45,16 @@ public class Animal {
         if (animal instanceof Chicken) {
             Chicken.harvestEggs();
         }
+        
+        //If animal is a cow
+        if (animal instanceof Cow) {
+            Cow.harvestMilk();
+        }
+        
+        //If animal is a sheep
+        if (animal instanceof Sheep) {
+            Sheep.harvestWool();
+        }
 
     }
    

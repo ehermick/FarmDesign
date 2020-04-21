@@ -129,7 +129,7 @@ public class HybridFarm extends Farm {
                 int chance = rand.nextInt(10); //Random number for chance
                 
                 if (chance == 2 || chance == 4 || chance == 8) {
-                    Animal.harvest();
+                    Animal.harvest(selectedAnimal); //Harvest from animal
                 }
                 
             }

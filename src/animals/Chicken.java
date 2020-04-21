@@ -8,9 +8,11 @@ public class Chicken extends Animal {
         super(name, health, age, birthCycle);
     }
     
+
     //Each egg makes the farm $1
     public static void harvestEggs() {
         Farm.currency = Farm.currency + 1;
+        
     }
 
 }
