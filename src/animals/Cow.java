@@ -1,5 +1,5 @@
 package animals;
 
-public class Cow extends Animals {
+public class Cow extends Animal {
 
 }

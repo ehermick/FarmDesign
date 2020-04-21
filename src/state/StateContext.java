@@ -2,6 +2,7 @@ package state;
 
 public class StateContext {
     private Statelike currentState;
+    public static int count = 0;
 
     /**
      * Initializes the current state - beginning with day time.
@@ -37,6 +38,7 @@ public class StateContext {
      * Updates the current state.
      */
     public void update() {
+        count++; //keeps track of how many cycles have passed
         currentState.updateState(this);
     }
 

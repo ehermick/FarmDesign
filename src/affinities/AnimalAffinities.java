@@ -1,8 +1,8 @@
 package affinities;
 
-import animals.Animals;
+import animals.Animal;
 
-public class AnimalAffinities extends Animals {
-    private Animals animals;
+public class AnimalAffinities extends Animal {
+    private Animal animal;
 
 }

@@ -11,7 +11,17 @@ public class Farm {
 	private int numFarmers;
 	private double currency;
 	private int maxNumFarmers;
-	private ArrayList<Farmers> farmers;
-	private ArrayList<Predators> predators;
+	ArrayList<Farmers> farmers = new ArrayList<Farmers>();
+	ArrayList<Predators> predators = new ArrayList<Predators>();
+
+	
+	public void setSize(int size) {
+	    this.size = size;
+	}
+	
+	public void addFarmers(Farmers farmer) {
+	    farmers.add(farmer);
+	}
+	
 
 }

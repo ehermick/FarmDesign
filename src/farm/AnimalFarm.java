@@ -1,6 +1,6 @@
 package farm;
 
-import animals.Animals;
+import animals.Animal;
 
 import java.util.ArrayList;
 
@@ -9,7 +9,7 @@ public class AnimalFarm extends Farm {
     private int numAnimals;
     private int maxNumAnimals;
 
-    private ArrayList<Animals> animals;
+    private ArrayList<Animal> animals;
 
     public void sellAnimalProducts() {
   

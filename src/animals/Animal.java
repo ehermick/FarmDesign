@@ -4,7 +4,7 @@ import affinities.AnimalAffinities;
 import farm.AnimalFarm;
 import farm.HybridFarm;
 
-public class Animals {
+public class Animal {
 
     private int age;
     private int health;
