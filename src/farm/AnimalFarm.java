@@ -1,17 +1,18 @@
 package farm;
 
-import java.util.ArrayList;
-
 import animals.Animals;
 
+import java.util.ArrayList;
+
+
 public class AnimalFarm extends Farm {
-	private int numAnimals;
-	private int maxNumAnimals;
-	
-	private ArrayList<Animals> animals;
-	
-	public void sellAnimalProducts() {
-		
-	}
+    private int numAnimals;
+    private int maxNumAnimals;
+
+    private ArrayList<Animals> animals;
+
+    public void sellAnimalProducts() {
+  
+    }
 
 }
