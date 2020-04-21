@@ -11,6 +11,7 @@ public class Wheat extends Crops {
     //Each harvest makes the farm $3
     public static void harvestWheat() {
         Farm.currency = Farm.currency + 3;
+        Farm.currencyChange = Farm.currencyChange + 3;
     }
 
 }
