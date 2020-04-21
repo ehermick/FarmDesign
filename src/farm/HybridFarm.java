@@ -16,7 +16,7 @@ public class HybridFarm extends Farm {
     private int numCrops;
     private int maxNumAnimals;
     private int maxNumCrops;
-    ArrayList<Crops> crops = new ArrayList<Crops>();
+    static ArrayList<Crops> crops = new ArrayList<Crops>();
     static ArrayList<Animal> animals = new ArrayList<Animal>();
     
     public int birthCycle;
@@ -87,19 +87,19 @@ public class HybridFarm extends Farm {
                     
                     //If it's a chicken
                     if (selectedAnimal instanceof Chicken) {
-                        Chicken chicken = new Chicken("Chicken", 100, 0, 0);
+                        Chicken chicken = new Chicken("Chicken", 100, 0, 0, 0);
                         animals.add(chicken);
                     }
                     
                     //If it's a Cow
                     if (selectedAnimal instanceof Cow) {
-                        Cow cow = new Cow("Cow", 100, 0, 0);
+                        Cow cow = new Cow("Cow", 100, 0, 0, 0);
                         animals.add(cow);
                     }
                     
                     //If it's a Sheep
                     if (selectedAnimal instanceof Sheep) {
-                        Sheep sheep = new Sheep("Sheep", 100, 0, 0);
+                        Sheep sheep = new Sheep("Sheep", 100, 0, 0, 0);
                         animals.add(sheep);
                     }
                     
@@ -123,18 +123,53 @@ public class HybridFarm extends Farm {
             Animal selectedAnimal = animals.get(i);
             String animalName = selectedAnimal.name;
             
-            //If animal is atleast 3 days old
-            if (Animal.animalAge(selectedAnimal) >= 3) {
+            //If animal is atleast 3 days old AND harvest cycle is atleast 2 days
+            if (Animal.animalAge(selectedAnimal) >= 3 && (selectedAnimal.harvestCycle >= 2)) {
+                selectedAnimal.harvestCycle = 0; //reset harvest cycle
                 
                 int chance = rand.nextInt(10); //Random number for chance
                 
                 if (chance == 2 || chance == 4 || chance == 8) {
                     Animal.harvest(selectedAnimal); //Harvest from animal
                 }
+                else
+                {
+                    selectedAnimal.harvestCycle++; //increment animal's harvest cycle
+                }
                 
+            }
+            else
+            {
+                selectedAnimal.harvestCycle++; //increment animal's harvest cycle
             }
         }
         
+    }
+    
+    /**
+     * Harvests from crops
+     */
+    public static void harvestCrops() {
+        
+        for (int i = 0; i < crops.size(); i++) {
+            Crops selectedCrop = crops.get(i);
+            String cropName = selectedCrop.name;
+            
+            //Crops harvested only once every 3 cycles (no chance needed)
+            if (selectedCrop.harvestCycle >= 3) {
+                selectedCrop.harvestCycle = 0; //reset harvest cycle
+                
+                Crops.harvest(selectedCrop); //harvest crop
+                
+            }
+            
+            else
+            {
+                selectedCrop.harvestCycle++; //increment crop's harvest cycle
+            }
+            
+            
+        }
     }
 
 }

@@ -4,8 +4,8 @@ import farm.Farm;
 
 public class Cow extends Animal {
 
-    public Cow(String name, int health, int age, int birthCycle) {
-        super(name, health, age, birthCycle);
+    public Cow(String name, int health, int age, int birthCycle, int harvestCycle) {
+        super(name, health, age, birthCycle, harvestCycle);
 
     }
     
