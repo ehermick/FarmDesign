@@ -10,8 +10,8 @@ public class Rice extends Crops {
     
     //Each harvest makes the farm $1
     public static void harvestRice() {
-        Farm.currency = Farm.currency + 1;
-        Farm.currencyChange = Farm.currencyChange + 1;
+        Farm.setCurrency(1);
+        Farm.setCurrencyChange(1);
     }
 
 }

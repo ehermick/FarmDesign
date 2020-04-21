@@ -14,8 +14,8 @@ public class Chicken extends Animal {
      * Each egg makes the farm $1.
      */
     public static void harvestEggs() {
-        Farm.currency = Farm.currency + 1;
-        Farm.currencyChange = Farm.currencyChange + 1;
+        Farm.setCurrency(1);
+        Farm.setCurrencyChange(1);
         
     }
 

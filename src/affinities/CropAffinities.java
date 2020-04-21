@@ -8,6 +8,6 @@ public class CropAffinities extends Crops {
         super(name, health, age, harvestCycle);
     }
 
-    private Crops crops;
+    //private Crops crops;
 
 }

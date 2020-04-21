@@ -1,11 +1,11 @@
 package main;
 
-import affinities.FarmerAffinities;
-import farm.Farm;
+//import affinities.FarmerAffinities;
+//import farm.Farm;
 
 public class Farmers {
-    private Farm farm;
-    private FarmerAffinities farmerAffinities;
+    //private Farm farm;
+    //private FarmerAffinities farmerAffinities;
 
     public void buyAnimal() {
 

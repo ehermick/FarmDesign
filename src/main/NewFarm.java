@@ -1,15 +1,16 @@
 package main;
 
-import animals.Animal;
+//import animals.Animal;
 import animals.Chicken;
 import animals.Cow;
 import animals.Sheep;
 
 import crops.Corn;
-import crops.Crops;
+//import crops.Crops;
 import crops.Rice;
 import crops.Wheat;
 
+import farm.Farm;
 import farm.HybridFarm;
 
 
@@ -30,8 +31,7 @@ public class NewFarm {
         Farmers farmer = new Farmers();
         
         //Start with 1 hybrid farm
-        HybridFarm hbFarm = new HybridFarm();
-        hbFarm.setSize(10); //Start with 10 acres
+        HybridFarm hbFarm = new HybridFarm(10, 0, 0);//Start with 10 acres
         System.out.println("Congratulations on purchasing your first farm!");
         System.out.println("Let's start you off with a few things: ");
         
@@ -58,7 +58,7 @@ public class NewFarm {
         
         //Add farmers
         for (int i = 0; i < 3; i++) {
-            hbFarm.addFarmers(farmer);
+            Farm.addFarmer(farmer);
         }
         System.out.println("\t+3 Farmers");
         System.out.println();

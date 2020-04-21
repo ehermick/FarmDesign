@@ -11,8 +11,8 @@ public class Sheep extends Animal {
     
     //Each set of wool makes the farm $5
     public static void harvestWool() {
-        Farm.currency = Farm.currency + 5;
-        Farm.currencyChange = Farm.currencyChange + 5;
+        Farm.setCurrency(5);
+        Farm.setCurrencyChange(5);
     }
     
 

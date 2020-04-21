@@ -10,23 +10,115 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import main.Farmers;
-import predators.Predators;
-
+//import predators.Predators;
 
 
 public class Farm {
 
     private int size;
-    private int numFarmers;
-    public static int currency = 0;
-    private int maxNumFarmers;
-    ArrayList<Farmers> farmers = new ArrayList<Farmers>();
-    ArrayList<Predators> predators = new ArrayList<Predators>();
-    public static ArrayList<Crops> crops = new ArrayList<Crops>();
-    public static ArrayList<Animal> animals = new ArrayList<Animal>();
+    //private int numFarmers;
+    private  static int currency = 0;
+    //private int maxNumFarmers;
+    private static ArrayList<Farmers> farmers = new ArrayList<Farmers>();
+    //ArrayList<Predators> predators = new ArrayList<Predators>();
+    private static ArrayList<Crops> crops = new ArrayList<Crops>();
+    private static ArrayList<Animal> animals = new ArrayList<Animal>();
 
     static Random rand = new Random();
-    public static int currencyChange; //Tracks the amount of money made each day
+    private  static int currencyChange = 0;
+    
+    /**
+     * Constructor.
+     * @param size Size of farm
+     * @param currency Currency on farm
+     * @param currencyChange Change in currency each day
+     */
+    public Farm(int size, int currency, int currencyChange) {
+        this.size = size;
+        setCurrency(currency);
+        setCurrencyChange(currencyChange);
+    }
+    
+    /**
+     * Farm's currency getter.
+     * @return currency Farm's bank
+     */
+    public int getCurrency() {
+        return currency;
+    }
+    
+    /**
+     * Farm's currency setter.
+     * @param currencyInput Farm's bank
+     */
+    public static void setCurrency(int currencyInput) {
+        currency = currency + currencyInput;
+    }
+    
+    /**
+     * Daily income getter.
+     * @return currencyChange Income for the day
+     */
+    public int getCurrencyChange() {
+        return currencyChange;
+    }
+    
+    /**
+     * Daily income setter.
+     * @param currencyChangeInput Income for the day
+     */
+    public static void setCurrencyChange(int currencyChangeInput) {
+        currencyChange = currencyChange + currencyChangeInput;
+    }
+    
+    /**
+     * Adds crops to list.
+     * @param crop Crop to be added
+     */
+    public static void addCrop(Crops crop) {
+        crops.add(crop);
+    }
+    
+    /**
+     * Removes crop from list.
+     * @param crop Crop to be removed
+     */
+    public static void removeCrop(Crops crop) {
+        crops.remove(crop);
+    }
+    
+    
+    /**
+     * Adds animals to list.
+     * @param animal Animal to be added
+     */
+    public static void addAnimal(Animal animal) {
+        animals.add(animal);
+    }
+    
+    /**
+     * Removed animal from list.
+     * @param animal Animal to be removed
+     */
+    public static void removeAnimal(Animal animal) {
+        animals.remove(animal);
+    }
+    
+    /**
+     * Adds farmers to list.
+     * @param farmer Farmer to be added
+     */
+    public static void addFarmer(Farmers farmer) {
+        farmers.add(farmer);
+    }
+    
+    /**
+     * Removes farmer from list.
+     * @param farmer Farmer to be removed
+     */
+    public static void removeFarmer(Farmers farmer) {
+        farmers.remove(farmer);
+    }
 
     /**
      * Sets the size of the farm.
@@ -36,13 +128,6 @@ public class Farm {
         this.size = size;
     }
 
-    /**
-     * Add farmers to farm.
-     * @param farmer The farmer being added
-     */
-    public void addFarmers(Farmers farmer) {
-        farmers.add(farmer);
-    }
 
     /**
      * Dead animals. Death either when 14 or when attacked
@@ -55,7 +140,7 @@ public class Farm {
             
             //If the animal is 14 days or older they die
             if (Animal.animalAge(selectedAnimal) >= 14) {
-                animals.remove(i); //Remove animal from list
+                removeAnimal(selectedAnimal); //Remove animal from list
                 System.out.println("You lost one " + animalName);
             }
         }
@@ -83,19 +168,19 @@ public class Farm {
                     //If it's a chicken
                     if (selectedAnimal instanceof Chicken) {
                         Chicken chicken = new Chicken("Chicken", 100, 0, 0, 0);
-                        animals.add(chicken);
+                        addAnimal(chicken);
                     }
                     
                     //If it's a Cow
                     if (selectedAnimal instanceof Cow) {
                         Cow cow = new Cow("Cow", 100, 0, 0, 0);
-                        animals.add(cow);
+                        addAnimal(cow);
                     }
                     
                     //If it's a Sheep
                     if (selectedAnimal instanceof Sheep) {
                         Sheep sheep = new Sheep("Sheep", 100, 0, 0, 0);
-                        animals.add(sheep);
+                        addAnimal(sheep);
                     }
                     
                     System.out.println("You gained one " + animalName);
@@ -115,7 +200,7 @@ public class Farm {
         
         for (int i = 0; i < animals.size(); i++) {
             Animal selectedAnimal = animals.get(i);
-            String animalName = selectedAnimal.name;
+            //String animalName = selectedAnimal.name;
             
             //If animal is atleast 3 days old AND harvest cycle is atleast 2 days
             if (Animal.animalAge(selectedAnimal) >= 3 && (selectedAnimal.harvestCycle >= 2)) {
@@ -143,7 +228,7 @@ public class Farm {
         
         for (int i = 0; i < crops.size(); i++) {
             Crops selectedCrop = crops.get(i);
-            String cropName = selectedCrop.name;
+            //String cropName = selectedCrop.name;
             
             //Crops harvested only once every 3 cycles (no chance needed)
             if (selectedCrop.harvestCycle >= 3) {
@@ -168,6 +253,15 @@ public class Farm {
         currencyChange = 0; //Reset to 0 for next day
 
     }
+    
+    /**
+     * Getter for farm size.
+     * @return size Size of the farm
+     */
+    public int getSize() {
+        return size;
+    }
+    
 
 
 }

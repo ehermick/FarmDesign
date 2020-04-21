@@ -7,6 +7,6 @@ public class AnimalAffinities extends Animal {
         super(name, health, age, birthCycle, harvestCycle);
     }
 
-    private Animal animal;
+    //private Animal animal;
 
 }

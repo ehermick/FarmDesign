@@ -1,13 +1,13 @@
 package predators;
 
-import farm.Farm;
+//import farm.Farm;
 
-import java.util.ArrayList;
+//import java.util.ArrayList;
 
 public class Predators {
 
-    private int damageAmount;
-    private ArrayList<Farm> farm;
+    //private int damageAmount;
+    // private ArrayList<Farm> farm;
 
     /**
      * Damage dealt to animals.

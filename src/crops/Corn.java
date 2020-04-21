@@ -11,8 +11,8 @@ public class Corn extends Crops {
     
     //Each harvest makes the farm $2
     public static void harvestCorn() {
-        Farm.currency = Farm.currency + 2;
-        Farm.currencyChange = Farm.currencyChange + 2;
+        Farm.setCurrency(2);
+        Farm.setCurrencyChange(2);
     }
 
 }

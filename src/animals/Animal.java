@@ -1,8 +1,8 @@
 package animals;
 
-import affinities.AnimalAffinities;
-import farm.AnimalFarm;
-import farm.HybridFarm;
+//import affinities.AnimalAffinities;
+//import farm.AnimalFarm;
+//import farm.HybridFarm;
 import state.StateContext;
 
 public class Animal {
@@ -12,10 +12,10 @@ public class Animal {
     private int health;
     public int birthCycle;
     public int harvestCycle;
-    private int productWorth;
-    private AnimalFarm animalFarm;
-    private AnimalAffinities animalAffinities;
-    private HybridFarm hybridFarm;
+    //private int productWorth;
+    //private AnimalFarm animalFarm;
+    //private AnimalAffinities animalAffinities;
+    //private HybridFarm hybridFarm;
     
     /**
      * Animal Constructor.
@@ -27,7 +27,7 @@ public class Animal {
      */
     public Animal(String name, int health, int age, int birthCycle, int harvestCycle) {
         this.name = name;
-        this.health = health;
+        this.setHealth(health);
         this.age = age;
         this.birthCycle = birthCycle;
         this.harvestCycle = harvestCycle;
@@ -38,7 +38,7 @@ public class Animal {
      * @param animal The animal in question
      */
     public static int animalAge(Animal animal) {
-        int calculatedAge = StateContext.count / 2; //1 day + 1 night per cycle
+        int calculatedAge = StateContext.getCount() / 2; //1 day + 1 night per cycle
         return animal.age = calculatedAge;
         
        
@@ -74,6 +74,38 @@ public class Animal {
      */
     public void injury() {
 
+    }
+
+    /**
+     * Health getter. 
+     * @return health Animal's health
+     */
+    public int getHealth() {
+        return health;
+    }
+
+    /**
+     * Healther setter.
+     * @param health Animal's health
+     */
+    public void setHealth(int health) {
+        this.health = health;
+    }
+    
+    /**
+     * Age getter.
+     * @return age Animal's age
+     */
+    public int getAge() {
+        return age;
+    }
+    
+    /**
+     * Age setter.
+     * @param age Animal's age
+     */
+    public void setAge(int age) {
+        this.age = age;
     }
 
 }
