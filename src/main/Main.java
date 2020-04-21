@@ -1,4 +1,5 @@
 package main;
+
 import farm.Farm;
 import farm.HybridFarm;
 import state.StateContext;
@@ -7,12 +8,16 @@ import state.StateContext;
 
 
 public class Main {
-	
-	public static void main(String[] args) {
-		
-		NewFarm.buildFarm(); //Build a new farm
-		
-	      //Start off at day time
+
+    /**
+     * Main method.
+     * @param args String passed
+     */
+    public static void main(String[] args) {
+
+        NewFarm.buildFarm(); //Build a new farm
+
+        //Start off at day time
         StateContext context = new StateContext(null);
         context.update();
         
@@ -37,10 +42,6 @@ public class Main {
             
             context.update(); //Switch to day
             
-        }
-        
-		
-
-	}
-
+        }       
+    }
 }

@@ -1,13 +1,23 @@
 package main;
 
-import animals.*;
-import crops.*;
-import main.*;
+import animals.Animal;
+import animals.Chicken;
+import animals.Cow;
+import animals.Sheep;
+
+import crops.Corn;
+import crops.Crops;
+import crops.Rice;
+import crops.Wheat;
 
 import farm.HybridFarm;
 
+
 public class NewFarm {
     
+    /**
+     * Builds a new farm.
+     */
     public static void buildFarm() {
         Chicken chicken = new Chicken("Chicken", 100, 0, 0, 0);
         Cow cow = new Cow("Chicken", 100, 0, 0, 0);
@@ -28,9 +38,9 @@ public class NewFarm {
         
         //Add animals - start off with 2 of each
         for (int i = 0; i < 2; i++) {
-              hbFarm.addAnimal(chicken);
-              hbFarm.addAnimal(cow);
-              hbFarm.addAnimal(sheep);
+            hbFarm.addAnimal(chicken);
+            hbFarm.addAnimal(cow);
+            hbFarm.addAnimal(sheep);
         }
         System.out.println("\t+2 Chickens");
         System.out.println("\t+2 Cows");

@@ -17,7 +17,14 @@ public class Animal {
     private AnimalAffinities animalAffinities;
     private HybridFarm hybridFarm;
     
-    
+    /**
+     * Animal Constructor.
+     * @param name Animal name
+     * @param health Animal health
+     * @param age Animal age
+     * @param birthCycle Animal birthcycle
+     * @param harvestCycle Animal harvestCycle
+     */
     public Animal(String name, int health, int age, int birthCycle, int harvestCycle) {
         this.name = name;
         this.health = health;
@@ -27,12 +34,12 @@ public class Animal {
     }
 
     /**
-     * Calculates the age of the animal based off the number of cycles
+     * Calculates the age of the animal based off the number of cycles.
      * @param animal The animal in question
      */
     public static int animalAge(Animal animal) {
         int calculatedAge = StateContext.count / 2; //1 day + 1 night per cycle
-       return animal.age = calculatedAge;
+        return animal.age = calculatedAge;
         
        
     }

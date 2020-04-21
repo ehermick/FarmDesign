@@ -3,21 +3,28 @@ package state;
 //STATE PATTERN
 
 public class StateNight implements Statelike {
-  private static StateNight instance = new StateNight();
+    private static StateNight instance = new StateNight();
 
-  private StateNight() {
+    /**
+     * Constructor.
+     */
+    private StateNight() {
 
-  }
+    }
 
-  public static StateNight instance() {
-    return instance;
-  }
+    /**
+     * Night instance.
+     * @return StateNight instance of night
+     */
+    public static StateNight instance() {
+        return instance;
+    }
 
-  @Override
-  public void updateState(StateContext context) {
-    System.out.println("--------------Night Time Summary--------------"); //Night time
-    context.setCurrentState(StateDay.instance());//Switch to day time
-  }
+    @Override
+    public void updateState(StateContext context) {
+        System.out.println("--------------Night Time Summary--------------"); //Night time
+        context.setCurrentState(StateDay.instance());//Switch to day time
+    }
     
 
 

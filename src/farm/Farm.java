@@ -1,39 +1,49 @@
 package farm;
 
-import java.util.ArrayList;
-import java.util.Random;
-
 import animals.Animal;
 import animals.Chicken;
 import animals.Cow;
 import animals.Sheep;
 import crops.Crops;
+
+import java.util.ArrayList;
+import java.util.Random;
+
 import main.Farmers;
 import predators.Predators;
 
+
+
 public class Farm {
-	
-	private int size;
-	private int numFarmers;
-	public static int currency = 0;
-	private int maxNumFarmers;
-	ArrayList<Farmers> farmers = new ArrayList<Farmers>();
-	ArrayList<Predators> predators = new ArrayList<Predators>();
-	public static ArrayList<Crops> crops = new ArrayList<Crops>();
-	public static ArrayList<Animal> animals = new ArrayList<Animal>();
-	
+
+    private int size;
+    private int numFarmers;
+    public static int currency = 0;
+    private int maxNumFarmers;
+    ArrayList<Farmers> farmers = new ArrayList<Farmers>();
+    ArrayList<Predators> predators = new ArrayList<Predators>();
+    public static ArrayList<Crops> crops = new ArrayList<Crops>();
+    public static ArrayList<Animal> animals = new ArrayList<Animal>();
+
     static Random rand = new Random();
     public static int currencyChange; //Tracks the amount of money made each day
 
-	
-	public void setSize(int size) {
-	    this.size = size;
-	}
-	
-	public void addFarmers(Farmers farmer) {
-	    farmers.add(farmer);
-	}
-	
+    /**
+     * Sets the size of the farm.
+     * @param size The size of the farm
+     */
+    public void setSize(int size) {
+        this.size = size;
+    }
+
+    /**
+     * Add farmers to farm.
+     * @param farmer The farmer being added
+     */
+    public void addFarmers(Farmers farmer) {
+        farmers.add(farmer);
+    }
+
     /**
      * Dead animals. Death either when 14 or when attacked
      */
@@ -52,6 +62,9 @@ public class Farm {
 
     }
     
+    /**
+     * Birth of an animal.
+     */
     public static void birth() {
         
         for (int i = 0; i < animals.size(); i++) {
@@ -87,9 +100,8 @@ public class Farm {
                     
                     System.out.println("You gained one " + animalName);
                     
-                }
-                else
-                {
+                } else {
+                
                     selectedAnimal.birthCycle++; //Increment birthCycle
                 }
             }
@@ -97,7 +109,7 @@ public class Farm {
     }
     
     /**
-     * Harvests from animals (if older than 3)
+     * Harvests from animals (if older than 3).
      */
     public static void harvestProduce() {
         
@@ -113,15 +125,11 @@ public class Farm {
                 
                 if (chance == 2 || chance == 4 || chance == 8) {
                     Animal.harvest(selectedAnimal); //Harvest from animal
-                }
-                else
-                {
+                } else {
                     selectedAnimal.harvestCycle++; //increment animal's harvest cycle
                 }
                 
-            }
-            else
-            {
+            } else {
                 selectedAnimal.harvestCycle++; //increment animal's harvest cycle
             }
         }
@@ -129,7 +137,7 @@ public class Farm {
     }
     
     /**
-     * Harvests from crops
+     * Harvests from crops.
      */
     public static void harvestCrops() {
         
@@ -143,10 +151,7 @@ public class Farm {
                 
                 Crops.harvest(selectedCrop); //harvest crop
                 
-            }
-            
-            else
-            {
+            } else {
                 selectedCrop.harvestCycle++; //increment crop's harvest cycle
             }
             
@@ -154,12 +159,15 @@ public class Farm {
         }
     }
     
+    /**
+     * Tracks the money made for the day. 
+     */
     public static void moneyMade() {
         
         System.out.println("Total day's earnings : " + currencyChange);
         currencyChange = 0; //Reset to 0 for next day
 
     }
-	
+
 
 }

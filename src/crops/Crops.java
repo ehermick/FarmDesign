@@ -17,6 +17,13 @@ public class Crops {
     public int age;
     public int harvestCycle = 0;
     
+    /**
+     * Crop Constructor.
+     * @param name Crop name
+     * @param health Crop health
+     * @param age Crop age
+     * @param harvestCycle Crop harvestCycle
+     */
     public Crops(String name, int health, int age, int harvestCycle) {
         this.name = name;
         this.health = health;

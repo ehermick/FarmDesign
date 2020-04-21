@@ -25,14 +25,14 @@ public class HybridFarm extends Farm {
 
     
     /**
-     * Adds animals
+     * Adds animals.
      */
     public void addAnimal(Animal animal) {
         animals.add(animal);
     }
     
     /**
-     * Adds crops
+     * Adds crops.
      */
     public void addCrops(Crops crop) {
         crops.add(crop);
