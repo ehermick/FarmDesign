@@ -1,19 +1,1 @@
-
-# Log file
-*.log
-
-### Eclipse ###
-
-# Eclipse core
-.project
-
-# JDT-specific (Eclipse Java Development Tools)
-.classpath
-
-### Gradle ###
-.gradle
-/build/
-
-# Mac DS file
-.DS_Store
 /bin/

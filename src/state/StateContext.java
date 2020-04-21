@@ -1,3 +1,4 @@
+package state;
 
 public class StateContext {
 	private Statelike currentState;

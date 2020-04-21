@@ -1,4 +1,4 @@
-
+package state;
 //STATE PATTERN
 
 public interface Statelike {
