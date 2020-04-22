@@ -263,11 +263,19 @@ public class Farm {
     }
     
     /**
-     * Getter for crops size (list of crops)
+     * Getter for crops size (list of crops).
      * @return int size of crops
      */
     public int getCropsSize() {
         return crops.size();
+    }
+    
+    /**
+     * Getter for animals size (list of animals).
+     * @return int size of animals
+     */
+    public int getAnimalsSize() {
+        return animals.size();
     }
     
 
