@@ -1,20 +1,29 @@
 package test;
 
-import static org.junit.Assert.*;
-
-
-import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
 import crops.Corn;
 
 import farm.CropFarm;
 import farm.Farm;
 
+import org.junit.After;
+import org.junit.Before;
+
+import org.junit.Test;
+
+
+
 
 public class TestHarvestCrops {
+    @Before
+    public void setUp() {
+        Farm.resetCurrencyChange();
+    }
+    
     
     /**
-     * Tests the harvest of corn
+     * Tests the harvest of corn.
      */
     @Test
     public void harvestCorn() {
@@ -40,9 +49,9 @@ public class TestHarvestCrops {
         assertEquals("Corn Harvest", expectedIncome, actualIncome);
     }
     
-    
-    
- 
-
+    @After
+    public void reset() {
+        Farm.resetCurrencyChange();
+    } 
 
 }

@@ -2,17 +2,30 @@ package test;
 
 import static org.junit.Assert.assertEquals;
 
-import org.junit.Test;
-
 import animals.Chicken;
+
 import farm.Farm;
 import farm.HybridFarm;
 
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+
+
 public class TestHarvestEggs {
+    
+    private HybridFarm hf;
+    
+    @Before
+    public void setUp() {
+        Farm.resetCurrencyChange();
+        hf = new HybridFarm(10, 0, 0);
+    }
     
     @Test
     public void harvestEggs() {
-        HybridFarm hf = new HybridFarm(10, 0, 0);
+
         
         Chicken chicken = new Chicken("Chicken", 100, 3, 0, 2);
         
@@ -28,6 +41,11 @@ public class TestHarvestEggs {
         int expected = 5;
         int actual = hf.getCurrencyChange();
         assertEquals("Egg Harvest", expected, actual);
+    }
+    
+    @After
+    public void reset() {
+        Farm.resetCurrencyChange();
     }
     
 

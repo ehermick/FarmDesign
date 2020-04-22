@@ -44,15 +44,9 @@ public class Crops {
         //If crop is corn
         if (crop instanceof Corn) {
             Corn.harvestCorn();
-        }
-        
-        //If crop is Rice
-        else if (crop instanceof Rice) {
+        } else if (crop instanceof Rice) { //If crop is Rice
             Rice.harvestRice();
-        }
-        
-        //If crop is Wheat
-        else if (crop instanceof Wheat) {
+        } else if (crop instanceof Wheat) { //If crop is Wheat
             Wheat.harvestWheat();
         }
 

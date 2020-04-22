@@ -56,6 +56,13 @@ public class Farm {
     }
     
     /**
+     * Resets the income of the day to 0.
+     */
+    public static void resetCurrencyChange() {
+        currency = 0;
+    }
+    
+    /**
      * Daily income getter.
      * @return currencyChange Income for the day
      */
