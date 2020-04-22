@@ -10,10 +10,10 @@ public class StateContext {
      */
     public StateContext(Statelike currentState) {
             super();
-        this.currentState = currentState;
+            setCurrentState(currentState);
 
         if (currentState == null) {
-            this.currentState = StateDay.instance();
+            setCurrentState(StateDay.instance());
         }
 
     }
@@ -30,8 +30,8 @@ public class StateContext {
      * Setter method for the state.
      * @param newState the new state of this context
      */
-    void setCurrentState(Statelike currentState) {
-        this.currentState = currentState;
+    static void  setCurrentState(Statelike currentStateInput) {
+        currentState = currentStateInput;
     }
 
     /**

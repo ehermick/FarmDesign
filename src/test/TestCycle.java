@@ -11,11 +11,13 @@ import state.Statelike;
 
 public class TestCycle {
     
+    StateContext context;
+    
     //Day
     @Test
     public void testDay() {
         
-        StateContext context = new StateContext(null); //Day
+        context = new StateContext(null); //Day
         
         Statelike expected = StateDay.returnState();
         Statelike actual = StateContext.getCurrentState();
@@ -28,7 +30,7 @@ public class TestCycle {
     public void testNight() {
         
         
-        StateContext context = new StateContext(null); //Day
+        context = new StateContext(null); //Day
         context.update(); //Night
         
         Statelike expected = StateNight.returnState();
@@ -38,7 +40,7 @@ public class TestCycle {
     
     @Test
     public void testState() {
-        StateContext context = new StateContext(null); //Day
+        context = new StateContext(null); //Day
         context.update(); //Night
         context.update(); //Day
         context.update(); //Night
