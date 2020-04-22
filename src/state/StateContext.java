@@ -10,7 +10,7 @@ public class StateContext {
      */
     public StateContext(Statelike currentState) {
             super();
-            setCurrentState(currentState);
+        setCurrentState(currentState);
 
         if (currentState == null) {
             setCurrentState(StateDay.instance());
@@ -50,8 +50,8 @@ public class StateContext {
         StateContext.count = count;
     }
     
-   // public void count(int count) {
-   //     setCount(count);
-  //  }
+    // public void count(int count) {
+    //     setCount(count);
+    //  }
 
 }
