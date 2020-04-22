@@ -17,7 +17,7 @@ public class Farm {
 
     private int size;
     //private int numFarmers;
-    private  static int currency = 0;
+    private  static int currency;
     //private int maxNumFarmers;
     private static ArrayList<Farmers> farmers = new ArrayList<Farmers>();
     //ArrayList<Predators> predators = new ArrayList<Predators>();
@@ -25,7 +25,7 @@ public class Farm {
     private static ArrayList<Animal> animals = new ArrayList<Animal>();
 
     static Random rand = new Random();
-    private  static int currencyChange = 0;
+    private  static int currencyChange;
     
     /**
      * Constructor.
@@ -260,6 +260,14 @@ public class Farm {
      */
     public int getSize() {
         return size;
+    }
+    
+    /**
+     * Getter for crops size (list of crops)
+     * @return int size of crops
+     */
+    public int getCropsSize() {
+        return crops.size();
     }
     
 

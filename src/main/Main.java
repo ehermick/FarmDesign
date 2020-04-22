@@ -21,6 +21,7 @@ public class Main {
         StateContext context = new StateContext(null);
         context.update();
         
+        //Simulation end when farm goes bankrupt or reaches $100 in the bank
         for (int i = 0; i < 30; i++) {
             //Check for births
             Farm.birth();
