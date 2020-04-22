@@ -1,7 +1,7 @@
 package state;
 
 public class StateContext {
-    private Statelike currentState;
+    private static Statelike currentState;
     private static int count = 0;
 
     /**
@@ -22,7 +22,7 @@ public class StateContext {
      * Returns the current state.
      * @return currentState the current state
      */
-    public Statelike getCurrentState() {
+    public static Statelike getCurrentState() {
         return currentState;
     }
 
@@ -50,8 +50,8 @@ public class StateContext {
         StateContext.count = count;
     }
     
-    public void count(int count) {
-        setCount(count);
-    }
+   // public void count(int count) {
+   //     setCount(count);
+  //  }
 
 }

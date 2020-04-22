@@ -26,6 +26,10 @@ public class StateNight implements Statelike {
         context.setCurrentState(StateDay.instance());//Switch to day time
     }
     
+    public static StateNight returnState() {
+        return instance;
+    }
+    
 
 
 }

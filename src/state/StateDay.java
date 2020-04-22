@@ -20,6 +20,10 @@ public class StateDay implements Statelike {
         System.out.println("--------------Day Time Summary--------------"); //Day time
         context.setCurrentState(StateNight.instance()); //Switch to nightime
     }
+    
+    public static StateDay returnState() {
+        return instance;
+    }
 
 
 

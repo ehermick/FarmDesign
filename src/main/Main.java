@@ -23,7 +23,7 @@ public class Main {
         
         //Simulation end when farm goes bankrupt or reaches $100 in the bank
         for (int i = 0; i < 30; i++) {
-            //Check for births
+            //Check for births 
             Farm.birth();
             
             //Check for deaths

@@ -14,7 +14,6 @@ import org.junit.Test;
 
 
 public class TestHarvestEggs {
-    
     private HybridFarm hf;
     
     @Before
@@ -26,7 +25,6 @@ public class TestHarvestEggs {
     @Test
     public void harvestEggs() {
 
-        
         Chicken chicken = new Chicken("Chicken", 100, 3, 0, 2);
         
         //Add 5 chickens to farm
