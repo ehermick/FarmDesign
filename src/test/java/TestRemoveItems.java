@@ -2,9 +2,6 @@ package test.java;
 
 import static org.junit.Assert.assertEquals;
 
-import org.junit.Before;
-import org.junit.Test;
-
 import animals.Animal;
 import animals.Chicken;
 import animals.Cow;
@@ -15,6 +12,11 @@ import crops.Rice;
 import crops.Wheat;
 import farm.Farm;
 import farm.HybridFarm;
+
+import org.junit.Before;
+import org.junit.Test;
+
+
 
 public class TestRemoveItems {
     private HybridFarm hf;
@@ -28,6 +30,9 @@ public class TestRemoveItems {
     
     private int currencyChange = 0;
     
+    /**
+     * Setup before tests.
+     */
     @Before
     public void setup() {
         hf = new HybridFarm(10, 0, 0);

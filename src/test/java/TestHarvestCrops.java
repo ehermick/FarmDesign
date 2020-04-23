@@ -25,6 +25,9 @@ public class TestHarvestCrops {
     private int currencyChange = 0;
     
     
+    /**
+     * Setup before tests.
+     */
     @Before
     public void setUp() {
         cf = new CropFarm(10, 0, 0);

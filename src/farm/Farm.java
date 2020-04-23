@@ -15,7 +15,7 @@ import main.Farmers;
 
 public class Farm {
 
-    private int size;
+    private static int size;
     //private int numFarmers;
     private  static int currency;
     //private int maxNumFarmers;
@@ -34,9 +34,25 @@ public class Farm {
      * @param currencyChange Change in currency each day
      */
     public Farm(int size, int currency, int currencyChange) {
-        this.size = size;
+        setSize(size);
         setCurrency(currency);
         setCurrencyChange(currencyChange);
+    }
+    
+    /**
+     * Sets the size of the farm.
+     * @param sizeInput The size of the farm
+     */
+    public static void setSize(int sizeInput) {
+        size = sizeInput;
+    }
+    
+    /**
+     * Farm's size getter.
+     * @return size Farm's size
+     */
+    public int getSize() {
+        return size;
     }
     
     /**
@@ -127,13 +143,6 @@ public class Farm {
         farmers.remove(farmer);
     }
 
-    /**
-     * Sets the size of the farm.
-     * @param size The size of the farm
-     */
-    public void setSize(int size) {
-        this.size = size;
-    }
 
 
     /**
@@ -213,7 +222,7 @@ public class Farm {
             if (selectedAnimal.age >= 3 && (selectedAnimal.harvestCycle >= 2)) {
                 selectedAnimal.harvestCycle = 0; //reset harvest cycle
                 
-                    Animal.harvest(selectedAnimal); //Harvest from animal
+                Animal.harvest(selectedAnimal); //Harvest from animal
                 
             } else {
                 selectedAnimal.harvestCycle++; //increment animal's harvest cycle
