@@ -81,6 +81,13 @@ public class TestHarvestCrops {
         int expectedWheat = 30; //Should make $15 + existing $15
         int actualWheat = currencyChange;
         assertEquals("Wheat Harvest", expectedWheat, actualWheat);
+        
+        
+        //Resets the currencyChange counter
+        Farm.resetCurrencyChange();
+        int expected = 0;
+        int actual = cf.getCurrencyChange();
+        assertEquals("Reset", expected, actual);
     }
     
 

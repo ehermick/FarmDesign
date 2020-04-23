@@ -59,7 +59,7 @@ public class Farm {
      * Resets the income of the day to 0.
      */
     public static void resetCurrencyChange() {
-        currency = 0;
+        currencyChange = 0;
     }
     
     /**
@@ -210,16 +210,10 @@ public class Farm {
             //String animalName = selectedAnimal.name;
             
             //If animal is atleast 3 days old AND harvest cycle is atleast 2 days
-            if (Animal.animalAge(selectedAnimal) >= 3 && (selectedAnimal.harvestCycle >= 2)) {
+            if (selectedAnimal.age >= 3 && (selectedAnimal.harvestCycle >= 2)) {
                 selectedAnimal.harvestCycle = 0; //reset harvest cycle
                 
-                int chance = rand.nextInt(10); //Random number for chance
-                
-                if (chance == 2 || chance == 4 || chance == 8) {
                     Animal.harvest(selectedAnimal); //Harvest from animal
-                } else {
-                    selectedAnimal.harvestCycle++; //increment animal's harvest cycle
-                }
                 
             } else {
                 selectedAnimal.harvestCycle++; //increment animal's harvest cycle
@@ -260,30 +254,8 @@ public class Farm {
         currencyChange = 0; //Reset to 0 for next day
 
     }
-    
-    /**
-     * Getter for farm size.
-     * @return size Size of the farm
-     */
-    public int getSize() {
-        return size;
-    }
-    
-    /**
-     * Getter for crops size (list of crops).
-     * @return int size of crops
-     */
-    public int getCropsSize() {
-        return crops.size();
-    }
-    
-    /**
-     * Getter for animals size (list of animals).
-     * @return int size of animals
-     */
-    public int getAnimalsSize() {
-        return animals.size();
-    }
+
+
     
 
 

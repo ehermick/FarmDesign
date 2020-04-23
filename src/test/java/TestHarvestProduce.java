@@ -73,6 +73,12 @@ public class TestHarvestProduce {
         int expectedWool = 40; //Should be $25 + existing $15
         int actualWool = currencyChange;
         assertEquals("Wool Harvest", expectedWool, actualWool);
+        
+        //Resets the currencyChange counter
+        Farm.resetCurrencyChange();
+        int expected = 0;
+        int actual = af.getCurrencyChange();
+        assertEquals("Reset", expected, actual);
     }
     
 
