@@ -20,22 +20,17 @@ public class TestAge {
     private HybridFarm hf;
     
     private Corn corn1;
-    private Rice rice1;
     private Wheat wheat1;
     
     private Corn corn2;
     private Rice rice2;
-    private Wheat wheat2;
     
     private Chicken chicken1;
     private Cow cow1;
-    private Sheep sheep1;
     
     private Chicken chicken2;
-    private Cow cow2;
     private Sheep sheep2;
     
-    private Chicken chicken3;
     private Cow cow3;
     private Sheep sheep3;
     
@@ -50,25 +45,20 @@ public class TestAge {
         
         //Old enough crops
         corn1 = new Corn("Corn", 100, 0, 3, 0);
-        rice1 = new Rice("Rice", 100, 0, 3, 0);
         wheat1 = new Wheat("Wheat", 100, 0, 3, 0);
         //Too young crops
         corn2 = new Corn("Corn", 100, 0, 0, 0);
         rice2 = new Rice("Rice", 100, 0, 0, 0);
-        wheat2 = new Wheat("Wheat", 100, 0, 0, 0);
         
         //Animals with too young ages
         chicken1 = new Chicken("Chicken", 100, 0, 0, 2);
         cow1 = new Cow("Cow", 100, 0, 0, 2);
-        sheep1 = new Sheep("Sheep", 100, 0, 0, 2);
         
         //Animals with too young harvest cycles
         chicken2 = new Chicken("Chicken", 100, 3, 0, 0);
-        cow2 = new Cow("Cow", 100, 3, 0, 0);
         sheep2 = new Sheep("Sheep", 100, 3, 0, 0);
         
         //Animals with too young ages & harvest cycles
-        chicken3 = new Chicken("Chicken", 100, 0, 0, 0);
         cow3 = new Cow("Cow", 100, 0, 0, 0);
         sheep3 = new Sheep("Sheep", 100, 0, 0, 0);
     }
