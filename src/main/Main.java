@@ -35,6 +35,7 @@ public class Main {
             
             //Replenish crops and animals
             Farm.replenishCrops();
+            Farm.replenishAnimals();
             
             //Money made for the day
             Farm.moneyMade();

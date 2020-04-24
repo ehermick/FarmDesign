@@ -264,7 +264,7 @@ public class Farm {
      */
     public static void moneyMade() {
         
-        System.out.println("Total day's earnings : " + currencyChange);
+        System.out.println("Total day's earnings : " + currencyChange + "       Total in bank : " + currency);
         currencyChange = 0; //Reset to 0 for next day
 
     }
@@ -298,7 +298,7 @@ public class Farm {
             Corn corn = new Corn("Corn", 100, 0, 0, 0);
             
             for (int i = 0; i < 5; i++) {
-                crops.add(corn); //Add 5 more plots
+                addCrop(corn); //Add 5 more plots
             }
             
             setCurrency(-2);
@@ -309,7 +309,7 @@ public class Farm {
             Rice rice = new Rice("Rice", 100, 0, 0, 0);
             
             for (int i = 0; i < 5; i++) {
-                crops.add(rice); //Add 5 more plots
+                addCrop(rice); //Add 5 more plots
             }
             
             setCurrency(-1);
@@ -320,7 +320,7 @@ public class Farm {
             Wheat wheat = new Wheat("Wheat", 100, 0, 0, 0);
             
             for (int i = 0; i < 5; i++) {
-                crops.add(wheat); //Add 5 more plots
+                addCrop(wheat); //Add 5 more plots
             }
             
             
@@ -331,6 +331,66 @@ public class Farm {
         
     }
     
+    /**
+     * Replenishes animals when they get too low.
+     */
+    public static void replenishAnimals() {
+        
+        int chickenNum = 0;
+        int cowNum = 0;
+        int sheepNum = 0;
+        
+        for (int i = 0; i < animals.size(); i++) {
+            Animal selectedAnimal = animals.get(i);
+            
+            if (selectedAnimal instanceof Chicken) {
+                chickenNum++;
+                
+            } else if (selectedAnimal instanceof Cow) {
+                cowNum++;
+                
+            } else if (selectedAnimal instanceof Sheep) {
+                sheepNum++;
+            }
+            
+        }
+        
+        if (chickenNum == 0) {
+            Chicken chicken = new Chicken("Chicken", 100, 0, 0, 0);
+            
+            for (int i = 0; i < 5; i++) {
+                addAnimal(chicken); //Add 5 more chickens
+            }
+            
+            setCurrency(-1);
+            setCurrencyChange(-1);
+            System.out.println("You purchased 5 more Chickens!");
+            
+        } else if (cowNum == 0) {
+            Cow cow = new Cow("Cow", 100, 0, 0, 0);
+            
+            for (int i = 0; i < 5; i++) {
+                addAnimal(cow); //Add 5 more cows
+            }
+            
+            setCurrency(-2);
+            setCurrencyChange(-2);
+            System.out.println("You purchased 5 more Cows!");
+            
+        } else if (sheepNum == 0) {
+            Sheep sheep = new Sheep("Sheep", 100, 0, 0, 0);
+            
+            for (int i = 0; i < 5; i++) {
+                addAnimal(sheep); //Add 5 more sheep
+            }
+            
+            
+            setCurrency(-5);
+            setCurrencyChange(-5);
+            System.out.println("You purchased 5 more Sheep!");
+        }
+        
+    }
 
 
 }
