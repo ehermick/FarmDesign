@@ -264,7 +264,8 @@ public class Farm {
      */
     public static void moneyMade() {
         
-        System.out.println("Total day's earnings : " + currencyChange + "       Total in bank : " + currency);
+        System.out.println("Total day's earnings : " + currencyChange 
+                + "       Total in bank : " + currency);
         currencyChange = 0; //Reset to 0 for next day
 
     }
@@ -301,8 +302,8 @@ public class Farm {
                 addCrop(corn); //Add 5 more plots
             }
             
-            setCurrency(-2);
-            setCurrencyChange(-2);
+            setCurrency(-20);
+            setCurrencyChange(-20);
             System.out.println("You purchased 5 more plots of Corn");
             
         } else if (riceNum == 0) {
@@ -312,8 +313,8 @@ public class Farm {
                 addCrop(rice); //Add 5 more plots
             }
             
-            setCurrency(-1);
-            setCurrencyChange(-1);
+            setCurrency(-10);
+            setCurrencyChange(-10);
             System.out.println("You purchased 5 more plots of Rice");
             
         } else if (wheatNum == 0) {
@@ -324,8 +325,8 @@ public class Farm {
             }
             
             
-            setCurrency(-5);
-            setCurrencyChange(-5);
+            setCurrency(-50);
+            setCurrencyChange(-50);
             System.out.println("You purchased 5 more plots of Wheat");
         }
         
@@ -362,8 +363,8 @@ public class Farm {
                 addAnimal(chicken); //Add 5 more chickens
             }
             
-            setCurrency(-1);
-            setCurrencyChange(-1);
+            setCurrency(-10);
+            setCurrencyChange(-10);
             System.out.println("You purchased 5 more Chickens!");
             
         } else if (cowNum == 0) {
@@ -373,8 +374,8 @@ public class Farm {
                 addAnimal(cow); //Add 5 more cows
             }
             
-            setCurrency(-2);
-            setCurrencyChange(-2);
+            setCurrency(-20);
+            setCurrencyChange(-20);
             System.out.println("You purchased 5 more Cows!");
             
         } else if (sheepNum == 0) {
@@ -385,11 +386,27 @@ public class Farm {
             }
             
             
-            setCurrency(-5);
-            setCurrencyChange(-5);
+            setCurrency(-50);
+            setCurrencyChange(-50);
             System.out.println("You purchased 5 more Sheep!");
         }
         
+    }
+    
+    public static int getAnimalsSize() {
+        return animals.size();
+    }
+    
+    public static int getCropsSize() {
+        return crops.size();
+    }
+    
+    public static void resetAnimals() {
+        animals.clear();
+    }
+    
+    public static void resetCrops() {
+        crops.clear();
     }
 
 

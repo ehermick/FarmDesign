@@ -38,8 +38,9 @@ public class TestHarvestProduce {
      * Tests the harvest of animal produce.
      */
     @Test
-    public void harvestProduce() {
-
+    public void harvestEggsTest() {
+        Farm.resetCurrencyChange();
+        Farm.resetAnimals();
         
         //Add 5 chickens to farm
         for (int i = 0; i < 5; i++) {
@@ -53,6 +54,20 @@ public class TestHarvestProduce {
         int actualEgg = currencyChange;
         assertEquals("Egg Harvest", expectedEgg, actualEgg);
     
+       
+        
+        //Resets the currencyChange counter
+        Farm.resetCurrencyChange();
+        int expected = 0;
+        int actual = af.getCurrencyChange();
+        assertEquals("Reset", expected, actual);
+    }
+    
+    @Test
+    public void harvestMilkTest() {
+        Farm.resetCurrencyChange();
+        Farm.resetAnimals();
+        
         //Add 5 cows to farm
         for (int i = 0; i < 5; i++) {
             Farm.addAnimal(cow);
@@ -61,9 +76,15 @@ public class TestHarvestProduce {
         
         currencyChange = af.getCurrencyChange();
     
-        int expectedMilk = 15; //Should be $10 + existing $5
+        int expectedMilk = 10; //Should be $10
         int actualMilk = currencyChange;
         assertEquals("Milk Harvest", expectedMilk, actualMilk);
+    }
+    
+    @Test
+    public void harvestWoolTest() {
+        Farm.resetCurrencyChange();
+        Farm.resetAnimals();
         
         //Add 5 sheep to farm
         for (int i = 0; i < 5; i++) {
@@ -73,15 +94,9 @@ public class TestHarvestProduce {
         
         currencyChange = af.getCurrencyChange();
         
-        int expectedWool = 40; //Should be $25 + existing $15
+        int expectedWool = 25; //Should be $25
         int actualWool = currencyChange;
         assertEquals("Wool Harvest", expectedWool, actualWool);
-        
-        //Resets the currencyChange counter
-        Farm.resetCurrencyChange();
-        int expected = 0;
-        int actual = af.getCurrencyChange();
-        assertEquals("Reset", expected, actual);
     }
     
 

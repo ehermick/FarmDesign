@@ -9,7 +9,9 @@ public class Sheep extends Animal {
 
     }
     
-    //Each set of wool makes the farm $5
+    /**
+     * Each shearing makes the farm $5.
+     */
     public static void harvestWool() {
 
         Farm.setCurrency(5);

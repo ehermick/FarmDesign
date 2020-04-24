@@ -12,7 +12,7 @@ public class Animal {
     private int health;
     public int birthCycle;
     public int harvestCycle;
-    public static int production;
+    //public static int production;
     //private int productWorth;
     //private AnimalFarm animalFarm;
     //private AnimalAffinities animalAffinities;

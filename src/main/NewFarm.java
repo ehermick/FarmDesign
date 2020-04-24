@@ -35,6 +35,8 @@ public class NewFarm {
         System.out.println("Congratulations on purchasing your first farm!");
         System.out.println("Let's start you off with a few things: ");
         
+        Farm.setCurrency(100);
+        System.out.println("\t+100 Dollars");
         
         //Add animals - start off with 2 of each
         for (int i = 0; i < 2; i++) {
