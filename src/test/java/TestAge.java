@@ -150,7 +150,7 @@ public class TestAge {
         currencyChange = hf.getCurrencyChange();
         int expected = 0;
         int actual = currencyChange;
-        assertEquals("Low Harvest Cycle and Age Animals", expected, actual);
+        assertEquals("Low Harvest Cycle and Age Animals", expected, actual);  
         
     }
     
