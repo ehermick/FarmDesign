@@ -176,7 +176,7 @@ public class Farm {
             String animalName = selectedAnimal.name;
             
             //If the animal is older than 2 days
-            if (Animal.animalAge(selectedAnimal) >= 2) {
+            if (selectedAnimal.getAge() >= 2) {
                 
                 int chance = rand.nextInt(10); //Generate random number for chance
                 
