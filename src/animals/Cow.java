@@ -10,13 +10,13 @@ public class Cow extends Animal {
     }
     
     /**
-     * Each milking makes the farm $2.
+     * Each milking makes the farm $10.
      */
     public static void harvestMilk() {
         
         System.out.println("You harvested Milk!");
-        Farm.setCurrency(2);
-        Farm.setCurrencyChange(2);
+        Farm.setCurrency(10);
+        Farm.setCurrencyChange(10);
     }
 
 }

@@ -65,7 +65,7 @@ public class TestRemoveItems {
 
         
         currencyChange = hf.getCurrencyChange();
-        int expected = 3;
+        int expected = 9;
         int actual = currencyChange;
         assertEquals("Remove Crops", expected, actual);
         
@@ -90,7 +90,7 @@ public class TestRemoveItems {
         Animal.harvest(sheep);
         
         currencyChange = hf.getCurrencyChange();
-        int expected = 6;
+        int expected = 25;
         int actual = currencyChange;
         assertEquals("Remove Animals", expected, actual);
         

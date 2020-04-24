@@ -36,7 +36,7 @@ public class TestMoneyMade {
             Farm.harvestProduce();
         }
 
-        int expected =  5;
+        int expected =  25;
         int actual = Farm.moneyMade();
         assertEquals("Money Made", expected, actual);
         

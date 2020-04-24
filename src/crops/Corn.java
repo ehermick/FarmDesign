@@ -9,12 +9,14 @@ public class Corn extends Crops {
     }
     
     
-    //Each harvest makes the farm $2
+    /**
+     * Each harvest makes the farm $6.
+     */
     public static void harvestCorn() {
         
         System.out.println("You harvested Corn!");
-        Farm.setCurrency(2);
-        Farm.setCurrencyChange(2);
+        Farm.setCurrency(6);
+        Farm.setCurrencyChange(6);
     }
 
 }

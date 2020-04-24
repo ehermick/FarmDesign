@@ -11,13 +11,13 @@ public class Chicken extends Animal {
 
 
     /**
-     * Each egg makes the farm $1.
+     * Each egg makes the farm $5.
      */
     public static void harvestEggs() {
 
         System.out.println("You harvested Eggs!");
-        Farm.setCurrency(1);
-        Farm.setCurrencyChange(1);
+        Farm.setCurrency(5);
+        Farm.setCurrencyChange(5);
         
     }
 

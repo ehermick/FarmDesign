@@ -8,12 +8,14 @@ public class Wheat extends Crops {
         super(name, health, age, harvestCycle, production);
     }
     
-    //Each harvest makes the farm $3
+    /**
+     * Each harvest makes the farm $9.
+     */
     public static void harvestWheat() {
         
         System.out.println("You harvested Wheat!");
-        Farm.setCurrency(3);
-        Farm.setCurrencyChange(3);
+        Farm.setCurrency(9);
+        Farm.setCurrencyChange(9);
     }
 
 }

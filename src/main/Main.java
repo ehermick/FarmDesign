@@ -1,6 +1,7 @@
 package main;
 
 import farm.Farm;
+import predators.Predators;
 //import farm.HybridFarm;
 import state.StateContext;
 
@@ -43,6 +44,8 @@ public class Main {
             context.update(); //Switch to night
             
             //Check for death/injury from predators
+            Predators.eat();
+            
             //Check for damage to crops from predators
             
             context.update(); //Switch to day

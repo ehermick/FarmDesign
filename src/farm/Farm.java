@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import main.Farmers;
-//import predators.Predators;
+import predators.Predators;
 
 
 public class Farm {
@@ -23,7 +23,6 @@ public class Farm {
     private  static int currency;
     //private int maxNumFarmers;
     private static ArrayList<Farmers> farmers = new ArrayList<Farmers>();
-    //ArrayList<Predators> predators = new ArrayList<Predators>();
     private static ArrayList<Crops> crops = new ArrayList<Crops>();
     private static ArrayList<Animal> animals = new ArrayList<Animal>();
 
@@ -417,6 +416,14 @@ public class Farm {
     
     public static void resetCrops() {
         crops.clear();
+    }
+
+    public static ArrayList<Animal> getAnimals() {
+        return animals;
+    }
+    
+    public static ArrayList<Crops> getCrops() {
+        return crops;
     }
 
 

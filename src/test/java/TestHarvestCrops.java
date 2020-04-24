@@ -55,7 +55,7 @@ public class TestHarvestCrops {
         
         currencyChange = cf.getCurrencyChange();
 
-        int expectedCorn = 10; //Should make $10
+        int expectedCorn = 30; //Should make $30
         int actualCorn = currencyChange;
         assertEquals("Corn Harvest", expectedCorn, actualCorn);
         
@@ -68,7 +68,7 @@ public class TestHarvestCrops {
         
         currencyChange = cf.getCurrencyChange();
         
-        int expectedRice = 15; //Should make $5 + Corn's $10
+        int expectedRice = 45; //Should make $45
         int actualRice = currencyChange;
         assertEquals("Rice Harvest", expectedRice, actualRice);
         
@@ -81,7 +81,7 @@ public class TestHarvestCrops {
 
         currencyChange = cf.getCurrencyChange();
         
-        int expectedWheat = 30; //Should make $15 + existing $15
+        int expectedWheat = 90; //Should make $90
         int actualWheat = currencyChange;
         assertEquals("Wheat Harvest", expectedWheat, actualWheat);
         

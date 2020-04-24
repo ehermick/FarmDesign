@@ -50,7 +50,7 @@ public class TestHarvestProduce {
         
         currencyChange = af.getCurrencyChange();
         
-        int expectedEgg = 5; //Should make $5
+        int expectedEgg = 25; //Should make $25
         int actualEgg = currencyChange;
         assertEquals("Egg Harvest", expectedEgg, actualEgg);
     
@@ -76,7 +76,7 @@ public class TestHarvestProduce {
         
         currencyChange = af.getCurrencyChange();
     
-        int expectedMilk = 10; //Should be $10
+        int expectedMilk = 50; //Should be $50
         int actualMilk = currencyChange;
         assertEquals("Milk Harvest", expectedMilk, actualMilk);
     }
@@ -95,7 +95,7 @@ public class TestHarvestProduce {
         
         currencyChange = af.getCurrencyChange();
         
-        int expectedWool = 25; //Should be $25
+        int expectedWool = 100; //Should be $100
         int actualWool = currencyChange;
         assertEquals("Wool Harvest", expectedWool, actualWool);
     }

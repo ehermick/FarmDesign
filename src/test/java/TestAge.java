@@ -74,7 +74,7 @@ public class TestAge {
         Farm.harvestCrops();
         
         currencyChange = hf.getCurrencyChange();
-        int expected = 5;
+        int expected = 15;
         int actual = currencyChange;
         assertEquals("Regular Crops", expected, actual);
         

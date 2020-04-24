@@ -10,13 +10,13 @@ public class Sheep extends Animal {
     }
     
     /**
-     * Each shearing makes the farm $5.
+     * Each shearing makes the farm $20.
      */
     public static void harvestWool() {
 
         System.out.println("You harvested Wool!");
-        Farm.setCurrency(5);
-        Farm.setCurrencyChange(5);
+        Farm.setCurrency(20);
+        Farm.setCurrencyChange(20);
     }
     
 

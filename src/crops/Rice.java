@@ -8,11 +8,13 @@ public class Rice extends Crops {
         super(name, health, age, harvestCycle, production);
     }
     
-    //Each harvest makes the farm $1
+    /**
+     * Each harvest makes the farm $3.
+     */
     public static void harvestRice() {
         System.out.println("You harvested Rice!");
-        Farm.setCurrency(1);
-        Farm.setCurrencyChange(1);
+        Farm.setCurrency(3);
+        Farm.setCurrencyChange(3);
     }
 
 }

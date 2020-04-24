@@ -22,8 +22,6 @@ import state.StateContext;
 public class TestBirth {
     
     private Cow cow1;
-
-   // private Sheep sheep2;
     
     private Chicken chicken3;
     
@@ -73,21 +71,6 @@ public class TestBirth {
         assertEquals("Low Birthcycle", expectedSize, actualSize);
         
     }
-    
-    //Too young, but high enough birthcycle
- //   @Test
-  //  public void birthTest2() {
-     //   Farm.resetCurrencyChange();
-     //   Farm.resetAnimals();
-        
-      //  Farm.addAnimal(sheep2);
-      //  Farm.birth();
-     //   int expectedSize = 1;
-     //   int actualSize = Farm.getAnimalsSize();
-        
-     //   assertEquals("Low Age", expectedSize, actualSize);
-        
-   // }
     
     //Too young, and too low birthcycle
     @Test
