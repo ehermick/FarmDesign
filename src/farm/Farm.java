@@ -160,7 +160,7 @@ public class Farm {
             String animalName = selectedAnimal.name;
             
             //If the animal is 14 days or older they die
-            if (selectedAnimal.getAge() >= 14) {
+            if (Animal.animalAge(selectedAnimal) >= 14) {
                 removeAnimal(selectedAnimal); //Remove animal from list
                 System.out.println("You lost one " + animalName);
             }
@@ -178,7 +178,7 @@ public class Farm {
             String animalName = selectedAnimal.name;
             
             //If the animal is older than 2 days
-            if (selectedAnimal.getAge() >= 2) {
+            if (Animal.animalAge(selectedAnimal) >= 2) {
                 
                 int chance = rand.nextInt(10); //Generate random number for chance
                 

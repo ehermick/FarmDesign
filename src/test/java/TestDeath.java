@@ -13,21 +13,21 @@ import farm.HybridFarm;
 import org.junit.Before;
 import org.junit.Test;
 
+import state.StateContext;
+
 
 public class TestDeath {
     
-    private AnimalFarm af;
     private Chicken chicken;
     private Cow cow;
-    private Sheep sheep;
-    private int currencyChange = 0;
+    
+    StateContext contextDeath;
     
     /**
      * Setup before tests.
      */
     @Before
     public void setup() {
-        af = new AnimalFarm(10, 0, 0);
         
         //Too old
         chicken = new Chicken("Chicken", 100, 14, 0, 2);
@@ -37,23 +37,9 @@ public class TestDeath {
         
     }
     
-    //Too old
-    @Test
-    public void deathTest1() {
-        Farm.resetAnimals();
-        
-        Farm.addAnimal(chicken);
-        Farm.death();
-        
-        int expected = 0;
-        int actual = Farm.getAnimalsSize();
-        assertEquals("Animal Death", expected, actual);
-        
-    }
-    
     //Not old enough
     @Test
-    public void deathTest2() {
+    public void deathTest1() {
         Farm.resetAnimals();
         
         Farm.addAnimal(cow);
@@ -64,6 +50,29 @@ public class TestDeath {
         assertEquals("No Animal Death", expected, actual);
         
     }
+    
+    //Too old
+    @Test
+    public void deathTest2() {
+        Farm.resetAnimals();
+        
+        Farm.addAnimal(chicken);
+        
+        contextDeath = new StateContext(null); //Day
+
+        for (int i = 0; i < 28; i++) {
+            contextDeath.update(); //Day
+        }
+        
+        Farm.death();
+        
+        int expected = 0;
+        int actual = Farm.getAnimalsSize();
+        assertEquals("Animal Death", expected, actual);
+        
+    }
+    
+
     
     
 

@@ -13,23 +13,17 @@ import farm.HybridFarm;
 import org.junit.Before;
 import org.junit.Test;
 
+import state.StateContext;
+
 /**
  * Tests the birth() method in Farm.java
  *
  */
 public class TestBirth {
     
-    private AnimalFarm af;
-    
-    private Chicken chicken1;
     private Cow cow1;
-    
-    private Chicken chicken2;
-    private Cow cow2;
+
     private Sheep sheep2;
-    
-    private Cow cow3;
-    private Sheep sheep3;
     
     private Chicken chicken3;
     
@@ -37,17 +31,16 @@ public class TestBirth {
     private Cow cow4;
     private Sheep sheep4;
     
-    private int currencyChange = 0;
+    StateContext context;
     
     /**
      * Setup before tests.
      */
     @Before
     public void setup() {
-        af = new AnimalFarm(10, 0, 0);
         
         //Old enough, but too low birthcycle
-        cow1 = new Cow("Cow", 100, 3, 0, 2);
+        cow1 = new Cow("Cow", 100, 3, -30, 2);
         
         //Too young, high enough birthcycle
         sheep2 = new Sheep("Sheep", 100, 0, 5, 2);
@@ -59,6 +52,8 @@ public class TestBirth {
         chicken4 = new Chicken("Chicken", 100, 3, 5, 2);
         cow4 = new Cow("Cow", 100, 3, 5, 2);
         sheep4 = new Sheep("Sheep", 100, 3, 5, 2);
+        
+        context = new StateContext(null); //Day
         
     }
     
@@ -86,7 +81,6 @@ public class TestBirth {
         Farm.resetAnimals();
         
         Farm.addAnimal(sheep2);
-        
         Farm.birth();
         int expectedSize = 1;
         int actualSize = Farm.getAnimalsSize();
@@ -117,6 +111,11 @@ public class TestBirth {
         Farm.resetCurrencyChange();
         Farm.resetAnimals();
         
+        context.update(); //Night
+        context.update(); //Day
+        context.update(); //Night
+        context.update(); //Day
+        
         Farm.addAnimal(chicken4);
         
         //Playing with chance - should happen atleast once
@@ -125,9 +124,14 @@ public class TestBirth {
         Farm.birth();
         Farm.birth();
         Farm.birth();
+        Farm.birth();
+        Farm.birth();
+        Farm.birth();
+        Farm.birth();
+        Farm.birth();
         
-        int expectedSize = 2; 
-        int actualSize = Farm.getAnimalsSize();
+        boolean expectedSize = true; 
+        boolean actualSize = Farm.getAnimalsSize() >= 2;
         
         assertEquals("Chicken Birth", expectedSize, actualSize); 
     }
@@ -140,15 +144,26 @@ public class TestBirth {
         
         Farm.addAnimal(cow4);
         
+        context = new StateContext(null); //Day
+        context.update(); //Night
+        context.update(); //Day
+        context.update(); //Night
+        context.update(); //Day
+        
         //Playing with chance - should happen atleast once
         Farm.birth();
         Farm.birth();
         Farm.birth();
         Farm.birth();
         Farm.birth();
+        Farm.birth();
+        Farm.birth();
+        Farm.birth();
+        Farm.birth();
+        Farm.birth();
         
-        int expectedSize = 2; 
-        int actualSize = Farm.getAnimalsSize();
+        boolean expectedSize = true; 
+        boolean actualSize = Farm.getAnimalsSize() >= 2;
         
         assertEquals("Cow Birth", expectedSize, actualSize); 
     }
@@ -161,15 +176,26 @@ public class TestBirth {
         
         Farm.addAnimal(sheep4);
         
+        context = new StateContext(null); //Day
+        context.update(); //Night
+        context.update(); //Day
+        context.update(); //Night
+        context.update(); //Day
+        
         //Playing with chance - should happen atleast once
         Farm.birth();
         Farm.birth();
         Farm.birth();
         Farm.birth();
         Farm.birth();
+        Farm.birth();
+        Farm.birth();
+        Farm.birth();
+        Farm.birth();
+        Farm.birth();
         
-        int expectedSize = 2; 
-        int actualSize = Farm.getAnimalsSize();
+        boolean expectedSize = true; 
+        boolean actualSize = Farm.getAnimalsSize() >= 2;
         
         assertEquals("Sheep Birth", expectedSize, actualSize); 
     }
