@@ -30,6 +30,8 @@ public class Farm {
     static Random rand = new Random();
     private  static int currencyChange;
     
+    private static int moneyMade;
+    
     /**
      * Constructor.
      * @param size Size of farm
@@ -262,11 +264,15 @@ public class Farm {
     /**
      * Tracks the money made for the day. 
      */
-    public static void moneyMade() {
+    public static int moneyMade() {
         
         System.out.println("Total day's earnings : " + currencyChange 
                 + "       Total in bank : " + currency);
+        moneyMade = currencyChange;
+        
         currencyChange = 0; //Reset to 0 for next day
+        
+        return moneyMade;
 
     }
 
