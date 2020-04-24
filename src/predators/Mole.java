@@ -36,13 +36,13 @@ public class Mole extends Predators {
             Crops selectedCrop = crops.get(i);
             
             if (selectedCrop instanceof Corn && chance == 2) {
-                Crops.damageHealth(Predators.animalDamage);
+                Crops.damageHealth(Predators.getDamage());
                 System.out.println("A Mole damaged corn");
             } else if (selectedCrop instanceof Rice && chance == 4) {
-                Crops.damageHealth(Predators.animalDamage);
+                Crops.damageHealth(Predators.getDamage());
                 System.out.println("A Mole damaged rice");
             } else if (selectedCrop instanceof Wheat && chance == 6) {
-                Crops.damageHealth(Predators.animalDamage);
+                Crops.damageHealth(Predators.getDamage());
                 System.out.println("A Mole damaged wheat");
             } 
         }

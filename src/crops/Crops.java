@@ -7,7 +7,7 @@ import state.StateContext;
 
 public class Crops {
 
-    public static int health;
+    private static int health;
     //private int productWorth;
     //private int dayLastHarvested;
     //private CropFarm cropFarm;

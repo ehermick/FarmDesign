@@ -12,7 +12,7 @@ public class Predators {
     // private ArrayList<Farm> farm;
     
     public String name;
-    public static int animalDamage;
+    private static int animalDamage;
     
     static Random rand = new Random();
     
@@ -23,6 +23,10 @@ public class Predators {
     
     public static void setDamage(int damage) {
         Predators.animalDamage = damage;
+    }
+    
+    public static int getDamage() {
+        return animalDamage;
     }
 
     /**

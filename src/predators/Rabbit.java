@@ -33,13 +33,13 @@ public class Rabbit extends Predators {
             Crops selectedCrop = crops.get(i);
             
             if (selectedCrop instanceof Corn && chance == 2) {
-                Crops.damageHealth(Predators.animalDamage);
+                Crops.damageHealth(Predators.getDamage());
                 System.out.println("A Rabbit damaged corn");
             } else if (selectedCrop instanceof Rice && chance == 4) {
-                Crops.damageHealth(Predators.animalDamage);
+                Crops.damageHealth(Predators.getDamage());
                 System.out.println("A Rabbit damaged rice");
             } else if (selectedCrop instanceof Wheat && chance == 6) {
-                Crops.damageHealth(Predators.animalDamage);
+                Crops.damageHealth(Predators.getDamage());
                 System.out.println("A Rabbit damaged wheat");
             } 
         }
