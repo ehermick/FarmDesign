@@ -9,7 +9,7 @@ public class Animal {
 
     public String name;
     public int age;
-    private int health;
+    private static int health;
     public int birthCycle;
     public int harvestCycle;
     //public static int production;
@@ -77,11 +77,17 @@ public class Animal {
 
     }
 
+    
+    public static void damageHealth(int damage) {
+        int newHealth = health - damage;
+        setHealth(newHealth);
+    }
+    
     /**
      * Health getter. 
      * @return health Animal's health
      */
-    public int getHealth() {
+    public static int getHealth() {
         return health;
     }
 
@@ -89,8 +95,8 @@ public class Animal {
      * Healther setter.
      * @param health Animal's health
      */
-    public void setHealth(int health) {
-        this.health = health;
+    public static void setHealth(int health) {
+        Animal.health = health;
     }
     
     /**

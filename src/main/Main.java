@@ -45,6 +45,7 @@ public class Main {
             
             //Check for death/injury from predators
             Predators.eat();
+            Predators.damage();
             
             //Check for damage to crops from predators
             

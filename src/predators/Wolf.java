@@ -23,7 +23,22 @@ public class Wolf extends Predators {
      * Damage Animals.
      */
     public static void damage() {
-
+        int chance = rand.nextInt(10); //Generate random number for chance
+        
+        for (int i = 0; i < animals.size(); i++) {
+            Animal selectedAnimal = animals.get(i);
+            
+            if (selectedAnimal instanceof Chicken && chance == 2) {
+                Animal.damageHealth(Predators.animalDamage);
+                System.out.println("A Wolf injured a chicken");
+            } else if (selectedAnimal instanceof Cow && chance == 4) {
+                Animal.damageHealth(Predators.animalDamage);
+                System.out.println("A Wolf injured a cow");
+            } else if (selectedAnimal instanceof Sheep && chance == 6) {
+                Animal.damageHealth(Predators.animalDamage);
+                System.out.println("A Wolf injured a sheep");
+            } 
+        }
     }
     
     /**

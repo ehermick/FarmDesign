@@ -12,19 +12,19 @@ public class Predators {
     // private ArrayList<Farm> farm;
     
     public String name;
-    public int damage;
+    public static int animalDamage;
     
     static Random rand = new Random();
     
     public Predators(String name, int damage) {
         this.name = name;
-        this.damage = damage;
+        Predators.animalDamage = damage;
     }
 
     /**
      * Damage dealt to animals.
      */
-    public void damage(Predators predator) {
+    public static void damage() {
         
         Fox.damage();
         Wolf.damage();
@@ -59,21 +59,7 @@ public class Predators {
         return name;
     }
     
-    /**
-     * Sets the predator's damage.
-     * @param damageInput Damage
-     */
-    public void setDamage(int damageInput) {
-        damage = damageInput;
-    }
-    
-    /**
-     * Returns predator's damage.
-     * @return damage Damage
-     */
-    public int getDamage() {
-        return damage;
-    }
+
     
     
 

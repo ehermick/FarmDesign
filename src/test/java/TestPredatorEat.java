@@ -9,14 +9,13 @@ import crops.Corn;
 import crops.Rice;
 import crops.Wheat;
 import farm.Farm;
-import farm.HybridFarm;
 
 import org.junit.Before;
 import org.junit.Test;
 
 import predators.Predators;
 
-public class TestPredator {
+public class TestPredatorEat {
 
     private Corn corn;
     private Rice rice;
@@ -161,6 +160,45 @@ public class TestPredator {
     }
     
     @Test
+    public void eatAnimals() {
+        
+        Farm.addAnimal(sheep);
+        Farm.addAnimal(chicken);
+        Farm.addAnimal(cow);
+        
+        //Playing with chance - should happen atleast once
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        
+        boolean expected = true;
+        boolean actual = Farm.getAnimalsSize() < 3;
+        assertEquals("Predator Eats Animal", expected, actual);
+        
+    }
+    
+    @Test
     public void eatCorn() {
         
         Farm.addCrop(corn);
@@ -277,6 +315,45 @@ public class TestPredator {
         boolean expected = true;
         boolean actual = Farm.getCropsSize() < 4;
         assertEquals("Predator Eats Wheat", expected, actual);
+        
+    }
+    
+    @Test
+    public void eatCrops() {
+        
+        Farm.addCrop(wheat);
+        Farm.addCrop(corn);
+        Farm.addCrop(rice);
+        
+        //Playing with chance - should happen atleast once
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        Predators.eat();
+        
+        boolean expected = true;
+        boolean actual = Farm.getCropsSize() < 3;
+        assertEquals("Predator Eats Crops", expected, actual);
         
     }
 

@@ -9,6 +9,8 @@ import farm.Farm;
 import java.util.ArrayList;
 import java.util.Random;
 
+import animals.Animal;
+
 public class Rabbit extends Predators {
     
     
@@ -24,7 +26,22 @@ public class Rabbit extends Predators {
      * Damage Crops.
      */
     public static void damage() {
-
+        int chance = rand.nextInt(10); //Generate random number for chance
+        
+        for (int i = 0; i < crops.size(); i++) {
+            Crops selectedCrop = crops.get(i);
+            
+            if (selectedCrop instanceof Corn && chance == 2) {
+                Crops.damageHealth(Predators.animalDamage);
+                System.out.println("A Rabbit damaged corn");
+            } else if (selectedCrop instanceof Rice && chance == 4) {
+                Crops.damageHealth(Predators.animalDamage);
+                System.out.println("A Rabbit damaged rice");
+            } else if (selectedCrop instanceof Wheat && chance == 6) {
+                Crops.damageHealth(Predators.animalDamage);
+                System.out.println("A Rabbit damaged wheat");
+            } 
+        }
     }
     
     /**

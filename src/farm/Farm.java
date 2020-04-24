@@ -25,6 +25,7 @@ public class Farm {
     private static ArrayList<Farmers> farmers = new ArrayList<Farmers>();
     private static ArrayList<Crops> crops = new ArrayList<Crops>();
     private static ArrayList<Animal> animals = new ArrayList<Animal>();
+    private static ArrayList<Predators> predators = new ArrayList<Predators>();
 
     static Random rand = new Random();
     private  static int currencyChange;
@@ -129,6 +130,14 @@ public class Farm {
      */
     public static void removeAnimal(Animal animal) {
         animals.remove(animal);
+    }
+    
+    /**
+     * Adds predators to list.
+     * @param predator Predator to be added
+     */
+    public static void addPredator(Predators predator) {
+        predators.add(predator);
     }
     
     /**

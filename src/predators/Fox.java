@@ -16,15 +16,30 @@ public class Fox extends Predators {
     
     private static ArrayList<Animal> animals = Farm.getAnimals();
 
-    public Fox(String name, int damage) {
-        super(name, damage);
+    public Fox(String name, int animalDamage) {
+        super(name, animalDamage);
     }
     
     /**
      * Damage Animals.
      */
     public static void damage() {
-
+        int chance = rand.nextInt(10); //Generate random number for chance
+        
+        for (int i = 0; i < animals.size(); i++) {
+            Animal selectedAnimal = animals.get(i);
+            
+            if (selectedAnimal instanceof Chicken && chance == 2) {
+                Animal.damageHealth(Predators.animalDamage);
+                System.out.println("A Fox injured a chicken");
+            } else if (selectedAnimal instanceof Cow && chance == 4) {
+                Animal.damageHealth(Predators.animalDamage);
+                System.out.println("A Fox injured a cow");
+            } else if (selectedAnimal instanceof Sheep && chance == 6) {
+                Animal.damageHealth(Predators.animalDamage);
+                System.out.println("A Fox injured a sheep");
+            } 
+        }
     }
     
     /**
