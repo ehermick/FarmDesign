@@ -160,7 +160,7 @@ public class Farm {
             String animalName = selectedAnimal.name;
             
             //If the animal is 14 days or older they die
-            if (Animal.animalAge(selectedAnimal) >= 14) {
+            if (selectedAnimal.getAge() >= 14) {
                 removeAnimal(selectedAnimal); //Remove animal from list
                 System.out.println("You lost one " + animalName);
             }
