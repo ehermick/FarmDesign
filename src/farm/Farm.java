@@ -289,7 +289,7 @@ public class Farm {
             } else if (selectedCrop instanceof Rice) {
                 riceNum++;
                 
-            } else if (selectedCrop instanceof Wheat) {
+            } else {
                 wheatNum++;
             }
             
@@ -306,7 +306,7 @@ public class Farm {
             setCurrencyChange(-20);
             System.out.println("You purchased 5 more plots of Corn");
             
-        } else if (riceNum == 0) {
+        } if (riceNum == 0) {
             Rice rice = new Rice("Rice", 100, 0, 0, 0);
             
             for (int i = 0; i < 5; i++) {
@@ -317,7 +317,7 @@ public class Farm {
             setCurrencyChange(-10);
             System.out.println("You purchased 5 more plots of Rice");
             
-        } else if (wheatNum == 0) {
+        } if (wheatNum == 0) {
             Wheat wheat = new Wheat("Wheat", 100, 0, 0, 0);
             
             for (int i = 0; i < 5; i++) {
@@ -350,7 +350,7 @@ public class Farm {
             } else if (selectedAnimal instanceof Cow) {
                 cowNum++;
                 
-            } else if (selectedAnimal instanceof Sheep) {
+            } else {
                 sheepNum++;
             }
             
@@ -367,7 +367,7 @@ public class Farm {
             setCurrencyChange(-10);
             System.out.println("You purchased 5 more Chickens!");
             
-        } else if (cowNum == 0) {
+        } if (cowNum == 0) {
             Cow cow = new Cow("Cow", 100, 0, 0, 0);
             
             for (int i = 0; i < 5; i++) {
@@ -378,7 +378,7 @@ public class Farm {
             setCurrencyChange(-20);
             System.out.println("You purchased 5 more Cows!");
             
-        } else if (sheepNum == 0) {
+        } if (sheepNum == 0) {
             Sheep sheep = new Sheep("Sheep", 100, 0, 0, 0);
             
             for (int i = 0; i < 5; i++) {

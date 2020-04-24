@@ -45,7 +45,7 @@ public class TestHarvestProduce {
         //Add 5 chickens to farm
         for (int i = 0; i < 5; i++) {
             Farm.addAnimal(chicken);
-            Animal.harvest(chicken);
+            Farm.harvestProduce();
         }
         
         currencyChange = af.getCurrencyChange();
@@ -71,7 +71,7 @@ public class TestHarvestProduce {
         //Add 5 cows to farm
         for (int i = 0; i < 5; i++) {
             Farm.addAnimal(cow);
-            Animal.harvest(cow);
+            Farm.harvestProduce();
         }
         
         currencyChange = af.getCurrencyChange();
@@ -89,8 +89,9 @@ public class TestHarvestProduce {
         //Add 5 sheep to farm
         for (int i = 0; i < 5; i++) {
             Farm.addAnimal(sheep);
-            Animal.harvest(sheep);
+            Farm.harvestProduce();
         }
+        
         
         currencyChange = af.getCurrencyChange();
         
