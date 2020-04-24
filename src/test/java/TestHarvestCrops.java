@@ -32,9 +32,9 @@ public class TestHarvestCrops {
     public void setUp() {
         cf = new CropFarm(10, 0, 0);
 
-        corn = new Corn("Corn", 100, 0, 3);
-        rice = new Rice("Rice", 100, 0, 3);
-        wheat = new Wheat("Wheat", 100, 0, 3);
+        corn = new Corn("Corn", 100, 0, 3, 0);
+        rice = new Rice("Rice", 100, 0, 3, 0);
+        wheat = new Wheat("Wheat", 100, 0, 3, 0);
         
     }
     

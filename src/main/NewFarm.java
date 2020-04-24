@@ -24,11 +24,11 @@ public class NewFarm {
         Cow cow = new Cow("Chicken", 100, 0, 0, 0);
         Sheep sheep = new Sheep("Sheep", 100, 0, 0, 0);
         
-        Corn corn = new Corn("Corn", 100, 0, 0);
-        Rice rice = new Rice("Rice", 100, 0, 0);
-        Wheat wheat = new Wheat("Wheat", 100, 0, 0);
+        Corn corn = new Corn("Corn", 100, 0, 0, 0);
+        Rice rice = new Rice("Rice", 100, 0, 0, 0);
+        Wheat wheat = new Wheat("Wheat", 100, 0, 0, 0);
         
-        Farmers farmer = new Farmers();
+        Farmers farmer = new Farmers("farmer", 1, 1, 1);
         
         //Start with 1 hybrid farm
         HybridFarm hbFarm = new HybridFarm(10, 0, 0);//Start with 10 acres
@@ -38,9 +38,9 @@ public class NewFarm {
         
         //Add animals - start off with 2 of each
         for (int i = 0; i < 2; i++) {
-            hbFarm.addAnimal(chicken);
-            hbFarm.addAnimal(cow);
-            hbFarm.addAnimal(sheep);
+            Farm.addAnimal(chicken);
+            Farm.addAnimal(cow);
+            Farm.addAnimal(sheep);
         }
         System.out.println("\t+2 Chickens");
         System.out.println("\t+2 Cows");

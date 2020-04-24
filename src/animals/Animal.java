@@ -12,6 +12,7 @@ public class Animal {
     private int health;
     public int birthCycle;
     public int harvestCycle;
+    public static int production;
     //private int productWorth;
     //private AnimalFarm animalFarm;
     //private AnimalAffinities animalAffinities;
@@ -107,5 +108,6 @@ public class Animal {
     public void setAge(int age) {
         this.age = age;
     }
+
 
 }

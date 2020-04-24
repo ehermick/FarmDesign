@@ -4,8 +4,8 @@ import farm.Farm;
 
 public class Wheat extends Crops {
     
-    public Wheat(String name, int health, int age, int harvestCycle) {
-        super(name, health, age, harvestCycle);
+    public Wheat(String name, int health, int age, int harvestCycle, int production) {
+        super(name, health, age, harvestCycle, production);
     }
     
     //Each harvest makes the farm $3

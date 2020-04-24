@@ -11,8 +11,9 @@ public class Cow extends Animal {
     
     //Each milking makes the farm $2
     public static void harvestMilk() {
-        Farm.setCurrency(2);
-        Farm.setCurrencyChange(2);
+        
+        Farm.setCurrency(1);
+        Farm.setCurrencyChange(1);
     }
 
 }

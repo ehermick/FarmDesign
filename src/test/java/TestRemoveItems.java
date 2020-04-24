@@ -37,9 +37,9 @@ public class TestRemoveItems {
     public void setup() {
         hf = new HybridFarm(10, 0, 0);
         
-        corn = new Corn("Corn", 100, 0, 3);
-        rice = new Rice("Rice", 100, 0, 3);
-        wheat = new Wheat("Wheat", 100, 0, 3);
+        corn = new Corn("Corn", 100, 0, 3, 0);
+        rice = new Rice("Rice", 100, 0, 3, 0);
+        wheat = new Wheat("Wheat", 100, 0, 3, 0);
         
         chicken = new Chicken("Chicken", 100, 3, 0, 2);
         cow = new Cow("Cow", 100, 3, 0, 2);

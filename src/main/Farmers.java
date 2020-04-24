@@ -4,10 +4,23 @@ package main;
 //import farm.Farm;
 
 public class Farmers {
-    //private Farm farm;
-    //private FarmerAffinities farmerAffinities;
+    public String name;
+    public int animalSkill;
+    public int cropSkill;
+    public int moneySkill;
+    
+    public Farmers(String name, int animalSkill, int cropSkill, int moneySkill) {
+        this.name = name;
+        this.animalSkill = animalSkill;
+        this.cropSkill = cropSkill;
+        this.moneySkill = moneySkill;
+    }
 
     public void buyAnimal() {
+
+    }
+    
+    public void buyCrop() {
 
     }
 
@@ -19,12 +32,6 @@ public class Farmers {
 
     }
 
-    public void buyCrop() {
 
-    }
-
-    public void harvest() {
-
-    }
 
 }
