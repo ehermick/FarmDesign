@@ -33,6 +33,9 @@ public class Main {
             Farm.harvestProduce();
             Farm.harvestCrops();
             
+            //Replenish crops and animals
+            Farm.replenishCrops();
+            
             //Money made for the day
             Farm.moneyMade();
             

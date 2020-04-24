@@ -4,7 +4,10 @@ import animals.Animal;
 import animals.Chicken;
 import animals.Cow;
 import animals.Sheep;
+import crops.Corn;
 import crops.Crops;
+import crops.Rice;
+import crops.Wheat;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -254,6 +257,8 @@ public class Farm {
         }
     }
     
+    
+    
     /**
      * Tracks the money made for the day. 
      */
@@ -265,6 +270,66 @@ public class Farm {
     }
 
 
+    /**
+     * Replenishes crops when they get too low.
+     */
+    public static void replenishCrops() {
+        
+        int cornNum = 0;
+        int riceNum = 0;
+        int wheatNum = 0;
+        
+        for (int i = 0; i < crops.size(); i++) {
+            Crops selectedCrop = crops.get(i);
+            
+            if (selectedCrop instanceof Corn) {
+                cornNum++;
+                
+            } else if (selectedCrop instanceof Rice) {
+                riceNum++;
+                
+            } else if (selectedCrop instanceof Wheat) {
+                wheatNum++;
+            }
+            
+        }
+        
+        if (cornNum == 0) {
+            Corn corn = new Corn("Corn", 100, 0, 0, 0);
+            
+            for (int i = 0; i < 5; i++) {
+                crops.add(corn); //Add 5 more plots
+            }
+            
+            setCurrency(-2);
+            setCurrencyChange(-2);
+            System.out.println("You purchased 5 more plots of Corn");
+            
+        } else if (riceNum == 0) {
+            Rice rice = new Rice("Rice", 100, 0, 0, 0);
+            
+            for (int i = 0; i < 5; i++) {
+                crops.add(rice); //Add 5 more plots
+            }
+            
+            setCurrency(-1);
+            setCurrencyChange(-1);
+            System.out.println("You purchased 5 more plots of Rice");
+            
+        } else if (wheatNum == 0) {
+            Wheat wheat = new Wheat("Wheat", 100, 0, 0, 0);
+            
+            for (int i = 0; i < 5; i++) {
+                crops.add(wheat); //Add 5 more plots
+            }
+            
+            
+            setCurrency(-5);
+            setCurrencyChange(-5);
+            System.out.println("You purchased 5 more plots of Wheat");
+        }
+        
+    }
     
 
 
