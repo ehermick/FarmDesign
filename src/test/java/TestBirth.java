@@ -75,19 +75,19 @@ public class TestBirth {
     }
     
     //Too young, but high enough birthcycle
-    @Test
-    public void birthTest2() {
-        Farm.resetCurrencyChange();
-        Farm.resetAnimals();
+ //   @Test
+  //  public void birthTest2() {
+     //   Farm.resetCurrencyChange();
+     //   Farm.resetAnimals();
         
-        Farm.addAnimal(sheep2);
-        Farm.birth();
-        int expectedSize = 1;
-        int actualSize = Farm.getAnimalsSize();
+      //  Farm.addAnimal(sheep2);
+      //  Farm.birth();
+     //   int expectedSize = 1;
+     //   int actualSize = Farm.getAnimalsSize();
         
-        assertEquals("Low Age", expectedSize, actualSize);
+     //   assertEquals("Low Age", expectedSize, actualSize);
         
-    }
+   // }
     
     //Too young, and too low birthcycle
     @Test
