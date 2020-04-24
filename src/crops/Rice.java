@@ -10,6 +10,7 @@ public class Rice extends Crops {
     
     //Each harvest makes the farm $1
     public static void harvestRice() {
+        System.out.println("You harvested Rice!");
         Farm.setCurrency(1);
         Farm.setCurrencyChange(1);
     }

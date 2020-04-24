@@ -16,8 +16,4 @@ public class CropFarm extends Farm {
         // TODO Auto-generated constructor stub
     }
 
-    public void sellCrops() {
-
-    }
-
 }

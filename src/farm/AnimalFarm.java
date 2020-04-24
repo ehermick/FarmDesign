@@ -16,8 +16,5 @@ public class AnimalFarm extends Farm {
         // TODO Auto-generated constructor stub
     }
 
-    public void sellAnimalProducts() {
-  
-    }
 
 }

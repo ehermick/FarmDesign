@@ -24,20 +24,6 @@ public class HybridFarm extends Farm {
     static ArrayList<Animal> animals = new ArrayList<Animal>();
     
     //public int birthCycle;
-    
-
-
-    
-
-    
-    /**
-     * Adds crops.
-     */
-    public void addCrops(Crops crop) {
-        crops.add(crop);
-    }
-
-    
 
 
 }

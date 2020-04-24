@@ -10,6 +10,8 @@ public class Wheat extends Crops {
     
     //Each harvest makes the farm $3
     public static void harvestWheat() {
+        
+        System.out.println("You harvested Wheat!");
         Farm.setCurrency(3);
         Farm.setCurrencyChange(3);
     }

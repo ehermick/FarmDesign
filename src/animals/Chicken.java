@@ -15,6 +15,7 @@ public class Chicken extends Animal {
      */
     public static void harvestEggs() {
 
+        System.out.println("You harvested Eggs!");
         Farm.setCurrency(1);
         Farm.setCurrencyChange(1);
         

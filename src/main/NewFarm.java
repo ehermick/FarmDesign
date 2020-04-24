@@ -50,9 +50,9 @@ public class NewFarm {
         
         //Add crops
         for (int i = 0; i < 5; i++) {
-            hbFarm.addCrops(corn);
-            hbFarm.addCrops(rice);
-            hbFarm.addCrops(wheat);
+            Farm.addCrop(corn);
+            Farm.addCrop(rice);
+            Farm.addCrop(wheat);
         }
         System.out.println("\t+5 Plots of Corn");
         System.out.println("\t+5 Plots of Rice");

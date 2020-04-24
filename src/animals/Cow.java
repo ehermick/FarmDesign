@@ -14,6 +14,7 @@ public class Cow extends Animal {
      */
     public static void harvestMilk() {
         
+        System.out.println("You harvested Milk!");
         Farm.setCurrency(2);
         Farm.setCurrencyChange(2);
     }
