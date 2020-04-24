@@ -43,7 +43,7 @@ public class TestBirth {
         cow1 = new Cow("Cow", 100, 3, -30, 2);
         
         //Too young, high enough birthcycle
-        sheep2 = new Sheep("Sheep", 100, 0, 5, 2);
+        sheep2 = new Sheep("Sheep", 100, -40, 5, 2);
         
         //Too young, and too low birthcycle
         chicken3 = new Chicken("Chicken", 100, 0, 0, 2);
