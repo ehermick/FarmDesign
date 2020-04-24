@@ -18,6 +18,10 @@ public class Predators {
     
     public Predators(String name, int damage) {
         this.name = name;
+        this.setDamage(damage);
+    }
+    
+    public static void setDamage(int damage) {
         Predators.animalDamage = damage;
     }
 

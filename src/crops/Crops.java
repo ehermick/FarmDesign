@@ -27,7 +27,7 @@ public class Crops {
      */
     public Crops(String name, int health, int age, int harvestCycle, int production) {
         this.name = name;
-        this.health = health;
+        this.setHealth(health);
         this.age = age;
         this.harvestCycle = harvestCycle;
         //this.production = production;

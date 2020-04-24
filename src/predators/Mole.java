@@ -1,18 +1,20 @@
 package predators;
 
+import animals.Animal;
+
+import animals.Chicken;
+import animals.Cow;
+import animals.Sheep;
+
 import crops.Corn;
 import crops.Crops;
 import crops.Rice;
 import crops.Wheat;
+
 import farm.Farm;
 
 import java.util.ArrayList;
 import java.util.Random;
-
-import animals.Animal;
-import animals.Chicken;
-import animals.Cow;
-import animals.Sheep;
 
 public class Mole extends Predators {
     
