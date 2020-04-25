@@ -13,7 +13,7 @@ public class Wheat extends Crops {
      */
     public static void harvestWheat() {
         
-        System.out.println("You harvested Wheat!");
+        System.out.println("You harvested Wheat! (+$9)");
         Farm.setCurrency(9);
         Farm.setCurrencyChange(9);
     }

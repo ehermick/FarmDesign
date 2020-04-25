@@ -14,7 +14,7 @@ public class Corn extends Crops {
      */
     public static void harvestCorn() {
         
-        System.out.println("You harvested Corn!");
+        System.out.println("You harvested Corn! (+$6)");
         Farm.setCurrency(6);
         Farm.setCurrencyChange(6);
     }

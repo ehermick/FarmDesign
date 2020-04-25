@@ -64,7 +64,7 @@ public class Farm {
      * Farm's currency getter.
      * @return currency Farm's bank
      */
-    public int getCurrency() {
+    public static int getCurrency() {
         return currency;
     }
     
@@ -318,7 +318,7 @@ public class Farm {
             
             setCurrency(-20);
             setCurrencyChange(-20);
-            System.out.println("You purchased 5 more plots of Corn");
+            System.out.println("You purchased 5 more plots of Corn (-$20)");
             
         } 
         if (riceNum == 0) {
@@ -330,7 +330,7 @@ public class Farm {
             
             setCurrency(-10);
             setCurrencyChange(-10);
-            System.out.println("You purchased 5 more plots of Rice");
+            System.out.println("You purchased 5 more plots of Rice (-$10)");
             
         } 
         if (wheatNum == 0) {
@@ -343,7 +343,7 @@ public class Farm {
             
             setCurrency(-50);
             setCurrencyChange(-50);
-            System.out.println("You purchased 5 more plots of Wheat");
+            System.out.println("You purchased 5 more plots of Wheat (-$50)");
         }
         
     }
@@ -381,7 +381,7 @@ public class Farm {
             
             setCurrency(-10);
             setCurrencyChange(-10);
-            System.out.println("You purchased 5 more Chickens!");
+            System.out.println("You purchased 5 more Chickens! (-$10)");
             
         } 
         if (cowNum == 0) {
@@ -393,7 +393,7 @@ public class Farm {
             
             setCurrency(-20);
             setCurrencyChange(-20);
-            System.out.println("You purchased 5 more Cows!");
+            System.out.println("You purchased 5 more Cows! (-$20)");
             
         } 
         if (sheepNum == 0) {
@@ -406,7 +406,7 @@ public class Farm {
             
             setCurrency(-50);
             setCurrencyChange(-50);
-            System.out.println("You purchased 5 more Sheep!");
+            System.out.println("You purchased 5 more Sheep! (-$50)");
         }
         
     }

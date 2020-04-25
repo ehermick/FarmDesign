@@ -12,12 +12,16 @@ import farm.Farm;
 import java.util.ArrayList;
 import java.util.Random;
 
+import main.Farmers;
+
 public class Rabbit extends Predators {
     
     
     static Random rand = new Random();
     
     private static ArrayList<Crops> crops = Farm.getCrops();
+    
+    private static boolean damagedCrop = false;
 
     public Rabbit(String name, int damage) {
         super(name, damage);
@@ -35,13 +39,25 @@ public class Rabbit extends Predators {
             if (selectedCrop instanceof Corn && chance == 2) {
                 Crops.damageHealth(Predators.getDamage());
                 System.out.println("A Rabbit damaged corn");
+                damagedCrop = true;
             } else if (selectedCrop instanceof Rice && chance == 4) {
                 Crops.damageHealth(Predators.getDamage());
                 System.out.println("A Rabbit damaged rice");
+                damagedCrop = true;
             } else if (selectedCrop instanceof Wheat && chance == 6) {
                 Crops.damageHealth(Predators.getDamage());
                 System.out.println("A Rabbit damaged wheat");
+                damagedCrop = true;
             } 
+        }
+    }
+    
+    /**
+     * Heals damage dealt.
+     */
+    public static void healDamage() {
+        if (damagedCrop == true) {
+            Farmers.treatCrop();
         }
     }
     

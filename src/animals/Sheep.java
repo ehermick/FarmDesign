@@ -14,7 +14,7 @@ public class Sheep extends Animal {
      */
     public static void harvestWool() {
 
-        System.out.println("You harvested Wool!");
+        System.out.println("You harvested Wool! (+20)");
         Farm.setCurrency(20);
         Farm.setCurrencyChange(20);
     }

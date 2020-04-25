@@ -1,5 +1,12 @@
 package main;
 
+import animals.Animal;
+import animals.Chicken;
+import crops.Crops;
+import farm.Farm;
+
+import java.util.ArrayList;
+
 //import affinities.FarmerAffinities;
 //import farm.Farm;
 
@@ -8,6 +15,9 @@ public class Farmers {
     public int animalSkill;
     public int cropSkill;
     public int moneySkill;
+    
+    private static ArrayList<Crops> crops = Farm.getCrops();
+    private static ArrayList<Animal> animals = Farm.getAnimals();
     
     /**
      * Constructor.
@@ -54,20 +64,32 @@ public class Farmers {
     public int getMoneySkill() {
         return moneySkill;
     }
+
+    /**
+     * Treat animals that are injured - $10.
+     */
+    public static void treatAnimal() {
+
+        Farm.setCurrency(-10);
+        Farm.setCurrencyChange(-10);
+        System.out.println("You treated an injured animal (-$10)");
+                
+        //Reset animal's health
+        Animal.setHealth(100); 
+    }
+
+    /**
+     * Treat crops that are damaged - $5.
+     */
+    public static void treatCrop() {
     
-    public void buyAnimal() {
-
-    }
-    
-    public void buyCrop() {
-
-    }
-
-    public void treatAnimal() {
-
-    }
-
-    public void treatCrop() {
+        Farm.setCurrency(-5);
+        Farm.setCurrencyChange(-5);
+            
+        System.out.println("You treated a damaged crop (-$5)");
+            
+        //Reset crop's health
+        Crops.setHealth(100);
 
     }
 

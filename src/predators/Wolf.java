@@ -9,11 +9,15 @@ import farm.Farm;
 import java.util.ArrayList;
 import java.util.Random;
 
+import main.Farmers;
+
 public class Wolf extends Predators {
     
     static Random rand = new Random();
     
     private static ArrayList<Animal> animals = Farm.getAnimals();
+    
+    private static boolean damagedAnimal = false;
 
     public Wolf(String name, int damage) {
         super(name, damage);
@@ -31,13 +35,25 @@ public class Wolf extends Predators {
             if (selectedAnimal instanceof Chicken && chance == 2) {
                 Animal.damageHealth(Predators.getDamage());
                 System.out.println("A Wolf injured a chicken");
+                damagedAnimal = true;
             } else if (selectedAnimal instanceof Cow && chance == 4) {
                 Animal.damageHealth(Predators.getDamage());
                 System.out.println("A Wolf injured a cow");
+                damagedAnimal = true;
             } else if (selectedAnimal instanceof Sheep && chance == 6) {
                 Animal.damageHealth(Predators.getDamage());
                 System.out.println("A Wolf injured a sheep");
+                damagedAnimal = true;
             } 
+        }
+    }
+    
+    /**
+     * Heals damage dealt.
+     */
+    public static void healDamage() {
+        if (damagedAnimal == true) {
+            Farmers.treatAnimal();
         }
     }
     

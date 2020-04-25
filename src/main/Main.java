@@ -22,8 +22,15 @@ public class Main {
         StateContext context = new StateContext(null);
         context.update();
         
-        //Simulation end when farm goes bankrupt or reaches $100 in the bank
-        for (int i = 0; i < 30; i++) {
+        //Simulation ends when farm goes bankrupt or reaches $1100 in the bank
+        boolean maxBank = false;
+        
+        
+        for (int i = 0; i < 1000; i++) {
+            
+            //Heal crops and animals injured from last night
+            Predators.healDamage();
+            
             //Check for births 
             Farm.birth();
             
@@ -47,7 +54,22 @@ public class Main {
             Predators.eat();
             Predators.damage();
             
-            //Check for damage to crops from predators
+            
+            if (Farm.getCurrency() >= 1100) {
+                System.out.println();
+                System.out.println("----------------------------------------------");
+                System.out.println("You've completed the simulation!");
+                System.out.println("You now have enough money to add another farm!");
+                System.out.println("----------------------------------------------");
+                break;
+            } else if (Farm.getCurrency() <= 0) {
+                System.out.println();
+                System.out.println("----------------------------------------------");
+                System.out.println("You've ran out of money!");
+                System.out.println("The simulation is now over");
+                System.out.println("----------------------------------------------");
+                break;
+            }
             
             context.update(); //Switch to day
             

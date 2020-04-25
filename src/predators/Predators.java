@@ -41,6 +41,16 @@ public class Predators {
     }
     
     /**
+     * Heals damage dealt.
+     */
+    public static void healDamage() {
+        Fox.healDamage();
+        Wolf.healDamage();
+        Mole.healDamage();
+        Rabbit.healDamage();
+    }
+    
+    /**
      * Eat animals.
      */
     public static void eat() {
