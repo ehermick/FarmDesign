@@ -21,47 +21,20 @@ import state.StateContext;
  */
 public class TestBirth {
     
-    private Cow cow1;
-    
-    private Chicken chicken3;
-    
-    private Chicken chicken4;
-    private Cow cow4;
-    private Sheep sheep4;
-    
     StateContext context;
+
+    //Old enough, but too low birthcycle
     
-    /**
-     * Setup before tests.
-     */
-    @Before
-    public void setup() {
-        
-        //Old enough, but too low birthcycle
-        cow1 = new Cow("Cow", 100, 3, -30, 2);
-        
-        //Too young, high enough birthcycle
-        //sheep2 = new Sheep("Sheep", 100, -40, 5, 2);
-        
-        //Too young, and too low birthcycle
-        chicken3 = new Chicken("Chicken", 100, 0, 0, 2);
-        
-        //Old enough, high enough birthcycle
-        chicken4 = new Chicken("Chicken", 100, 3, 5, 2);
-        cow4 = new Cow("Cow", 100, 3, 5, 2);
-        sheep4 = new Sheep("Sheep", 100, 3, 5, 2);
+    @Test
+    public void birthTest1() {
         
         context = new StateContext(null); //Day
         
-    }
-    
-    
-    //Old enough, but too low birthcycle
-    @Test
-    public void birthTest1() {
         Farm.resetCurrencyChange();
         Farm.resetAnimals();
         
+        //Old enough, but too low birthcycle
+        Cow cow1 = new Cow("Cow", 100, 3, -30, 2);
         Farm.addAnimal(cow1);
         
         Farm.birth();
@@ -73,10 +46,17 @@ public class TestBirth {
     }
     
     //Too young, and too low birthcycle
+    
     @Test
     public void birthTest3() {
+        
+        context = new StateContext(null); //Day
+        
         Farm.resetCurrencyChange();
         Farm.resetAnimals();
+        
+        //Too young, and too low birthcycle
+        Chicken chicken3 = new Chicken("Chicken", 100, 0, 0, 2);
         
         Farm.addAnimal(chicken3);
         
@@ -89,8 +69,12 @@ public class TestBirth {
     }
     
     //Old enough, and high enough birthcycle - Chicken
+    
     @Test
     public void birthTestChicken() {
+        
+        context = new StateContext(null); //Day
+        
         Farm.resetCurrencyChange();
         Farm.resetAnimals();
         
@@ -98,6 +82,9 @@ public class TestBirth {
         context.update(); //Day
         context.update(); //Night
         context.update(); //Day
+        
+        //Old enough, high enough birthcycle
+        Chicken chicken4 = new Chicken("Chicken", 100, 3, 5, 2);
         
         Farm.addAnimal(chicken4);
         
@@ -117,14 +104,20 @@ public class TestBirth {
         boolean actualSize = Farm.getAnimalsSize() >= 2;
         
         assertEquals("Chicken Birth", expectedSize, actualSize); 
-    }
+    } 
     
     //Old enough, and high enough birthcycle - Cow
+    
     @Test
     public void birthTestCow() {
+        
+        context = new StateContext(null); //Day
+        
         Farm.resetCurrencyChange();
         Farm.resetAnimals();
         
+        //Old enough, high enough birthcycle
+        Cow cow4 = new Cow("Cow", 100, 3, 5, 2);
         Farm.addAnimal(cow4);
         
         context = new StateContext(null); //Day
@@ -152,10 +145,17 @@ public class TestBirth {
     }
     
     //Old enough, and high enough birthcycle - Sheep
+    
     @Test
     public void birthTestSheep() {
+        
+        context = new StateContext(null); //Day
+        
         Farm.resetCurrencyChange();
         Farm.resetAnimals();
+        
+        //Old enough, high enough birthcycle
+        Sheep sheep4 = new Sheep("Sheep", 100, 3, 5, 2);
         
         Farm.addAnimal(sheep4);
         

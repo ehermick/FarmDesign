@@ -23,11 +23,10 @@ public class TestDeath {
     
     StateContext contextDeath;
     
-    /**
-     * Setup before tests.
-     */
-    @Before
-    public void setup() {
+    
+    //Not old enough
+    @Test
+    public void deathTest1() {
         
         //Too old
         chicken = new Chicken("Chicken", 100, 14, 0, 2);
@@ -35,11 +34,7 @@ public class TestDeath {
         //Not old enough
         cow = new Cow("Cow", 100, 5, 0, 2);
         
-    }
-    
-    //Not old enough
-    @Test
-    public void deathTest1() {
+        
         Farm.resetAnimals();
         
         Farm.addAnimal(cow);
@@ -54,6 +49,13 @@ public class TestDeath {
     //Too old
     @Test
     public void deathTest2() {
+        //Too old
+        chicken = new Chicken("Chicken", 100, 14, 0, 2);
+        
+        //Not old enough
+        cow = new Cow("Cow", 100, 5, 0, 2);
+        
+        
         Farm.resetAnimals();
         
         Farm.addAnimal(chicken);

@@ -29,12 +29,10 @@ public class TestRemoveItems {
     private Sheep sheep;
     
     private int currencyChange = 0;
+
     
-    /**
-     * Setup before tests.
-     */
-    @Before
-    public void setup() {
+    @Test
+    public void removeCropsTest() {
         hf = new HybridFarm(10, 0, 0);
         
         corn = new Corn("Corn", 100, 0, 3, 0);
@@ -44,10 +42,7 @@ public class TestRemoveItems {
         chicken = new Chicken("Chicken", 100, 3, 0, 2);
         cow = new Cow("Cow", 100, 3, 0, 2);
         sheep = new Sheep("Sheep", 100, 3, 0, 2);
-    }
-    
-    @Test
-    public void removeCropsTest() {
+        
         
         Farm.resetCurrencyChange();
         
@@ -78,6 +73,17 @@ public class TestRemoveItems {
     
     @Test
     public void removeAnimalsTest() {
+        
+        hf = new HybridFarm(10, 0, 0);
+        
+        corn = new Corn("Corn", 100, 0, 3, 0);
+        rice = new Rice("Rice", 100, 0, 3, 0);
+        wheat = new Wheat("Wheat", 100, 0, 3, 0);
+        
+        chicken = new Chicken("Chicken", 100, 3, 0, 2);
+        cow = new Cow("Cow", 100, 3, 0, 2);
+        sheep = new Sheep("Sheep", 100, 3, 0, 2);
+        
         Farm.resetCurrencyChange();
         
         Farm.addAnimal(chicken);

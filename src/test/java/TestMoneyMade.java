@@ -14,19 +14,12 @@ import org.junit.Test;
 public class TestMoneyMade {
 
     private Chicken chicken;
-
-    
-    /**
-     * Setup before tests.
-     */
-    @Before
-    public void setup() {
-        chicken = new Chicken("Chicken", 100, 3, 0, 2);
-
-    }
     
     @Test
     public void moneyMadeTest() {
+        
+        chicken = new Chicken("Chicken", 100, 3, 0, 2);
+        
         Farm.resetCurrencyChange();
         Farm.resetAnimals();
         

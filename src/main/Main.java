@@ -42,7 +42,7 @@ public class Main {
             Farm.harvestCrops();
             
             //Replenish crops and animals
-            Farm.replenishCrops();
+            Farm.replenishCrops(); 
             Farm.replenishAnimals();
             
             //Money made for the day

@@ -20,25 +20,19 @@ public class TestHarvestProduce {
     private Cow cow;
     private Sheep sheep;
     private int currencyChange = 0;
-    
-    /**
-     * Setup before tests.
-     */
-    @Before
-    public void setup() {
-        af = new AnimalFarm(10, 0, 0);
-        
-        chicken = new Chicken("Chicken", 100, 3, 0, 2);
-        cow = new Cow("Cow", 100, 3, 0, 2);
-        sheep = new Sheep("Sheep", 100, 3, 0, 2);
-        
-    }
+   
     
     /**
      * Tests the harvest of animal produce.
      */
     @Test
     public void harvestEggsTest() {
+        af = new AnimalFarm(10, 0, 0);
+        
+        chicken = new Chicken("Chicken", 100, 3, 0, 2);
+        cow = new Cow("Cow", 100, 3, 0, 2);
+        sheep = new Sheep("Sheep", 100, 3, 0, 2);
+        
         Farm.resetCurrencyChange();
         Farm.resetAnimals();
         
@@ -65,6 +59,12 @@ public class TestHarvestProduce {
     
     @Test
     public void harvestMilkTest() {
+        af = new AnimalFarm(10, 0, 0);
+        
+        chicken = new Chicken("Chicken", 100, 3, 0, 2);
+        cow = new Cow("Cow", 100, 3, 0, 2);
+        sheep = new Sheep("Sheep", 100, 3, 0, 2);
+        
         Farm.resetCurrencyChange();
         Farm.resetAnimals();
         
@@ -83,6 +83,12 @@ public class TestHarvestProduce {
     
     @Test
     public void harvestWoolTest() {
+        af = new AnimalFarm(10, 0, 0);
+        
+        chicken = new Chicken("Chicken", 100, 3, 0, 2);
+        cow = new Cow("Cow", 100, 3, 0, 2);
+        sheep = new Sheep("Sheep", 100, 3, 0, 2);
+        
         Farm.resetCurrencyChange();
         Farm.resetAnimals();
         

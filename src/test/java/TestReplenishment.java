@@ -28,11 +28,9 @@ public class TestReplenishment {
     
     private int currencyChange = 0;
     
-    /**
-     * Setup before tests.
-     */
-    @Before
-    public void setUp() {
+    
+    @Test
+    public void replenishCropsTest1() {
         hf = new HybridFarm(10, 0, 0);
         
         corn = new Corn("Corn", 100, 0, 3, 0);
@@ -42,10 +40,7 @@ public class TestReplenishment {
         chicken = new Chicken("Chicken", 100, 3, 0, 2);
         cow = new Cow("Cow", 100, 3, 0, 2);
         sheep = new Sheep("Sheep", 100, 3, 0, 2);
-    }
-    
-    @Test
-    public void replenishCropsTest1() {
+        
         Farm.resetCurrencyChange(); //Reset counter for next test
         Farm.resetCrops();
         
@@ -77,6 +72,16 @@ public class TestReplenishment {
     
     @Test
     public void replenishCropsTest2() {
+        hf = new HybridFarm(10, 0, 0);
+        
+        corn = new Corn("Corn", 100, 0, 3, 0);
+        rice = new Rice("Rice", 100, 0, 3, 0);
+        wheat = new Wheat("Wheat", 100, 0, 3, 0);
+        
+        chicken = new Chicken("Chicken", 100, 3, 0, 2);
+        cow = new Cow("Cow", 100, 3, 0, 2);
+        sheep = new Sheep("Sheep", 100, 3, 0, 2);
+        
         Farm.resetCurrencyChange(); //Reset counter for next test
         Farm.resetCrops();
         
@@ -108,6 +113,16 @@ public class TestReplenishment {
     
     @Test
     public void replenishCropsTest3() {
+        hf = new HybridFarm(10, 0, 0);
+        
+        corn = new Corn("Corn", 100, 0, 3, 0);
+        rice = new Rice("Rice", 100, 0, 3, 0);
+        wheat = new Wheat("Wheat", 100, 0, 3, 0);
+        
+        chicken = new Chicken("Chicken", 100, 3, 0, 2);
+        cow = new Cow("Cow", 100, 3, 0, 2);
+        sheep = new Sheep("Sheep", 100, 3, 0, 2);
+        
         Farm.resetCurrencyChange(); //Reset counter for next test
         Farm.resetCrops();
         
@@ -139,6 +154,15 @@ public class TestReplenishment {
     
     @Test
     public void replenishAnimalsTest1() {
+        hf = new HybridFarm(10, 0, 0);
+        
+        corn = new Corn("Corn", 100, 0, 3, 0);
+        rice = new Rice("Rice", 100, 0, 3, 0);
+        wheat = new Wheat("Wheat", 100, 0, 3, 0);
+        
+        chicken = new Chicken("Chicken", 100, 3, 0, 2);
+        cow = new Cow("Cow", 100, 3, 0, 2);
+        sheep = new Sheep("Sheep", 100, 3, 0, 2);
         
         Farm.resetCurrencyChange(); //Reset counter for next test
         Farm.resetAnimals();
@@ -171,6 +195,15 @@ public class TestReplenishment {
     
     @Test
     public void replenishAnimalsTest2() {
+        hf = new HybridFarm(10, 0, 0);
+        
+        corn = new Corn("Corn", 100, 0, 3, 0);
+        rice = new Rice("Rice", 100, 0, 3, 0);
+        wheat = new Wheat("Wheat", 100, 0, 3, 0);
+        
+        chicken = new Chicken("Chicken", 100, 3, 0, 2);
+        cow = new Cow("Cow", 100, 3, 0, 2);
+        sheep = new Sheep("Sheep", 100, 3, 0, 2);
         
         Farm.resetCurrencyChange(); //Reset counter for next test
         Farm.resetAnimals();
@@ -203,6 +236,15 @@ public class TestReplenishment {
     
     @Test
     public void replenishAnimalsTest3() {
+        hf = new HybridFarm(10, 0, 0);
+        
+        corn = new Corn("Corn", 100, 0, 3, 0);
+        rice = new Rice("Rice", 100, 0, 3, 0);
+        wheat = new Wheat("Wheat", 100, 0, 3, 0);
+        
+        chicken = new Chicken("Chicken", 100, 3, 0, 2);
+        cow = new Cow("Cow", 100, 3, 0, 2);
+        sheep = new Sheep("Sheep", 100, 3, 0, 2);
         
         Farm.resetCurrencyChange(); //Reset counter for next test
         Farm.resetAnimals();

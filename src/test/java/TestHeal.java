@@ -35,12 +35,9 @@ public class TestHeal {
     private Rabbit rabbit;
     private Mole mole;
     
-    /**
-     * Setup before tests.
-     */
-    @Before
-    public void setUp() {
-        
+    
+    @Test
+    public void injuredChicken() {
         corn = new Corn("Corn", 100, 0, 3, 0);
         rice = new Rice("Rice", 100, 0, 3, 0);
         wheat = new Wheat("Wheat", 100, 0, 3, 0);
@@ -53,10 +50,7 @@ public class TestHeal {
         wolf = new Wolf("Wolf", 10);
         rabbit = new Rabbit("Rabbit", 10);
         mole = new Mole("Mole", 10);
-    }
-    
-    @Test
-    public void injuredChicken() {
+        
         Farm.addPredator(fox);
         Farm.addPredator(wolf);
         Farm.addPredator(rabbit);
@@ -82,6 +76,19 @@ public class TestHeal {
     
     @Test
     public void injuredCow() {
+        corn = new Corn("Corn", 100, 0, 3, 0);
+        rice = new Rice("Rice", 100, 0, 3, 0);
+        wheat = new Wheat("Wheat", 100, 0, 3, 0);
+        
+        chicken = new Chicken("Chicken", 100, 0, 0, 0);
+        cow = new Cow("Cow", 100, 0, 0, 0);
+        sheep = new Sheep("Sheep", 100, 0, 0, 0);  
+        
+        fox = new Fox("Fox", 10);
+        wolf = new Wolf("Wolf", 10);
+        rabbit = new Rabbit("Rabbit", 10);
+        mole = new Mole("Mole", 10);
+        
         Farm.addPredator(fox);
         Farm.addPredator(wolf);
         Farm.addPredator(rabbit);
@@ -107,6 +114,19 @@ public class TestHeal {
     
     @Test
     public void injuredSheep() {
+        corn = new Corn("Corn", 100, 0, 3, 0);
+        rice = new Rice("Rice", 100, 0, 3, 0);
+        wheat = new Wheat("Wheat", 100, 0, 3, 0);
+        
+        chicken = new Chicken("Chicken", 100, 0, 0, 0);
+        cow = new Cow("Cow", 100, 0, 0, 0);
+        sheep = new Sheep("Sheep", 100, 0, 0, 0);  
+        
+        fox = new Fox("Fox", 10);
+        wolf = new Wolf("Wolf", 10);
+        rabbit = new Rabbit("Rabbit", 10);
+        mole = new Mole("Mole", 10);
+        
         Farm.addPredator(fox);
         Farm.addPredator(wolf);
         Farm.addPredator(rabbit);
@@ -132,6 +152,19 @@ public class TestHeal {
     
     @Test
     public void damagedCorn() {
+        corn = new Corn("Corn", 100, 0, 3, 0);
+        rice = new Rice("Rice", 100, 0, 3, 0);
+        wheat = new Wheat("Wheat", 100, 0, 3, 0);
+        
+        chicken = new Chicken("Chicken", 100, 0, 0, 0);
+        cow = new Cow("Cow", 100, 0, 0, 0);
+        sheep = new Sheep("Sheep", 100, 0, 0, 0);  
+        
+        fox = new Fox("Fox", 10);
+        wolf = new Wolf("Wolf", 10);
+        rabbit = new Rabbit("Rabbit", 10);
+        mole = new Mole("Mole", 10);
+        
         Farm.addPredator(fox);
         Farm.addPredator(wolf);
         Farm.addPredator(rabbit);
@@ -157,6 +190,19 @@ public class TestHeal {
     
     @Test
     public void damagedRice() {
+        corn = new Corn("Corn", 100, 0, 3, 0);
+        rice = new Rice("Rice", 100, 0, 3, 0);
+        wheat = new Wheat("Wheat", 100, 0, 3, 0);
+        
+        chicken = new Chicken("Chicken", 100, 0, 0, 0);
+        cow = new Cow("Cow", 100, 0, 0, 0);
+        sheep = new Sheep("Sheep", 100, 0, 0, 0);  
+        
+        fox = new Fox("Fox", 10);
+        wolf = new Wolf("Wolf", 10);
+        rabbit = new Rabbit("Rabbit", 10);
+        mole = new Mole("Mole", 10);
+        
         Farm.addPredator(fox);
         Farm.addPredator(wolf);
         Farm.addPredator(rabbit);
@@ -182,6 +228,19 @@ public class TestHeal {
     
     @Test
     public void damagedWheat() {
+        corn = new Corn("Corn", 100, 0, 3, 0);
+        rice = new Rice("Rice", 100, 0, 3, 0);
+        wheat = new Wheat("Wheat", 100, 0, 3, 0);
+        
+        chicken = new Chicken("Chicken", 100, 0, 0, 0);
+        cow = new Cow("Cow", 100, 0, 0, 0);
+        sheep = new Sheep("Sheep", 100, 0, 0, 0);  
+        
+        fox = new Fox("Fox", 10);
+        wolf = new Wolf("Wolf", 10);
+        rabbit = new Rabbit("Rabbit", 10);
+        mole = new Mole("Mole", 10);
+        
         Farm.addPredator(fox);
         Farm.addPredator(wolf);
         Farm.addPredator(rabbit);

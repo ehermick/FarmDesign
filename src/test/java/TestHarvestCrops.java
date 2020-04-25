@@ -23,20 +23,7 @@ public class TestHarvestCrops {
     private Rice rice;
     private Wheat wheat;
     private int currencyChange = 0;
-    
-    
-    /**
-     * Setup before tests.
-     */
-    @Before
-    public void setUp() {
-        cf = new CropFarm(10, 0, 0);
-
-        corn = new Corn("Corn", 100, 0, 3, 0);
-        rice = new Rice("Rice", 100, 0, 3, 0);
-        wheat = new Wheat("Wheat", 100, 0, 3, 0);
-        
-    }
+   
     
     
     /**
@@ -44,6 +31,12 @@ public class TestHarvestCrops {
      */
     @Test
     public void harvestCrops() {
+        cf = new CropFarm(10, 0, 0);
+
+        corn = new Corn("Corn", 100, 0, 3, 0);
+        rice = new Rice("Rice", 100, 0, 3, 0);
+        wheat = new Wheat("Wheat", 100, 0, 3, 0);
+        
 
         
         //Add 5 plots of corn
