@@ -12,7 +12,7 @@ import state.StateContext;
 
 public abstract class Crops {
 
-    public static int health;
+    protected static int health;
     //private int productWorth;
     //private int dayLastHarvested;
     //private CropFarm cropFarm;

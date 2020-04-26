@@ -9,6 +9,8 @@ import affinities.DecoratorProdSheep;
 //import affinities.AnimalAffinities;
 //import farm.AnimalFarm;
 //import farm.HybridFarm;
+
+
 import state.StateContext;
 
 public abstract class Animal {
@@ -19,14 +21,6 @@ public abstract class Animal {
     public int birthCycle;
     public int harvestCycle;
     //public int production;
-    //public static int production;
-    //private int productWorth;
-    //private AnimalFarm animalFarm;
-    //private AnimalAffinities animalAffinities;
-    //private HybridFarm hybridFarm;
-
-    
-
     
     public abstract String name();
     
@@ -104,7 +98,7 @@ public abstract class Animal {
      */
     public static void damageHealth(int damage) {
         int newHealth = health - damage;
-        setHealth(newHealth);
+        health = newHealth;
     }
     
     /**
