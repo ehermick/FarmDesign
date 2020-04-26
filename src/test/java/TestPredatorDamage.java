@@ -37,13 +37,13 @@ public class TestPredatorDamage {
     
     @Test
     public void eatChicken() {
-        corn = new Corn("Corn", 100, 0, 3, 0);
-        rice = new Rice("Rice", 100, 0, 3, 0);
-        wheat = new Wheat("Wheat", 100, 0, 3, 0);
+        corn = new Corn();
+        rice = new Rice();
+        wheat = new Wheat();
         
-        chicken = new Chicken("Chicken", 100, 0, 0, 0);
-        cow = new Cow("Cow", 100, 0, 0, 0);
-        sheep = new Sheep("Sheep", 100, 0, 0, 0);  
+        chicken = new Chicken();
+        cow = new Cow();
+        sheep = new Sheep();  
         
         fox = new Fox("Fox", 10);
         wolf = new Wolf("Wolf", 10);
@@ -95,13 +95,13 @@ public class TestPredatorDamage {
     
     @Test
     public void eatCow() {
-        corn = new Corn("Corn", 100, 0, 3, 0);
-        rice = new Rice("Rice", 100, 0, 3, 0);
-        wheat = new Wheat("Wheat", 100, 0, 3, 0);
+        corn = new Corn();
+        rice = new Rice();
+        wheat = new Wheat();
         
-        chicken = new Chicken("Chicken", 100, 0, 0, 0);
-        cow = new Cow("Cow", 100, 0, 0, 0);
-        sheep = new Sheep("Sheep", 100, 0, 0, 0);  
+        chicken = new Chicken();
+        cow = new Cow();
+        sheep = new Sheep();  
         
         fox = new Fox("Fox", 10);
         wolf = new Wolf("Wolf", 10);
@@ -153,13 +153,13 @@ public class TestPredatorDamage {
     @Test
     public void eatSheep() {
         
-        corn = new Corn("Corn", 100, 0, 3, 0);
-        rice = new Rice("Rice", 100, 0, 3, 0);
-        wheat = new Wheat("Wheat", 100, 0, 3, 0);
+        corn = new Corn();
+        rice = new Rice();
+        wheat = new Wheat();
         
-        chicken = new Chicken("Chicken", 100, 0, 0, 0);
-        cow = new Cow("Cow", 100, 0, 0, 0);
-        sheep = new Sheep("Sheep", 100, 0, 0, 0);  
+        chicken = new Chicken();
+        cow = new Cow();
+        sheep = new Sheep();  
         
         fox = new Fox("Fox", 10);
         wolf = new Wolf("Wolf", 10);
@@ -211,13 +211,13 @@ public class TestPredatorDamage {
     @Test
     public void eatAnimals() {
         
-        corn = new Corn("Corn", 100, 0, 3, 0);
-        rice = new Rice("Rice", 100, 0, 3, 0);
-        wheat = new Wheat("Wheat", 100, 0, 3, 0);
+        corn = new Corn();
+        rice = new Rice();
+        wheat = new Wheat();
         
-        chicken = new Chicken("Chicken", 100, 0, 0, 0);
-        cow = new Cow("Cow", 100, 0, 0, 0);
-        sheep = new Sheep("Sheep", 100, 0, 0, 0);  
+        chicken = new Chicken();
+        cow = new Cow();
+        sheep = new Sheep();  
         
         fox = new Fox("Fox", 10);
         wolf = new Wolf("Wolf", 10);
@@ -268,13 +268,13 @@ public class TestPredatorDamage {
     @Test
     public void eatCorn() {
         
-        corn = new Corn("Corn", 100, 0, 3, 0);
-        rice = new Rice("Rice", 100, 0, 3, 0);
-        wheat = new Wheat("Wheat", 100, 0, 3, 0);
+        corn = new Corn();
+        rice = new Rice();
+        wheat = new Wheat();
         
-        chicken = new Chicken("Chicken", 100, 0, 0, 0);
-        cow = new Cow("Cow", 100, 0, 0, 0);
-        sheep = new Sheep("Sheep", 100, 0, 0, 0);  
+        chicken = new Chicken();
+        cow = new Cow();
+        sheep = new Sheep();  
         
         fox = new Fox("Fox", 10);
         wolf = new Wolf("Wolf", 10);
@@ -326,13 +326,13 @@ public class TestPredatorDamage {
     @Test
     public void eatRice() {
         
-        corn = new Corn("Corn", 100, 0, 3, 0);
-        rice = new Rice("Rice", 100, 0, 3, 0);
-        wheat = new Wheat("Wheat", 100, 0, 3, 0);
+        corn = new Corn();
+        rice = new Rice();
+        wheat = new Wheat();
         
-        chicken = new Chicken("Chicken", 100, 0, 0, 0);
-        cow = new Cow("Cow", 100, 0, 0, 0);
-        sheep = new Sheep("Sheep", 100, 0, 0, 0);  
+        chicken = new Chicken();
+        cow = new Cow();
+        sheep = new Sheep();  
         
         fox = new Fox("Fox", 10);
         wolf = new Wolf("Wolf", 10);
@@ -384,13 +384,13 @@ public class TestPredatorDamage {
     @Test
     public void eatWheat() {
         
-        corn = new Corn("Corn", 100, 0, 3, 0);
-        rice = new Rice("Rice", 100, 0, 3, 0);
-        wheat = new Wheat("Wheat", 100, 0, 3, 0);
+        corn = new Corn();
+        rice = new Rice();
+        wheat = new Wheat();
         
-        chicken = new Chicken("Chicken", 100, 0, 0, 0);
-        cow = new Cow("Cow", 100, 0, 0, 0);
-        sheep = new Sheep("Sheep", 100, 0, 0, 0);  
+        chicken = new Chicken();
+        cow = new Cow();
+        sheep = new Sheep();  
         
         fox = new Fox("Fox", 10);
         wolf = new Wolf("Wolf", 10);
@@ -442,13 +442,13 @@ public class TestPredatorDamage {
     @Test
     public void eatCrops() {
         
-        corn = new Corn("Corn", 100, 0, 3, 0);
-        rice = new Rice("Rice", 100, 0, 3, 0);
-        wheat = new Wheat("Wheat", 100, 0, 3, 0);
+        corn = new Corn();
+        rice = new Rice();
+        wheat = new Wheat();
         
-        chicken = new Chicken("Chicken", 100, 0, 0, 0);
-        cow = new Cow("Cow", 100, 0, 0, 0);
-        sheep = new Sheep("Sheep", 100, 0, 0, 0);  
+        chicken = new Chicken();
+        cow = new Cow();
+        sheep = new Sheep();  
         
         fox = new Fox("Fox", 10);
         wolf = new Wolf("Wolf", 10);

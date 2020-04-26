@@ -9,17 +9,21 @@ import animals.Sheep;
 import farm.AnimalFarm;
 import farm.Farm;
 import farm.HybridFarm;
+import state.StateContext;
 
 import org.junit.Before;
 import org.junit.Test;
 
+import affinities.DecoratorAgeHarvestChicken;
+import affinities.DecoratorAgeHarvestCow;
+import affinities.DecoratorAgeHarvestSheep;
+
 public class TestHarvestProduce {
     
     private AnimalFarm af;
-    private Chicken chicken;
-    private Cow cow;
-    private Sheep sheep;
+
     private int currencyChange = 0;
+
    
     
     /**
@@ -27,11 +31,11 @@ public class TestHarvestProduce {
      */
     @Test
     public void harvestEggsTest() {
+      
         af = new AnimalFarm(10, 0, 0);
         
-        chicken = new Chicken("Chicken", 100, 3, 0, 2);
-        cow = new Cow("Cow", 100, 3, 0, 2);
-        sheep = new Sheep("Sheep", 100, 3, 0, 2);
+        DecoratorAgeHarvestChicken chicken = new DecoratorAgeHarvestChicken("Chicken", 100, 3, 0, 5, 1);
+
         
         Farm.resetCurrencyChange();
         Farm.resetAnimals();
@@ -60,10 +64,8 @@ public class TestHarvestProduce {
     @Test
     public void harvestMilkTest() {
         af = new AnimalFarm(10, 0, 0);
-        
-        chicken = new Chicken("Chicken", 100, 3, 0, 2);
-        cow = new Cow("Cow", 100, 3, 0, 2);
-        sheep = new Sheep("Sheep", 100, 3, 0, 2);
+
+        DecoratorAgeHarvestCow cow = new DecoratorAgeHarvestCow("Cow", 100, 3, 0, 2, 1);
         
         Farm.resetCurrencyChange();
         Farm.resetAnimals();
@@ -84,10 +86,8 @@ public class TestHarvestProduce {
     @Test
     public void harvestWoolTest() {
         af = new AnimalFarm(10, 0, 0);
-        
-        chicken = new Chicken("Chicken", 100, 3, 0, 2);
-        cow = new Cow("Cow", 100, 3, 0, 2);
-        sheep = new Sheep("Sheep", 100, 3, 0, 2);
+       
+        DecoratorAgeHarvestSheep sheep = new DecoratorAgeHarvestSheep("Sheep", 100, 3, 0, 2, 1);
         
         Farm.resetCurrencyChange();
         Farm.resetAnimals();

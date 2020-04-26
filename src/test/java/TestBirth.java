@@ -34,7 +34,7 @@ public class TestBirth {
         Farm.resetAnimals();
         
         //Old enough, but too low birthcycle
-        Cow cow1 = new Cow("Cow", 100, 3, -30, 2);
+        Cow cow1 = new Cow();
         Farm.addAnimal(cow1);
         
         Farm.birth();
@@ -56,7 +56,7 @@ public class TestBirth {
         Farm.resetAnimals();
         
         //Too young, and too low birthcycle
-        Chicken chicken3 = new Chicken("Chicken", 100, 0, 0, 2);
+        Chicken chicken3 = new Chicken();
         
         Farm.addAnimal(chicken3);
         
@@ -84,7 +84,7 @@ public class TestBirth {
         context.update(); //Day
         
         //Old enough, high enough birthcycle
-        Chicken chicken4 = new Chicken("Chicken", 100, 3, 5, 2);
+        Chicken chicken4 = new Chicken();
         
         Farm.addAnimal(chicken4);
         
@@ -117,7 +117,7 @@ public class TestBirth {
         Farm.resetAnimals();
         
         //Old enough, high enough birthcycle
-        Cow cow4 = new Cow("Cow", 100, 3, 5, 2);
+        Cow cow4 = new Cow();
         Farm.addAnimal(cow4);
         
         context = new StateContext(null); //Day
@@ -155,7 +155,7 @@ public class TestBirth {
         Farm.resetAnimals();
         
         //Old enough, high enough birthcycle
-        Sheep sheep4 = new Sheep("Sheep", 100, 3, 5, 2);
+        Sheep sheep4 = new Sheep();
         
         Farm.addAnimal(sheep4);
         

@@ -29,10 +29,10 @@ public class TestDeath {
     public void deathTest1() {
         
         //Too old
-        chicken = new Chicken("Chicken", 100, 14, 0, 2);
+        chicken = new Chicken();
         
         //Not old enough
-        cow = new Cow("Cow", 100, 5, 0, 2);
+        cow = new Cow();
         
         
         Farm.resetAnimals();
@@ -50,10 +50,10 @@ public class TestDeath {
     @Test
     public void deathTest2() {
         //Too old
-        chicken = new Chicken("Chicken", 100, 14, 0, 2);
+        chicken = new Chicken();
         
         //Not old enough
-        cow = new Cow("Cow", 100, 5, 0, 2);
+        cow = new Cow();
         
         
         Farm.resetAnimals();

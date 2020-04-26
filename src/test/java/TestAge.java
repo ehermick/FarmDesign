@@ -15,12 +15,13 @@ import farm.HybridFarm;
 import org.junit.Before;
 import org.junit.Test;
 
+import affinities.DecoratorHarvestCorn;
+import affinities.DecoratorHarvestWheat;
+
 public class TestAge {
     
     private HybridFarm hf;
-    
-    private Corn corn1;
-    private Wheat wheat1;
+
     
     private Corn corn2;
     private Rice rice2;
@@ -43,23 +44,10 @@ public class TestAge {
         hf = new HybridFarm(10, 0, 0);
         
         //Old enough crops
-        corn1 = new Corn("Corn", 100, 0, 3, 0);
-        wheat1 = new Wheat("Wheat", 100, 0, 3, 0);
-        //Too young crops
-        corn2 = new Corn("Corn", 100, 0, 0, 0);
-        rice2 = new Rice("Rice", 100, 0, 0, 0);
+        DecoratorHarvestCorn corn1 = new DecoratorHarvestCorn("Corn", 100, 0, 3, 1);
+        DecoratorHarvestWheat wheat1 = new DecoratorHarvestWheat("Wheat", 100, 0, 3, 1);
         
-        //Animals with too young ages
-        chicken1 = new Chicken("Chicken", 100, 0, 0, 2);
-        cow1 = new Cow("Cow", 100, 0, 0, 2);
-        
-        //Animals with too young harvest cycles
-        chicken2 = new Chicken("Chicken", 100, 3, 0, 0);
-        sheep2 = new Sheep("Sheep", 100, 3, 0, 0);
-        
-        //Animals with too young ages & harvest cycles
-        cow3 = new Cow("Cow", 100, 0, 0, 0);
-        sheep3 = new Sheep("Sheep", 100, 0, 0, 0);
+
         
         Farm.resetCurrencyChange();
         Farm.resetCrops();
@@ -84,24 +72,9 @@ public class TestAge {
         
         hf = new HybridFarm(10, 0, 0);
         
-        //Old enough crops
-        corn1 = new Corn("Corn", 100, 0, 3, 0);
-        wheat1 = new Wheat("Wheat", 100, 0, 3, 0);
         //Too young crops
-        corn2 = new Corn("Corn", 100, 0, 0, 0);
-        rice2 = new Rice("Rice", 100, 0, 0, 0);
-        
-        //Animals with too young ages
-        chicken1 = new Chicken("Chicken", 100, 0, 0, 2);
-        cow1 = new Cow("Cow", 100, 0, 0, 2);
-        
-        //Animals with too young harvest cycles
-        chicken2 = new Chicken("Chicken", 100, 3, 0, 0);
-        sheep2 = new Sheep("Sheep", 100, 3, 0, 0);
-        
-        //Animals with too young ages & harvest cycles
-        cow3 = new Cow("Cow", 100, 0, 0, 0);
-        sheep3 = new Sheep("Sheep", 100, 0, 0, 0);
+        corn2 = new Corn();
+        rice2 = new Rice();
         
         Farm.resetCurrencyChange();
         Farm.resetCrops();
@@ -126,24 +99,10 @@ public class TestAge {
         
         hf = new HybridFarm(10, 0, 0);
         
-        //Old enough crops
-        corn1 = new Corn("Corn", 100, 0, 3, 0);
-        wheat1 = new Wheat("Wheat", 100, 0, 3, 0);
-        //Too young crops
-        corn2 = new Corn("Corn", 100, 0, 0, 0);
-        rice2 = new Rice("Rice", 100, 0, 0, 0);
-        
         //Animals with too young ages
-        chicken1 = new Chicken("Chicken", 100, 0, 0, 2);
-        cow1 = new Cow("Cow", 100, 0, 0, 2);
-        
-        //Animals with too young harvest cycles
-        chicken2 = new Chicken("Chicken", 100, 3, 0, 0);
-        sheep2 = new Sheep("Sheep", 100, 3, 0, 0);
-        
-        //Animals with too young ages & harvest cycles
-        cow3 = new Cow("Cow", 100, 0, 0, 0);
-        sheep3 = new Sheep("Sheep", 100, 0, 0, 0);
+        chicken1 = new Chicken();
+        cow1 = new Cow();
+
         
         Farm.resetCurrencyChange();
         Farm.resetAnimals();
@@ -164,25 +123,12 @@ public class TestAge {
     public void harvestCycleAnimalsTest() {
         
         hf = new HybridFarm(10, 0, 0);
-        
-        //Old enough crops
-        corn1 = new Corn("Corn", 100, 0, 3, 0);
-        wheat1 = new Wheat("Wheat", 100, 0, 3, 0);
-        //Too young crops
-        corn2 = new Corn("Corn", 100, 0, 0, 0);
-        rice2 = new Rice("Rice", 100, 0, 0, 0);
-        
-        //Animals with too young ages
-        chicken1 = new Chicken("Chicken", 100, 0, 0, 2);
-        cow1 = new Cow("Cow", 100, 0, 0, 2);
+
         
         //Animals with too young harvest cycles
-        chicken2 = new Chicken("Chicken", 100, 3, 0, 0);
-        sheep2 = new Sheep("Sheep", 100, 3, 0, 0);
-        
-        //Animals with too young ages & harvest cycles
-        cow3 = new Cow("Cow", 100, 0, 0, 0);
-        sheep3 = new Sheep("Sheep", 100, 0, 0, 0);
+        chicken2 = new Chicken();
+        sheep2 = new Sheep();
+
         
         Farm.resetCurrencyChange();
         Farm.resetAnimals();
@@ -204,24 +150,9 @@ public class TestAge {
         
         hf = new HybridFarm(10, 0, 0);
         
-        //Old enough crops
-        corn1 = new Corn("Corn", 100, 0, 3, 0);
-        wheat1 = new Wheat("Wheat", 100, 0, 3, 0);
-        //Too young crops
-        corn2 = new Corn("Corn", 100, 0, 0, 0);
-        rice2 = new Rice("Rice", 100, 0, 0, 0);
-        
-        //Animals with too young ages
-        chicken1 = new Chicken("Chicken", 100, 0, 0, 2);
-        cow1 = new Cow("Cow", 100, 0, 0, 2);
-        
-        //Animals with too young harvest cycles
-        chicken2 = new Chicken("Chicken", 100, 3, 0, 0);
-        sheep2 = new Sheep("Sheep", 100, 3, 0, 0);
-        
         //Animals with too young ages & harvest cycles
-        cow3 = new Cow("Cow", 100, 0, 0, 0);
-        sheep3 = new Sheep("Sheep", 100, 0, 0, 0);
+        cow3 = new Cow();
+        sheep3 = new Sheep();
         
         Farm.resetCurrencyChange();
         Farm.resetAnimals();

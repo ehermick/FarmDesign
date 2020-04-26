@@ -26,13 +26,13 @@ public class TestPredatorEat {
     
     @Test
     public void eatChicken() {
-        corn = new Corn("Corn", 100, 0, 3, 0);
-        rice = new Rice("Rice", 100, 0, 3, 0);
-        wheat = new Wheat("Wheat", 100, 0, 3, 0);
+        corn = new Corn();
+        rice = new Rice();
+        wheat = new Wheat();
         
-        chicken = new Chicken("Chicken", 100, 0, 0, 0);
-        cow = new Cow("Cow", 100, 0, 0, 0);
-        sheep = new Sheep("Sheep", 100, 0, 0, 0);  
+        chicken = new Chicken();
+        cow = new Cow();
+        sheep = new Sheep();  
         
         
         Farm.addAnimal(chicken);
@@ -74,13 +74,13 @@ public class TestPredatorEat {
     
     @Test
     public void eatCow() {
-        corn = new Corn("Corn", 100, 0, 3, 0);
-        rice = new Rice("Rice", 100, 0, 3, 0);
-        wheat = new Wheat("Wheat", 100, 0, 3, 0);
+        corn = new Corn();
+        rice = new Rice();
+        wheat = new Wheat();
         
-        chicken = new Chicken("Chicken", 100, 0, 0, 0);
-        cow = new Cow("Cow", 100, 0, 0, 0);
-        sheep = new Sheep("Sheep", 100, 0, 0, 0);  
+        chicken = new Chicken();
+        cow = new Cow();
+        sheep = new Sheep();  
         
         
         Farm.addAnimal(cow);
@@ -122,13 +122,13 @@ public class TestPredatorEat {
     
     @Test
     public void eatSheep() {
-        corn = new Corn("Corn", 100, 0, 3, 0);
-        rice = new Rice("Rice", 100, 0, 3, 0);
-        wheat = new Wheat("Wheat", 100, 0, 3, 0);
+        corn = new Corn();
+        rice = new Rice();
+        wheat = new Wheat();
         
-        chicken = new Chicken("Chicken", 100, 0, 0, 0);
-        cow = new Cow("Cow", 100, 0, 0, 0);
-        sheep = new Sheep("Sheep", 100, 0, 0, 0);  
+        chicken = new Chicken();
+        cow = new Cow();
+        sheep = new Sheep();  
         
         
         Farm.addAnimal(sheep);
@@ -171,13 +171,13 @@ public class TestPredatorEat {
     @Test
     public void eatAnimals() {
         
-        corn = new Corn("Corn", 100, 0, 3, 0);
-        rice = new Rice("Rice", 100, 0, 3, 0);
-        wheat = new Wheat("Wheat", 100, 0, 3, 0);
+        corn = new Corn();
+        rice = new Rice();
+        wheat = new Wheat();
         
-        chicken = new Chicken("Chicken", 100, 0, 0, 0);
-        cow = new Cow("Cow", 100, 0, 0, 0);
-        sheep = new Sheep("Sheep", 100, 0, 0, 0);  
+        chicken = new Chicken();
+        cow = new Cow();
+        sheep = new Sheep();  
         
         Farm.addAnimal(sheep);
         Farm.addAnimal(chicken);
@@ -218,13 +218,13 @@ public class TestPredatorEat {
     @Test
     public void eatCorn() {
         
-        corn = new Corn("Corn", 100, 0, 3, 0);
-        rice = new Rice("Rice", 100, 0, 3, 0);
-        wheat = new Wheat("Wheat", 100, 0, 3, 0);
+        corn = new Corn();
+        rice = new Rice();
+        wheat = new Wheat();
         
-        chicken = new Chicken("Chicken", 100, 0, 0, 0);
-        cow = new Cow("Cow", 100, 0, 0, 0);
-        sheep = new Sheep("Sheep", 100, 0, 0, 0);  
+        chicken = new Chicken();
+        cow = new Cow();
+        sheep = new Sheep();  
         
         Farm.addCrop(corn);
         Farm.addCrop(corn);
@@ -266,13 +266,13 @@ public class TestPredatorEat {
     @Test
     public void eatRice() {
         
-        corn = new Corn("Corn", 100, 0, 3, 0);
-        rice = new Rice("Rice", 100, 0, 3, 0);
-        wheat = new Wheat("Wheat", 100, 0, 3, 0);
+        corn = new Corn();
+        rice = new Rice();
+        wheat = new Wheat();
         
-        chicken = new Chicken("Chicken", 100, 0, 0, 0);
-        cow = new Cow("Cow", 100, 0, 0, 0);
-        sheep = new Sheep("Sheep", 100, 0, 0, 0);  
+        chicken = new Chicken();
+        cow = new Cow();
+        sheep = new Sheep();  
         
         Farm.addCrop(rice);
         Farm.addCrop(rice);
@@ -314,13 +314,13 @@ public class TestPredatorEat {
     @Test
     public void eatWheat() {
         
-        corn = new Corn("Corn", 100, 0, 3, 0);
-        rice = new Rice("Rice", 100, 0, 3, 0);
-        wheat = new Wheat("Wheat", 100, 0, 3, 0);
+        corn = new Corn();
+        rice = new Rice();
+        wheat = new Wheat();
         
-        chicken = new Chicken("Chicken", 100, 0, 0, 0);
-        cow = new Cow("Cow", 100, 0, 0, 0);
-        sheep = new Sheep("Sheep", 100, 0, 0, 0);  
+        chicken = new Chicken();
+        cow = new Cow();
+        sheep = new Sheep();  
         
         Farm.addCrop(wheat);
         Farm.addCrop(wheat);
@@ -362,13 +362,13 @@ public class TestPredatorEat {
     @Test
     public void eatCrops() {
         
-        corn = new Corn("Corn", 100, 0, 3, 0);
-        rice = new Rice("Rice", 100, 0, 3, 0);
-        wheat = new Wheat("Wheat", 100, 0, 3, 0);
+        corn = new Corn();
+        rice = new Rice();
+        wheat = new Wheat();
         
-        chicken = new Chicken("Chicken", 100, 0, 0, 0);
-        cow = new Cow("Cow", 100, 0, 0, 0);
-        sheep = new Sheep("Sheep", 100, 0, 0, 0);  
+        chicken = new Chicken();
+        cow = new Cow();
+        sheep = new Sheep();  
         
         Farm.addCrop(wheat);
         Farm.addCrop(corn);

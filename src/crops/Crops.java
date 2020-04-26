@@ -1,13 +1,19 @@
 package crops;
 
+import affinities.DecoratorProdCorn;
+import affinities.DecoratorProdRice;
+import affinities.DecoratorProdWheat;
 //import affinities.CropAffinities;
 //import farm.CropFarm;
 //import farm.HybridFarm;
 import state.StateContext;
+import affinities.DecoratorHarvestCorn;
+import affinities.DecoratorHarvestRice;
+import affinities.DecoratorHarvestWheat;
 
-public class Crops {
+public abstract class Crops {
 
-    private static int health;
+    public static int health;
     //private int productWorth;
     //private int dayLastHarvested;
     //private CropFarm cropFarm;
@@ -16,22 +22,13 @@ public class Crops {
     public String name;
     public int age;
     public int harvestCycle = 0;
-    //public int production;
+    public int production;
     
-    /**
-     * Crop Constructor.
-     * @param name Crop name
-     * @param health Crop health
-     * @param age Crop age
-     * @param harvestCycle Crop harvestCycle
-     */
-    public Crops(String name, int health, int age, int harvestCycle, int production) {
-        this.name = name;
-        this.setHealth(health);
-        this.age = age;
-        this.harvestCycle = harvestCycle;
-        //this.production = production;
-    }
+
+    public abstract String name();
+    public abstract int health();
+    public abstract int harvestCycle();
+    public abstract int production();
     
     public static int cropAge(Crops crop) {
         int calculatedAge = StateContext.getCount() / 2; //1 day + 1 night per cycle
@@ -50,6 +47,30 @@ public class Crops {
             Rice.harvestRice();
         } else if (crop instanceof Wheat) { //If crop is Wheat
             Wheat.harvestWheat();
+        }
+        
+        if (crop instanceof DecoratorProdCorn) {
+            DecoratorProdCorn.harvest();
+        }
+        
+        if (crop instanceof DecoratorProdRice) {
+            DecoratorProdRice.harvest();
+        }
+        
+        if (crop instanceof DecoratorProdWheat) {
+            DecoratorProdWheat.harvest();
+        }
+        
+        if (crop instanceof DecoratorHarvestCorn) {
+            DecoratorHarvestCorn.harvest();
+        }
+        
+        if (crop instanceof DecoratorHarvestRice) {
+            DecoratorHarvestRice.harvest();
+        }
+        
+        if (crop instanceof DecoratorHarvestWheat) {
+            DecoratorHarvestWheat.harvest();
         }
 
     }

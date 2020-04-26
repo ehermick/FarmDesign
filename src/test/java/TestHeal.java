@@ -38,13 +38,13 @@ public class TestHeal {
     
     @Test
     public void injuredChicken() {
-        corn = new Corn("Corn", 100, 0, 3, 0);
-        rice = new Rice("Rice", 100, 0, 3, 0);
-        wheat = new Wheat("Wheat", 100, 0, 3, 0);
+        corn = new Corn();
+        rice = new Rice();
+        wheat = new Wheat();
         
-        chicken = new Chicken("Chicken", 100, 0, 0, 0);
-        cow = new Cow("Cow", 100, 0, 0, 0);
-        sheep = new Sheep("Sheep", 100, 0, 0, 0);  
+        chicken = new Chicken();
+        cow = new Cow();
+        sheep = new Sheep();  
         
         fox = new Fox("Fox", 10);
         wolf = new Wolf("Wolf", 10);
@@ -76,13 +76,13 @@ public class TestHeal {
     
     @Test
     public void injuredCow() {
-        corn = new Corn("Corn", 100, 0, 3, 0);
-        rice = new Rice("Rice", 100, 0, 3, 0);
-        wheat = new Wheat("Wheat", 100, 0, 3, 0);
+        corn = new Corn();
+        rice = new Rice();
+        wheat = new Wheat();
         
-        chicken = new Chicken("Chicken", 100, 0, 0, 0);
-        cow = new Cow("Cow", 100, 0, 0, 0);
-        sheep = new Sheep("Sheep", 100, 0, 0, 0);  
+        chicken = new Chicken();
+        cow = new Cow();
+        sheep = new Sheep();  
         
         fox = new Fox("Fox", 10);
         wolf = new Wolf("Wolf", 10);
@@ -114,13 +114,13 @@ public class TestHeal {
     
     @Test
     public void injuredSheep() {
-        corn = new Corn("Corn", 100, 0, 3, 0);
-        rice = new Rice("Rice", 100, 0, 3, 0);
-        wheat = new Wheat("Wheat", 100, 0, 3, 0);
+        corn = new Corn();
+        rice = new Rice();
+        wheat = new Wheat();
         
-        chicken = new Chicken("Chicken", 100, 0, 0, 0);
-        cow = new Cow("Cow", 100, 0, 0, 0);
-        sheep = new Sheep("Sheep", 100, 0, 0, 0);  
+        chicken = new Chicken();
+        cow = new Cow();
+        sheep = new Sheep();  
         
         fox = new Fox("Fox", 10);
         wolf = new Wolf("Wolf", 10);
@@ -152,13 +152,13 @@ public class TestHeal {
     
     @Test
     public void damagedCorn() {
-        corn = new Corn("Corn", 100, 0, 3, 0);
-        rice = new Rice("Rice", 100, 0, 3, 0);
-        wheat = new Wheat("Wheat", 100, 0, 3, 0);
+        corn = new Corn();
+        rice = new Rice();
+        wheat = new Wheat();
         
-        chicken = new Chicken("Chicken", 100, 0, 0, 0);
-        cow = new Cow("Cow", 100, 0, 0, 0);
-        sheep = new Sheep("Sheep", 100, 0, 0, 0);  
+        chicken = new Chicken();
+        cow = new Cow();
+        sheep = new Sheep();  
         
         fox = new Fox("Fox", 10);
         wolf = new Wolf("Wolf", 10);
@@ -190,13 +190,13 @@ public class TestHeal {
     
     @Test
     public void damagedRice() {
-        corn = new Corn("Corn", 100, 0, 3, 0);
-        rice = new Rice("Rice", 100, 0, 3, 0);
-        wheat = new Wheat("Wheat", 100, 0, 3, 0);
+        corn = new Corn();
+        rice = new Rice();
+        wheat = new Wheat();
         
-        chicken = new Chicken("Chicken", 100, 0, 0, 0);
-        cow = new Cow("Cow", 100, 0, 0, 0);
-        sheep = new Sheep("Sheep", 100, 0, 0, 0);  
+        chicken = new Chicken();
+        cow = new Cow();
+        sheep = new Sheep();  
         
         fox = new Fox("Fox", 10);
         wolf = new Wolf("Wolf", 10);
@@ -228,13 +228,13 @@ public class TestHeal {
     
     @Test
     public void damagedWheat() {
-        corn = new Corn("Corn", 100, 0, 3, 0);
-        rice = new Rice("Rice", 100, 0, 3, 0);
-        wheat = new Wheat("Wheat", 100, 0, 3, 0);
+        corn = new Corn();
+        rice = new Rice();
+        wheat = new Wheat();
         
-        chicken = new Chicken("Chicken", 100, 0, 0, 0);
-        cow = new Cow("Cow", 100, 0, 0, 0);
-        sheep = new Sheep("Sheep", 100, 0, 0, 0);  
+        chicken = new Chicken();
+        cow = new Cow();
+        sheep = new Sheep();  
         
         fox = new Fox("Fox", 10);
         wolf = new Wolf("Wolf", 10);

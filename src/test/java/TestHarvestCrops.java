@@ -23,21 +23,16 @@ public class TestHarvestCrops {
     private Rice rice;
     private Wheat wheat;
     private int currencyChange = 0;
-   
     
-    
-    /**
-     * Tests the harvest of crops.
-     */
     @Test
-    public void harvestCrops() {
+    public void harvestCornTest() {
+        
         cf = new CropFarm(10, 0, 0);
 
-        corn = new Corn("Corn", 100, 0, 3, 0);
-        rice = new Rice("Rice", 100, 0, 3, 0);
-        wheat = new Wheat("Wheat", 100, 0, 3, 0);
-        
+        corn = new Corn();
 
+        Farm.resetCurrencyChange();
+        Farm.resetCrops();
         
         //Add 5 plots of corn
         for (int i = 0; i < 5; i++) {
@@ -51,6 +46,15 @@ public class TestHarvestCrops {
         int expectedCorn = 30; //Should make $30
         int actualCorn = currencyChange;
         assertEquals("Corn Harvest", expectedCorn, actualCorn);
+    }
+    
+    @Test
+    public void harvestRiceTest() {
+        cf = new CropFarm(10, 0, 0);
+        rice = new Rice();
+        
+        Farm.resetCurrencyChange();
+        Farm.resetCrops();
         
         //Add 5 plots of rice
         for (int i = 0; i < 5; i++) {
@@ -61,9 +65,18 @@ public class TestHarvestCrops {
         
         currencyChange = cf.getCurrencyChange();
         
-        int expectedRice = 45; //Should make $45
+        int expectedRice = 15; //Should make $15
         int actualRice = currencyChange;
         assertEquals("Rice Harvest", expectedRice, actualRice);
+    }
+    
+    @Test
+    public void harvestWheatTest() {
+        cf = new CropFarm(10, 0, 0);
+        wheat = new Wheat();
+        
+        Farm.resetCurrencyChange();
+        Farm.resetCrops();
         
         //Add 5 plots of wheat
         for (int i = 0; i < 5; i++) {
@@ -74,7 +87,7 @@ public class TestHarvestCrops {
 
         currencyChange = cf.getCurrencyChange();
         
-        int expectedWheat = 90; //Should make $90
+        int expectedWheat = 45; //Should make $45
         int actualWheat = currencyChange;
         assertEquals("Wheat Harvest", expectedWheat, actualWheat);
         

@@ -11,14 +11,36 @@ import farm.Farm;
 import org.junit.Before;
 import org.junit.Test;
 
+
+import affinities.DecoratorAgeHarvestChicken;
+
 public class TestMoneyMade {
 
-    private Chicken chicken;
     
     @Test
     public void moneyMadeTest() {
         
-        chicken = new Chicken("Chicken", 100, 3, 0, 2);
+        Chicken chicken = new Chicken();
+        
+        Farm.resetCurrencyChange();
+        Farm.resetAnimals();
+        
+        //Add 5 chickens to farm
+        for (int i = 0; i < 5; i++) {
+            Farm.addAnimal(chicken);
+            Farm.harvestProduce();
+        }
+
+        int expected =  0; //Not old enough
+        int actual = Farm.moneyMade();
+        assertEquals("Money Made", expected, actual);
+        
+    }
+    
+    @Test
+    public void moneyMadeTestSuper() {
+        
+        DecoratorAgeHarvestChicken chicken = new DecoratorAgeHarvestChicken("Chicken", 100, 6, 0, 8, 1);
         
         Farm.resetCurrencyChange();
         Farm.resetAnimals();

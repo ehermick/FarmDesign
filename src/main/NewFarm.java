@@ -20,13 +20,13 @@ public class NewFarm {
      * Builds a new farm.
      */
     public static void buildFarm() {
-        Chicken chicken = new Chicken("Chicken", 100, 0, 0, 0);
-        Cow cow = new Cow("Chicken", 100, 0, 0, 0);
-        Sheep sheep = new Sheep("Sheep", 100, 0, 0, 0);
+        Chicken chicken = new Chicken();
+        Cow cow = new Cow();
+        Sheep sheep = new Sheep();
         
-        Corn corn = new Corn("Corn", 100, 0, 0, 0);
-        Rice rice = new Rice("Rice", 100, 0, 0, 0);
-        Wheat wheat = new Wheat("Wheat", 100, 0, 0, 0);
+        Corn corn = new Corn();
+        Rice rice = new Rice();
+        Wheat wheat = new Wheat();
         
         Farmers farmer = new Farmers("farmer", 1, 1, 1);
         

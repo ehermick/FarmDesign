@@ -1,38 +1,39 @@
 package animals;
 
+import affinities.DecoratorAgeHarvestChicken;
+import affinities.DecoratorAgeHarvestCow;
+import affinities.DecoratorAgeHarvestSheep;
+import affinities.DecoratorProdChicken;
+import affinities.DecoratorProdCow;
+import affinities.DecoratorProdSheep;
 //import affinities.AnimalAffinities;
 //import farm.AnimalFarm;
 //import farm.HybridFarm;
 import state.StateContext;
 
-public class Animal {
+public abstract class Animal {
 
     public String name;
     public int age;
-    private static int health;
+    public static int health;
     public int birthCycle;
     public int harvestCycle;
+    public int production;
     //public static int production;
     //private int productWorth;
     //private AnimalFarm animalFarm;
     //private AnimalAffinities animalAffinities;
     //private HybridFarm hybridFarm;
+
     
-    /**
-     * Animal Constructor.
-     * @param name Animal name
-     * @param health Animal health
-     * @param age Animal age
-     * @param birthCycle Animal birthcycle
-     * @param harvestCycle Animal harvestCycle
-     */
-    public Animal(String name, int health, int age, int birthCycle, int harvestCycle) {
-        this.name = name;
-        this.setHealth(health);
-        this.age = age;
-        this.birthCycle = birthCycle;
-        this.harvestCycle = harvestCycle;
-    }
+
+    
+    public abstract String name();
+    public abstract int health();
+    public abstract int age();
+    public abstract int birthCycle();
+    public abstract int harvestCycle();
+    public abstract int production();
 
     /**
      * Calculates the age of the animal based off the number of cycles.
@@ -63,6 +64,31 @@ public class Animal {
         //If animal is a sheep
         if (animal instanceof Sheep) {
             Sheep.harvestWool();
+        }
+        
+        
+        if (animal instanceof DecoratorAgeHarvestChicken) {
+            DecoratorAgeHarvestChicken.harvest();
+        }
+        
+        if (animal instanceof DecoratorAgeHarvestCow) {
+            DecoratorAgeHarvestCow.harvest();
+        }
+        
+        if (animal instanceof DecoratorAgeHarvestSheep) {
+            DecoratorAgeHarvestSheep.harvest();
+        }
+        
+        if (animal instanceof DecoratorProdChicken) {
+            DecoratorProdChicken.harvest();
+        }
+        
+        if (animal instanceof DecoratorProdCow) {
+            DecoratorProdCow.harvest();
+        }
+        
+        if (animal instanceof DecoratorProdSheep) {
+            DecoratorProdSheep.harvest();
         }
 
     }
@@ -116,5 +142,12 @@ public class Animal {
     }
     
 
+    public void setName(String name) {
+        this.name = name;
+    }
+    
+    public String getName() {
+        return name;
+    }
 
 }

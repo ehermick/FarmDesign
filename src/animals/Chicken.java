@@ -7,10 +7,6 @@ import java.util.ArrayList;
 public class Chicken extends Animal {
     
     private static ArrayList<Animal> animals = Farm.getAnimals();
-
-    public Chicken(String name, int health, int age, int birthCycle, int harvestCycle) {
-        super(name, health, age, birthCycle, harvestCycle);
-    }
     
 
 
@@ -23,6 +19,46 @@ public class Chicken extends Animal {
         Farm.setCurrency(5);
         Farm.setCurrencyChange(5);
         
+    }
+
+
+
+    @Override
+    public int health() {
+        return 100;
+    }
+
+
+
+    @Override
+    public String name() {
+        return "Chicken";
+    }
+
+
+
+    @Override
+    public int age() {
+        return 0;
+    }
+
+
+
+    @Override
+    public int birthCycle() {
+        return 0;
+    }
+
+
+
+    @Override
+    public int harvestCycle() {
+        return 0;
+    }
+    
+    @Override
+    public int production() {
+        return 1;
     }
     
 }

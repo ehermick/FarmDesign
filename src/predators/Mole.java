@@ -16,6 +16,9 @@ import farm.Farm;
 import java.util.ArrayList;
 import java.util.Random;
 
+import affinities.DecoratorHealthCorn;
+import affinities.DecoratorHealthRice;
+import affinities.DecoratorHealthWheat;
 import main.Farmers;
 
 public class Mole extends Predators {
@@ -39,15 +42,15 @@ public class Mole extends Predators {
         for (int i = 0; i < crops.size(); i++) {
             Crops selectedCrop = crops.get(i);
             
-            if (selectedCrop instanceof Corn && chance == 2) {
+            if ((selectedCrop instanceof Corn || selectedCrop instanceof DecoratorHealthCorn) && chance == 2) {
                 Crops.damageHealth(Predators.getDamage());
                 System.out.println("A Mole damaged corn");
                 damagedCrop = true;
-            } else if (selectedCrop instanceof Rice && chance == 4) {
+            } else if ((selectedCrop instanceof Rice || selectedCrop instanceof DecoratorHealthRice) && chance == 4) {
                 Crops.damageHealth(Predators.getDamage());
                 System.out.println("A Mole damaged rice");
                 damagedCrop = true;
-            } else if (selectedCrop instanceof Wheat && chance == 6) {
+            } else if ((selectedCrop instanceof Wheat || selectedCrop instanceof DecoratorHealthWheat) && chance == 6) {
                 Crops.damageHealth(Predators.getDamage());
                 System.out.println("A Mole damaged wheat");
                 damagedCrop = true;
