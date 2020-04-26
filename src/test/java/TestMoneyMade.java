@@ -2,17 +2,12 @@ package test.java;
 
 import static org.junit.Assert.assertEquals;
 
+import affinities.DecoratorAgeHarvestChicken;
+
 import animals.Chicken;
-import animals.Cow;
-import animals.Sheep;
-import farm.AnimalFarm;
 import farm.Farm;
 
-import org.junit.Before;
 import org.junit.Test;
-
-
-import affinities.DecoratorAgeHarvestChicken;
 
 public class TestMoneyMade {
 
@@ -40,7 +35,8 @@ public class TestMoneyMade {
     @Test
     public void moneyMadeTestSuper() {
         
-        DecoratorAgeHarvestChicken chicken = new DecoratorAgeHarvestChicken("Chicken", 100, 6, 0, 8, 1);
+        DecoratorAgeHarvestChicken chicken = 
+                new DecoratorAgeHarvestChicken("Chicken", 100, 6, 0, 8, 1);
         
         Farm.resetCurrencyChange();
         Farm.resetAnimals();

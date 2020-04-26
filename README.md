@@ -19,11 +19,13 @@ Utilizing design patterns to construct working farms
 	- Income is generated from selling crops/animal products
 	- Animals are born every 4 cycles
 	- Animals live for 14 days (28 cycles) unless killed by predator/disease
+        - Crops are harvested every 
 
 ### Decorator Pattern : affinities Package
  - Affinities animals and crops have
- - Animals can produce more produce, or have better health (Useful if attacked by predator)
- - Crops can produce more, or have better health (Useful if attacked by predator)
+ - Animals and crops can produce more, or have better health (Useful if attacked by predator)
+ - With every birth of an animal, and every purchase of an animal or crop there is a chance
+   that it will be super. 
  - Requirements met :
 	- Animals have affinities
 	- Crops have affinities

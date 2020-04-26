@@ -1,17 +1,5 @@
 package farm;
 
-import animals.Animal;
-import animals.Chicken;
-import animals.Cow;
-import animals.Sheep;
-import crops.Corn;
-import crops.Crops;
-import crops.Rice;
-import crops.Wheat;
-
-import java.util.ArrayList;
-import java.util.Random;
-
 import affinities.DecoratorHealthChicken;
 import affinities.DecoratorHealthCorn;
 import affinities.DecoratorHealthCow;
@@ -24,6 +12,19 @@ import affinities.DecoratorProdCow;
 import affinities.DecoratorProdRice;
 import affinities.DecoratorProdSheep;
 import affinities.DecoratorProdWheat;
+
+import animals.Animal;
+import animals.Chicken;
+import animals.Cow;
+import animals.Sheep;
+import crops.Corn;
+import crops.Crops;
+import crops.Rice;
+import crops.Wheat;
+
+import java.util.ArrayList;
+import java.util.Random;
+
 import main.Farmers;
 import predators.Predators;
 
@@ -223,11 +224,13 @@ public class Farm {
                     if (selectedAnimal instanceof Chicken) {
                         
                         if (superChance == 2) {
-                            DecoratorHealthChicken superHealthChicken = new DecoratorHealthChicken("Chicken", 150, 0, 0, 0, 1);
+                            DecoratorHealthChicken superHealthChicken = new 
+                                    DecoratorHealthChicken("Chicken", 150, 0, 0, 0, 1);
                             addAnimal(superHealthChicken);
                             System.out.println("You gained one SUPER healthy Chicken!");
                         } else if (superChance == 6) {
-                            DecoratorProdChicken superProdChicken = new DecoratorProdChicken("Chicken", 100, 0, 0, 0, 2);
+                            DecoratorProdChicken superProdChicken = 
+                                    new DecoratorProdChicken("Chicken", 100, 0, 0, 0, 2);
                             addAnimal(superProdChicken);
                             System.out.println("You gained one SUPER producing Chicken!");
                         } else {
@@ -241,11 +244,13 @@ public class Farm {
                     if (selectedAnimal instanceof Cow) {
                         
                         if (superChance == 2) {
-                            DecoratorHealthCow superHealthCow = new DecoratorHealthCow("Cow", 150, 0, 0, 0, 1);
+                            DecoratorHealthCow superHealthCow = 
+                                    new DecoratorHealthCow("Cow", 150, 0, 0, 0, 1);
                             addAnimal(superHealthCow);
                             System.out.println("You gained one SUPER healthy Cow!");
                         } else if (superChance == 6) {
-                            DecoratorProdCow superProdCow = new DecoratorProdCow("Cow", 100, 0, 0, 0, 2);
+                            DecoratorProdCow superProdCow = 
+                                    new DecoratorProdCow("Cow", 100, 0, 0, 0, 2);
                             addAnimal(superProdCow);
                             System.out.println("You gained one SUPER producing Cow!");
                         } else {
@@ -258,11 +263,13 @@ public class Farm {
                     //If it's a Sheep
                     if (selectedAnimal instanceof Sheep) {
                         if (superChance == 2) {
-                            DecoratorHealthSheep superHealthSheep = new DecoratorHealthSheep("Sheep", 150, 0, 0, 0, 1);
+                            DecoratorHealthSheep superHealthSheep = 
+                                    new DecoratorHealthSheep("Sheep", 150, 0, 0, 0, 1);
                             addAnimal(superHealthSheep);
                             System.out.println("You gained one SUPER healthy Sheep!");
                         } else if (superChance == 6) {
-                            DecoratorProdSheep superProdSheep = new DecoratorProdSheep("Sheep", 100, 0, 0, 0, 2);
+                            DecoratorProdSheep superProdSheep = new 
+                                    DecoratorProdSheep("Sheep", 100, 0, 0, 0, 2);
                             addAnimal(superProdSheep);
                             System.out.println("You gained one SUPER producing Sheep!");
                         } else {
@@ -389,7 +396,8 @@ public class Farm {
                 
                 setCurrency(-20);
                 setCurrencyChange(-20);
-                System.out.println("You purchased 5 more plots of Corn - One of them is SUPER healthy! (-$20)"); 
+                System.out.println("You purchased 5 more plots of Corn - "
+                        + "One of them is SUPER healthy! (-$20)"); 
             } else if (superChance == 7 || superChance == 9) { //SUPER crop
                 
                 DecoratorProdCorn superProdCorn = new DecoratorProdCorn("Corn", 100, 0, 0, 2);
@@ -404,7 +412,8 @@ public class Farm {
                 
                 setCurrency(-20);
                 setCurrencyChange(-20);
-                System.out.println("You purchased 5 more plots of Corn - One of them is SUPER producing! (-$20)");
+                System.out.println("You purchased 5 more plots of Corn - "
+                        + "One of them is SUPER producing! (-$20)");
                 
             } else { //Normal crop
                 Corn corn = new Corn();
@@ -436,7 +445,8 @@ public class Farm {
                 
                 setCurrency(-10);
                 setCurrencyChange(-10);
-                System.out.println("You purchased 5 more plots of Rice - One of them is SUPER healthy! (-$10)"); 
+                System.out.println("You purchased 5 more plots of Rice - "
+                        + "One of them is SUPER healthy! (-$10)"); 
             } else if (superChance == 7 || superChance == 9) { //SUPER crop
                 
                 DecoratorProdRice superProdRice = new DecoratorProdRice("Rice", 100, 0, 0, 2);
@@ -451,7 +461,8 @@ public class Farm {
                 
                 setCurrency(-10);
                 setCurrencyChange(-10);
-                System.out.println("You purchased 5 more plots of Rice - One of them is SUPER producing! (-$10)");
+                System.out.println("You purchased 5 more plots of Rice - "
+                        + "One of them is SUPER producing! (-$10)");
                 
             } else { //Normal Crop
                 Rice rice = new Rice();
@@ -471,7 +482,8 @@ public class Farm {
             int superChance = rand.nextInt(10); //Random number for chance of SUPER crop
             if (superChance == 3 || superChance == 5) { //SUPER CROP
                 //Super wheat
-                DecoratorHealthWheat superHealthWheat = new DecoratorHealthWheat("Wheat", 150, 0, 0, 1);
+                DecoratorHealthWheat superHealthWheat = 
+                        new DecoratorHealthWheat("Wheat", 150, 0, 0, 1);
                 addCrop(superHealthWheat);
                 
                 //Regular wheat
@@ -483,7 +495,8 @@ public class Farm {
                 
                 setCurrency(-50);
                 setCurrencyChange(-50);
-                System.out.println("You purchased 5 more plots of Wheat - One of them is SUPER healthy! (-$50)"); 
+                System.out.println("You purchased 5 more plots of Wheat - "
+                        + "One of them is SUPER healthy! (-$50)"); 
             } else if (superChance == 7 || superChance == 9) { //SUPER crop
                 
                 DecoratorProdWheat superProdWheat = new DecoratorProdWheat("Wheat", 100, 0, 0, 2);
@@ -498,7 +511,8 @@ public class Farm {
                 
                 setCurrency(-50);
                 setCurrencyChange(-50);
-                System.out.println("You purchased 5 more plots of Wheat - One of them is SUPER producing! (-$50)");
+                System.out.println("You purchased 5 more plots of Wheat - "
+                        + "One of them is SUPER producing! (-$50)");
                 
             } else { //Normal crop
                 Wheat wheat = new Wheat();
@@ -544,7 +558,8 @@ public class Farm {
             int superChance = rand.nextInt(10); //Random number for chance of SUPER animal
             if (superChance == 3 || superChance == 5) { //SUPER Animal
                 //Super chicken
-                DecoratorHealthChicken superHealthChicken = new DecoratorHealthChicken("Chicken", 150, 0, 0, 0, 1);
+                DecoratorHealthChicken superHealthChicken = 
+                        new DecoratorHealthChicken("Chicken", 150, 0, 0, 0, 1);
                 addAnimal(superHealthChicken);
                 
                 //Regular chicken
@@ -556,10 +571,12 @@ public class Farm {
                 
                 setCurrency(-10);
                 setCurrencyChange(-10);
-                System.out.println("You purchased 5 more chickens - One of them is SUPER healthy! (-$10)"); 
+                System.out.println("You purchased 5 more chickens - "
+                        + "One of them is SUPER healthy! (-$10)"); 
             } else if (superChance == 7 || superChance == 9) { //SUPER animal
                 
-                DecoratorProdChicken superProdChicken = new DecoratorProdChicken("Chicken", 100, 0, 0, 0, 2);
+                DecoratorProdChicken superProdChicken = 
+                        new DecoratorProdChicken("Chicken", 100, 0, 0, 0, 2);
                 addAnimal(superProdChicken);
                 
                 //Regular chicken
@@ -571,7 +588,8 @@ public class Farm {
                 
                 setCurrency(-10);
                 setCurrencyChange(-10);
-                System.out.println("You purchased 5 more chickens - One of them is SUPER producing! (-$10)");
+                System.out.println("You purchased 5 more chickens - "
+                        + "One of them is SUPER producing! (-$10)");
                 
             } else { //Normal animal
                 Chicken chicken = new Chicken();
@@ -602,7 +620,8 @@ public class Farm {
                 
                 setCurrency(-20);
                 setCurrencyChange(-20);
-                System.out.println("You purchased 5 more cows - One of them is SUPER healthy! (-$20)"); 
+                System.out.println("You purchased 5 more cows - "
+                        + "One of them is SUPER healthy! (-$20)"); 
             } else if (superChance == 7 || superChance == 9) { //SUPER animal
                 
                 DecoratorProdCow superProdCow = new DecoratorProdCow("Cow", 100, 0, 0, 0, 2);
@@ -617,7 +636,8 @@ public class Farm {
                 
                 setCurrency(-20);
                 setCurrencyChange(-20);
-                System.out.println("You purchased 5 more cows - One of them is SUPER producing! (-$20)");
+                System.out.println("You purchased 5 more cows - "
+                        + "One of them is SUPER producing! (-$20)");
                 
             } else { //Normal animal
                 Cow cow = new Cow();
@@ -636,7 +656,8 @@ public class Farm {
             int superChance = rand.nextInt(10); //Random number for chance of SUPER animal
             if (superChance == 3 || superChance == 5) { //SUPER Animal
                 //Super sheep
-                DecoratorHealthSheep superHealthSheep = new DecoratorHealthSheep("Sheep", 150, 0, 0, 0, 1);
+                DecoratorHealthSheep superHealthSheep = 
+                        new DecoratorHealthSheep("Sheep", 150, 0, 0, 0, 1);
                 addAnimal(superHealthSheep);
                 
                 //Regular sheep
@@ -648,10 +669,12 @@ public class Farm {
                 
                 setCurrency(-50);
                 setCurrencyChange(-50);
-                System.out.println("You purchased 5 more sheep - One of them is SUPER healthy! (-$50)"); 
+                System.out.println("You purchased 5 more sheep - "
+                        + "One of them is SUPER healthy! (-$50)"); 
             } else if (superChance == 7 || superChance == 9) { //SUPER animal
                 
-                DecoratorProdSheep superProdSheep = new DecoratorProdSheep("Sheep", 100, 0, 0, 0, 2);
+                DecoratorProdSheep superProdSheep = 
+                        new DecoratorProdSheep("Sheep", 100, 0, 0, 0, 2);
                 addAnimal(superProdSheep);
                 
                 //Regular sheep
@@ -663,7 +686,8 @@ public class Farm {
                 
                 setCurrency(-50);
                 setCurrencyChange(-50);
-                System.out.println("You purchased 5 more sheep - One of them is SUPER producing! (-$50)");
+                System.out.println("You purchased 5 more sheep - "
+                        + "One of them is SUPER producing! (-$50)");
                 
             } else { //Normal animal
                 Sheep sheep = new Sheep();

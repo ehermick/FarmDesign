@@ -2,21 +2,14 @@ package test.java;
 
 import static org.junit.Assert.assertEquals;
 
-import animals.Animal;
-import animals.Chicken;
-import animals.Cow;
-import animals.Sheep;
-import farm.AnimalFarm;
-import farm.Farm;
-import farm.HybridFarm;
-import state.StateContext;
-
-import org.junit.Before;
-import org.junit.Test;
-
 import affinities.DecoratorAgeHarvestChicken;
 import affinities.DecoratorAgeHarvestCow;
 import affinities.DecoratorAgeHarvestSheep;
+
+import farm.AnimalFarm;
+import farm.Farm;
+
+import org.junit.Test;
 
 public class TestHarvestProduce {
     
@@ -34,7 +27,8 @@ public class TestHarvestProduce {
       
         af = new AnimalFarm(10, 0, 0);
         
-        DecoratorAgeHarvestChicken chicken = new DecoratorAgeHarvestChicken("Chicken", 100, 3, 0, 5, 1);
+        DecoratorAgeHarvestChicken chicken = 
+                new DecoratorAgeHarvestChicken("Chicken", 100, 3, 0, 5, 1);
 
         
         Farm.resetCurrencyChange();

@@ -5,12 +5,21 @@ import crops.Crops;
 //DECORATOR PATTERN
 public class DecoratorHealthRice extends Crops {
     
-    public DecoratorHealthRice(String nameInput, int healthInput, int ageInput, int harvestCycleInput, int productionInput) {
+    /**
+     * Extra healthy rice.
+     * @param nameInput Name
+     * @param healthInput Health
+     * @param ageInput Age
+     * @param harvestCycleInput Harvest cycle
+     * @param productionInput Production
+     */
+    public DecoratorHealthRice(String nameInput, int healthInput, int ageInput, 
+            int harvestCycleInput, int productionInput) {
         name = nameInput;
-        health = healthInput;
+        Crops.setHealth(healthInput);
         age = ageInput;
         harvestCycle = harvestCycleInput;
-        production = productionInput;
+        //production = productionInput;
     }
 
     @Override

@@ -18,7 +18,7 @@ public abstract class Animal {
     public static int health;
     public int birthCycle;
     public int harvestCycle;
-    public int production;
+    //public int production;
     //public static int production;
     //private int productWorth;
     //private AnimalFarm animalFarm;
@@ -29,10 +29,15 @@ public abstract class Animal {
 
     
     public abstract String name();
+    
     public abstract int health();
+    
     public abstract int age();
+    
     public abstract int birthCycle();
+    
     public abstract int harvestCycle();
+    
     public abstract int production();
 
     /**
@@ -92,18 +97,11 @@ public abstract class Animal {
         }
 
     }
-   
-
-
 
     /**
-     * Injured or sick animals (from attacks or disease).
+     * Damage done by predators.
+     * @param damage Damage done
      */
-    public void injury() {
-
-    }
-
-    
     public static void damageHealth(int damage) {
         int newHealth = health - damage;
         setHealth(newHealth);

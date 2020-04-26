@@ -1,5 +1,12 @@
 package predators;
 
+import affinities.DecoratorAgeHarvestChicken;
+import affinities.DecoratorAgeHarvestCow;
+import affinities.DecoratorAgeHarvestSheep;
+import affinities.DecoratorHealthChicken;
+import affinities.DecoratorHealthCow;
+import affinities.DecoratorHealthSheep;
+
 import animals.Animal;
 import animals.Chicken;
 import animals.Cow;
@@ -10,12 +17,6 @@ import farm.Farm;
 import java.util.ArrayList;
 import java.util.Random;
 
-import affinities.DecoratorAgeHarvestChicken;
-import affinities.DecoratorAgeHarvestCow;
-import affinities.DecoratorAgeHarvestSheep;
-import affinities.DecoratorHealthChicken;
-import affinities.DecoratorHealthCow;
-import affinities.DecoratorHealthSheep;
 import main.Farmers;
 
 
@@ -39,15 +40,21 @@ public class Fox extends Predators {
         for (int i = 0; i < animals.size(); i++) {
             Animal selectedAnimal = animals.get(i);
             
-            if ((selectedAnimal instanceof Chicken || selectedAnimal instanceof DecoratorAgeHarvestChicken || selectedAnimal instanceof DecoratorHealthChicken) && chance == 2) {
+            if ((selectedAnimal instanceof Chicken 
+                    || selectedAnimal instanceof DecoratorAgeHarvestChicken 
+                    || selectedAnimal instanceof DecoratorHealthChicken) && chance == 2) {
                 Animal.damageHealth(Predators.getDamage());
                 System.out.println("A Fox injured a chicken");
                 damagedAnimal = true;
-            } else if ((selectedAnimal instanceof Cow || selectedAnimal instanceof DecoratorAgeHarvestCow || selectedAnimal instanceof DecoratorHealthCow) && chance == 4) {
+            } else if ((selectedAnimal instanceof Cow 
+                    || selectedAnimal instanceof DecoratorAgeHarvestCow 
+                    || selectedAnimal instanceof DecoratorHealthCow) && chance == 4) {
                 Animal.damageHealth(Predators.getDamage());
                 System.out.println("A Fox injured a cow");
                 damagedAnimal = true;
-            } else if ((selectedAnimal instanceof Sheep || selectedAnimal instanceof DecoratorAgeHarvestSheep || selectedAnimal instanceof DecoratorHealthSheep)&& chance == 6) {
+            } else if ((selectedAnimal instanceof Sheep 
+                    || selectedAnimal instanceof DecoratorAgeHarvestSheep 
+                    || selectedAnimal instanceof DecoratorHealthSheep) && chance == 6) {
                 Animal.damageHealth(Predators.getDamage());
                 System.out.println("A Fox injured a sheep");
                 damagedAnimal = true;

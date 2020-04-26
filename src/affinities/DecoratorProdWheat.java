@@ -5,12 +5,21 @@ import farm.Farm;
 
 public class DecoratorProdWheat extends Crops {
     
-    public DecoratorProdWheat(String nameInput, int healthInput, int ageInput, int harvestCycleInput, int productionInput) {
+    /**
+     * Extra producing wheat.
+     * @param nameInput Name
+     * @param healthInput Health
+     * @param ageInput Age
+     * @param harvestCycleInput Harvest cycle
+     * @param productionInput Production
+     */
+    public DecoratorProdWheat(String nameInput, int healthInput, int ageInput, 
+            int harvestCycleInput, int productionInput) {
         name = nameInput;
-        health = healthInput;
+        Crops.setHealth(healthInput);
         age = ageInput;
         harvestCycle = harvestCycleInput;
-        production = productionInput;
+        //production = productionInput;
     }
 
     @Override

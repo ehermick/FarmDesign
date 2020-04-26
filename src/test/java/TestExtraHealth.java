@@ -2,8 +2,6 @@ package test.java;
 
 import static org.junit.Assert.assertEquals;
 
-import org.junit.Test;
-
 import affinities.DecoratorHealthChicken;
 import affinities.DecoratorHealthCorn;
 import affinities.DecoratorHealthCow;
@@ -14,6 +12,9 @@ import animals.Animal;
 import animals.Cow;
 import crops.Crops;
 import farm.Farm;
+
+import org.junit.Test;
+
 import predators.Fox;
 import predators.Predators;
 import predators.Wolf;

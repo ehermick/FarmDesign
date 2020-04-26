@@ -1,6 +1,8 @@
 package predators;
 
-import animals.Animal;
+import affinities.DecoratorHealthCorn;
+import affinities.DecoratorHealthRice;
+import affinities.DecoratorHealthWheat;
 
 import crops.Corn;
 import crops.Crops;
@@ -12,9 +14,6 @@ import farm.Farm;
 import java.util.ArrayList;
 import java.util.Random;
 
-import affinities.DecoratorHealthCorn;
-import affinities.DecoratorHealthRice;
-import affinities.DecoratorHealthWheat;
 import main.Farmers;
 
 public class Rabbit extends Predators {
@@ -39,15 +38,21 @@ public class Rabbit extends Predators {
         for (int i = 0; i < crops.size(); i++) {
             Crops selectedCrop = crops.get(i);
             
-            if ((selectedCrop instanceof Corn || selectedCrop instanceof DecoratorHealthCorn) && chance == 2) {
+            if ((selectedCrop instanceof Corn 
+                    || selectedCrop instanceof DecoratorHealthCorn) 
+                    && chance == 2) {
                 Crops.damageHealth(Predators.getDamage());
                 System.out.println("A Rabbit damaged corn");
                 damagedCrop = true;
-            } else if ((selectedCrop instanceof Rice || selectedCrop instanceof DecoratorHealthRice) && chance == 4) {
+            } else if ((selectedCrop instanceof Rice 
+                    || selectedCrop instanceof DecoratorHealthRice) 
+                    && chance == 4) {
                 Crops.damageHealth(Predators.getDamage());
                 System.out.println("A Rabbit damaged rice");
                 damagedCrop = true;
-            } else if ((selectedCrop instanceof Wheat || selectedCrop instanceof DecoratorHealthWheat) && chance == 6) {
+            } else if ((selectedCrop instanceof Wheat 
+                    || selectedCrop instanceof DecoratorHealthWheat) 
+                    && chance == 6) {
                 Crops.damageHealth(Predators.getDamage());
                 System.out.println("A Rabbit damaged wheat");
                 damagedCrop = true;

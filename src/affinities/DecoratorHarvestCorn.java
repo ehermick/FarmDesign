@@ -1,17 +1,25 @@
 package affinities;
 
-
 import crops.Crops;
 import farm.Farm;
 
 public class DecoratorHarvestCorn extends Crops {
     
-    public DecoratorHarvestCorn(String nameInput, int healthInput, int ageInput, int harvestCycleInput, int productionInput) {
+    /**
+     * Harvests corn from old enough crop.
+     * @param nameInput Name
+     * @param healthInput Health
+     * @param ageInput Age
+     * @param harvestCycleInput Harvest Cycle
+     * @param productionInput Production
+     */
+    public DecoratorHarvestCorn(String nameInput, int healthInput, 
+            int ageInput, int harvestCycleInput, int productionInput) {
         name = nameInput;
-        health = healthInput;
+        Crops.setHealth(healthInput);
         age = ageInput;
         harvestCycle = harvestCycleInput;
-        production = productionInput;
+        //production = productionInput;
     }
 
     @Override

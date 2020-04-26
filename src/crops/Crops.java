@@ -1,15 +1,14 @@
 package crops;
 
-import affinities.DecoratorProdCorn;
-import affinities.DecoratorProdRice;
-import affinities.DecoratorProdWheat;
-//import affinities.CropAffinities;
-//import farm.CropFarm;
-//import farm.HybridFarm;
-import state.StateContext;
 import affinities.DecoratorHarvestCorn;
 import affinities.DecoratorHarvestRice;
 import affinities.DecoratorHarvestWheat;
+
+import affinities.DecoratorProdCorn;
+import affinities.DecoratorProdRice;
+import affinities.DecoratorProdWheat;
+
+import state.StateContext;
 
 public abstract class Crops {
 
@@ -22,12 +21,15 @@ public abstract class Crops {
     public String name;
     public int age;
     public int harvestCycle = 0;
-    public int production;
+    //public int production;
     
 
     public abstract String name();
+    
     public abstract int health();
+    
     public abstract int harvestCycle();
+    
     public abstract int production();
     
     public static int cropAge(Crops crop) {

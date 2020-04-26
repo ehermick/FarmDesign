@@ -2,21 +2,19 @@ package test.java;
 
 import static org.junit.Assert.assertEquals;
 
+import affinities.DecoratorHarvestCorn;
+import affinities.DecoratorHarvestWheat;
+
 import animals.Chicken;
 import animals.Cow;
 import animals.Sheep;
 import crops.Corn;
 import crops.Rice;
-import crops.Wheat;
 
 import farm.Farm;
 import farm.HybridFarm;
 
-import org.junit.Before;
 import org.junit.Test;
-
-import affinities.DecoratorHarvestCorn;
-import affinities.DecoratorHarvestWheat;
 
 public class TestAge {
     

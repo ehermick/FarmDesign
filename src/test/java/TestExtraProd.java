@@ -2,8 +2,6 @@ package test.java;
 
 import static org.junit.Assert.assertEquals;
 
-import org.junit.Test;
-
 import affinities.DecoratorProdChicken;
 import affinities.DecoratorProdCorn;
 import affinities.DecoratorProdCow;
@@ -13,6 +11,9 @@ import affinities.DecoratorProdWheat;
 import farm.AnimalFarm;
 import farm.CropFarm;
 import farm.Farm;
+
+import org.junit.Test;
+
 import state.StateContext;
 
 public class TestExtraProd {
@@ -21,7 +22,6 @@ public class TestExtraProd {
     
     @Test
     public void testCornProd() {
-        CropFarm cf = new CropFarm(10, 0, 0);
         Farm.resetCurrencyChange();
         Farm.resetCrops();
         
@@ -30,6 +30,7 @@ public class TestExtraProd {
         Farm.addCrop(corn);
         Farm.harvestCrops();
         
+        CropFarm cf = new CropFarm(10, 0, 0);
         currencyChange = cf.getCurrencyChange();
         
         int expected = 12;
@@ -43,7 +44,6 @@ public class TestExtraProd {
     
     @Test
     public void testRiceProd() {
-        CropFarm cf = new CropFarm(10, 0, 0);
         Farm.resetCurrencyChange();
         Farm.resetCrops();
         
@@ -52,6 +52,7 @@ public class TestExtraProd {
         Farm.addCrop(rice);
         Farm.harvestCrops();
         
+        CropFarm cf = new CropFarm(10, 0, 0);
         currencyChange = cf.getCurrencyChange();
         
         int expected = 6;
@@ -63,7 +64,6 @@ public class TestExtraProd {
     
     @Test
     public void testWheatProd() {
-        CropFarm cf = new CropFarm(10, 0, 0);
         Farm.resetCurrencyChange();
         Farm.resetCrops();
         
@@ -72,6 +72,7 @@ public class TestExtraProd {
         Farm.addCrop(wheat);
         Farm.harvestCrops();
         
+        CropFarm cf = new CropFarm(10, 0, 0);
         currencyChange = cf.getCurrencyChange();
         
         int expected = 18;
@@ -84,7 +85,6 @@ public class TestExtraProd {
     @Test
     public void testChickenProd() {
         
-        AnimalFarm af = new AnimalFarm(10, 0, 0);
         Farm.resetCurrencyChange();
         Farm.resetAnimals();
         
@@ -93,6 +93,7 @@ public class TestExtraProd {
         Farm.addAnimal(chicken);
         Farm.harvestProduce();
         
+        AnimalFarm af = new AnimalFarm(10, 0, 0);
         currencyChange = af.getCurrencyChange();
         
         int expected = 10;
@@ -105,7 +106,6 @@ public class TestExtraProd {
     @Test
     public void testCowProd() {
         
-        AnimalFarm af = new AnimalFarm(10, 0, 0);
         Farm.resetCurrencyChange();
         Farm.resetAnimals();
         
@@ -114,6 +114,7 @@ public class TestExtraProd {
         Farm.addAnimal(cow);
         Farm.harvestProduce();
         
+        AnimalFarm af = new AnimalFarm(10, 0, 0);
         currencyChange = af.getCurrencyChange();
         
         int expected = 20;
@@ -126,7 +127,6 @@ public class TestExtraProd {
     @Test
     public void testSheepProd() {
         
-        AnimalFarm af = new AnimalFarm(10, 0, 0);
         Farm.resetCurrencyChange();
         Farm.resetAnimals();
         
@@ -135,6 +135,7 @@ public class TestExtraProd {
         Farm.addAnimal(sheep);
         Farm.harvestProduce();
         
+        AnimalFarm af = new AnimalFarm(10, 0, 0);
         currencyChange = af.getCurrencyChange();
         
         int expected = 40;

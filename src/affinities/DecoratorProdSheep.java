@@ -6,13 +6,23 @@ import farm.Farm;
 //DECORATOR PATTERN
 public class DecoratorProdSheep extends Animal {
     
-    public DecoratorProdSheep(String nameInput, int healthInput, int ageInput, int birthCycleInput, int harvestCycleInput, int productionInput) {
+    /**
+     * Extra producing sheep.
+     * @param nameInput Name
+     * @param healthInput Health
+     * @param ageInput Age
+     * @param birthCycleInput Birth cycle
+     * @param harvestCycleInput Harvest cycle
+     * @param productionInput Production
+     */
+    public DecoratorProdSheep(String nameInput, int healthInput, int ageInput, 
+            int birthCycleInput, int harvestCycleInput, int productionInput) {
         name = nameInput;
-        health = healthInput;
+        Animal.setHealth(healthInput);
         age = ageInput;
         birthCycle = birthCycleInput;
         harvestCycle = harvestCycleInput;
-        production = productionInput;
+        //production = productionInput;
         
     }
     
