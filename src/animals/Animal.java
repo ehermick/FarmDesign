@@ -10,14 +10,13 @@ import affinities.DecoratorProdSheep;
 //import farm.AnimalFarm;
 //import farm.HybridFarm;
 
-
 import state.StateContext;
 
 public abstract class Animal {
 
     public String name;
     public int age;
-    public static int health;
+    public int health;
     public int birthCycle;
     public int harvestCycle;
     //public int production;
@@ -96,7 +95,7 @@ public abstract class Animal {
      * Damage done by predators.
      * @param damage Damage done
      */
-    public static void damageHealth(int damage) {
+    public  void damageHealth(int damage) {
         int newHealth = health - damage;
         health = newHealth;
     }
@@ -105,16 +104,16 @@ public abstract class Animal {
      * Health getter. 
      * @return health Animal's health
      */
-    public static int getHealth() {
+    public  int getHealth() {
         return health;
     }
 
     /**
      * Healther setter.
-     * @param health Animal's health
+     * @param healthInput Animal's health
      */
-    public static void setHealth(int health) {
-        Animal.health = health;
+    public void setHealth(int healthInput) {
+        health = healthInput;
     }
     
     /**

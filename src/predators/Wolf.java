@@ -33,29 +33,24 @@ public class Wolf extends Predators {
             Animal selectedAnimal = animals.get(i);
             
             if (selectedAnimal instanceof Chicken && chance == 2) {
-                Animal.damageHealth(Predators.getDamage());
+                selectedAnimal.damageHealth(Predators.getDamage());
                 System.out.println("A Wolf injured a chicken");
+                Farmers.treatAnimal(selectedAnimal);
                 damagedAnimal = true;
             } else if (selectedAnimal instanceof Cow && chance == 4) {
-                Animal.damageHealth(Predators.getDamage());
+                selectedAnimal.damageHealth(Predators.getDamage());
                 System.out.println("A Wolf injured a cow");
+                Farmers.treatAnimal(selectedAnimal);
                 damagedAnimal = true;
             } else if (selectedAnimal instanceof Sheep && chance == 6) {
-                Animal.damageHealth(Predators.getDamage());
+                selectedAnimal.damageHealth(Predators.getDamage());
                 System.out.println("A Wolf injured a sheep");
+                Farmers.treatAnimal(selectedAnimal);
                 damagedAnimal = true;
             } 
         }
     }
     
-    /**
-     * Heals damage dealt.
-     */
-    public static void healDamage() {
-        if (damagedAnimal == true) {
-            Farmers.treatAnimal();
-        }
-    }
     
     /**
      * Eat Animals.

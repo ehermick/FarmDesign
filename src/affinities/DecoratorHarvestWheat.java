@@ -16,7 +16,7 @@ public class DecoratorHarvestWheat extends Crops {
     public DecoratorHarvestWheat(String nameInput, int healthInput, int ageInput, 
             int harvestCycleInput, int productionInput) {
         name = nameInput;
-        Crops.setHealth(healthInput);
+        health = healthInput;
         age = ageInput;
         harvestCycle = harvestCycleInput;
         //production = productionInput;

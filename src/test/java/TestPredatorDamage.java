@@ -88,7 +88,7 @@ public class TestPredatorDamage {
         Predators.damage();
         
         boolean expected = true;
-        boolean actual = Chicken.getHealth() < 100;
+        boolean actual = chicken.getHealth() == 100;
         assertEquals("Predator Injures Chicken", expected, actual);
         
     }
@@ -145,7 +145,7 @@ public class TestPredatorDamage {
         Predators.damage();
         
         boolean expected = true;
-        boolean actual = Cow.getHealth() < 100;
+        boolean actual = cow.getHealth() == 100;
         assertEquals("Predator Injures Cow", expected, actual);
         
     }
@@ -203,7 +203,7 @@ public class TestPredatorDamage {
         Predators.damage();
         
         boolean expected = true;
-        boolean actual = Sheep.getHealth() < 100;
+        boolean actual = sheep.getHealth() == 100;
         assertEquals("Predator Injures Sheep", expected, actual);
         
     }
@@ -260,7 +260,7 @@ public class TestPredatorDamage {
         Predators.damage();
         
         boolean expected = true;
-        boolean actual = Animal.getHealth() < 100;
+        boolean actual = sheep.getHealth() == 100;
         assertEquals("Predator Injures Animal", expected, actual);
         
     }
@@ -318,7 +318,7 @@ public class TestPredatorDamage {
         Predators.damage();
         
         boolean expected = true;
-        boolean actual = Corn.getHealth() < 100;
+        boolean actual = corn.getHealth() == 100;
         assertEquals("Predator Damages Corn", expected, actual);
         
     }
@@ -376,7 +376,7 @@ public class TestPredatorDamage {
         Predators.damage();
         
         boolean expected = true;
-        boolean actual = Rice.getHealth() < 100;
+        boolean actual = rice.getHealth() == 100;
         assertEquals("Predator Damages Rice", expected, actual);
         
     }
@@ -434,7 +434,7 @@ public class TestPredatorDamage {
         Predators.damage();
         
         boolean expected = true;
-        boolean actual = Wheat.getHealth() < 100;
+        boolean actual = wheat.getHealth() == 100;
         assertEquals("Predator Damages Wheat", expected, actual);
         
     }
@@ -491,7 +491,7 @@ public class TestPredatorDamage {
         Predators.damage();
         
         boolean expected = true;
-        boolean actual = Crops.getHealth() < 100;
+        boolean actual = wheat.getHealth() == 100;
         assertEquals("Predator Damages Crops", expected, actual);
         
     }

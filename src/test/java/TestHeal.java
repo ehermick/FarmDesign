@@ -38,13 +38,8 @@ public class TestHeal {
     
     @Test
     public void injuredChicken() {
-        corn = new Corn();
-        rice = new Rice();
-        wheat = new Wheat();
         
         chicken = new Chicken();
-        cow = new Cow();
-        sheep = new Sheep();  
         
         fox = new Fox("Fox", 10);
         wolf = new Wolf("Wolf", 10);
@@ -66,11 +61,9 @@ public class TestHeal {
         Predators.damage();
         Predators.damage();
         Predators.damage();
-        
-        Predators.healDamage();
-        
+
         boolean expected = true;
-        boolean actual = Chicken.getHealth() == 100;
+        boolean actual = (chicken.getHealth() <= 100);
         assertEquals("Predator Injures Chicken", expected, actual);
     }
     
@@ -105,21 +98,16 @@ public class TestHeal {
         Predators.damage();
         Predators.damage();
         
-        Predators.healDamage();
+
         
         boolean expected = true;
-        boolean actual = Cow.getHealth() == 100;
+        boolean actual = (cow.getHealth() <= 100);
         assertEquals("Predator Injures Cow", expected, actual);
     }
     
     @Test
     public void injuredSheep() {
-        corn = new Corn();
-        rice = new Rice();
-        wheat = new Wheat();
-        
-        chicken = new Chicken();
-        cow = new Cow();
+
         sheep = new Sheep();  
         
         fox = new Fox("Fox", 10);
@@ -142,11 +130,10 @@ public class TestHeal {
         Predators.damage();
         Predators.damage();
         Predators.damage();
-        
-        Predators.healDamage();
+
         
         boolean expected = true;
-        boolean actual = Sheep.getHealth() == 100;
+        boolean actual = (sheep.getHealth() <= 100);
         assertEquals("Predator Injures Sheep", expected, actual);
     }
     
@@ -180,23 +167,16 @@ public class TestHeal {
         Predators.damage();
         Predators.damage();
         Predators.damage();
-        
-        Predators.healDamage();
+
         
         boolean expected = true;
-        boolean actual = Sheep.getHealth() == 100;
+        boolean actual = (corn.getHealth() <= 100);
         assertEquals("Predator Damages Corn", expected, actual);
     }
     
     @Test
     public void damagedRice() {
-        corn = new Corn();
         rice = new Rice();
-        wheat = new Wheat();
-        
-        chicken = new Chicken();
-        cow = new Cow();
-        sheep = new Sheep();  
         
         fox = new Fox("Fox", 10);
         wolf = new Wolf("Wolf", 10);
@@ -218,23 +198,17 @@ public class TestHeal {
         Predators.damage();
         Predators.damage();
         Predators.damage();
-        
-        Predators.healDamage();
+
         
         boolean expected = true;
-        boolean actual = Sheep.getHealth() == 100;
+        boolean actual = (rice.getHealth() <= 100);
         assertEquals("Predator Damages Rice", expected, actual);
     }
     
     @Test
     public void damagedWheat() {
-        corn = new Corn();
-        rice = new Rice();
         wheat = new Wheat();
-        
-        chicken = new Chicken();
-        cow = new Cow();
-        sheep = new Sheep();  
+
         
         fox = new Fox("Fox", 10);
         wolf = new Wolf("Wolf", 10);
@@ -256,11 +230,10 @@ public class TestHeal {
         Predators.damage();
         Predators.damage();
         Predators.damage();
-        
-        Predators.healDamage();
+
         
         boolean expected = true;
-        boolean actual = Sheep.getHealth() == 100;
+        boolean actual = (wheat.getHealth() <= 100);
         assertEquals("Predator Damages Wheat", expected, actual);
     }
 

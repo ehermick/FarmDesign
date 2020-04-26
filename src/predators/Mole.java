@@ -40,31 +40,22 @@ public class Mole extends Predators {
             if ((selectedCrop instanceof Corn 
                     || selectedCrop instanceof DecoratorHealthCorn) 
                     && chance == 2) {
-                Crops.damageHealth(Predators.getDamage());
+                selectedCrop.damageHealth(Predators.getDamage());
                 System.out.println("A Mole damaged corn");
-                damagedCrop = true;
+                Farmers.treatCrop(selectedCrop);
             } else if ((selectedCrop instanceof Rice 
                     || selectedCrop instanceof DecoratorHealthRice) 
                     && chance == 4) {
-                Crops.damageHealth(Predators.getDamage());
+                selectedCrop.damageHealth(Predators.getDamage());
                 System.out.println("A Mole damaged rice");
-                damagedCrop = true;
+                Farmers.treatCrop(selectedCrop);
             } else if ((selectedCrop instanceof Wheat 
                     || selectedCrop instanceof DecoratorHealthWheat) 
                     && chance == 6) {
-                Crops.damageHealth(Predators.getDamage());
+                selectedCrop.damageHealth(Predators.getDamage());
                 System.out.println("A Mole damaged wheat");
-                damagedCrop = true;
+                Farmers.treatCrop(selectedCrop);
             } 
-        }
-    }
-    
-    /**
-     * Heals damage dealt.
-     */
-    public static void healDamage() {
-        if (damagedCrop == true) {
-            Farmers.treatCrop();
         }
     }
     

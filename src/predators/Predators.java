@@ -1,5 +1,7 @@
 package predators;
 
+import animals.Animal;
+
 import java.util.Random;
 
 //import farm.Farm;
@@ -30,7 +32,7 @@ public class Predators {
     }
 
     /**
-     * Damage dealt to animals.
+     * Damage dealt.
      */
     public static void damage() {
         
@@ -40,15 +42,6 @@ public class Predators {
         Rabbit.damage();
     }
     
-    /**
-     * Heals damage dealt.
-     */
-    public static void healDamage() {
-        Fox.healDamage();
-        Wolf.healDamage();
-        Mole.healDamage();
-        Rabbit.healDamage();
-    }
     
     /**
      * Eat animals.

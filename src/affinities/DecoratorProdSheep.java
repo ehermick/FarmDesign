@@ -18,7 +18,7 @@ public class DecoratorProdSheep extends Animal {
     public DecoratorProdSheep(String nameInput, int healthInput, int ageInput, 
             int birthCycleInput, int harvestCycleInput, int productionInput) {
         name = nameInput;
-        Animal.setHealth(healthInput);
+        health = healthInput;
         age = ageInput;
         birthCycle = birthCycleInput;
         harvestCycle = harvestCycleInput;

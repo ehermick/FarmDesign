@@ -25,7 +25,6 @@ public class Fox extends Predators {
     
     private static ArrayList<Animal> animals = Farm.getAnimals();
     
-    private static boolean damagedAnimal = false;
 
     public Fox(String name, int animalDamage) {
         super(name, animalDamage);
@@ -43,34 +42,26 @@ public class Fox extends Predators {
             if ((selectedAnimal instanceof Chicken 
                     || selectedAnimal instanceof DecoratorAgeHarvestChicken 
                     || selectedAnimal instanceof DecoratorHealthChicken) && chance == 2) {
-                Animal.damageHealth(Predators.getDamage());
+                selectedAnimal.damageHealth(Predators.getDamage());
                 System.out.println("A Fox injured a chicken");
-                damagedAnimal = true;
+                Farmers.treatAnimal(selectedAnimal);
             } else if ((selectedAnimal instanceof Cow 
                     || selectedAnimal instanceof DecoratorAgeHarvestCow 
                     || selectedAnimal instanceof DecoratorHealthCow) && chance == 4) {
-                Animal.damageHealth(Predators.getDamage());
+                selectedAnimal.damageHealth(Predators.getDamage());
                 System.out.println("A Fox injured a cow");
-                damagedAnimal = true;
+                Farmers.treatAnimal(selectedAnimal);
             } else if ((selectedAnimal instanceof Sheep 
                     || selectedAnimal instanceof DecoratorAgeHarvestSheep 
                     || selectedAnimal instanceof DecoratorHealthSheep) && chance == 6) {
-                Animal.damageHealth(Predators.getDamage());
+                selectedAnimal.damageHealth(Predators.getDamage());
                 System.out.println("A Fox injured a sheep");
-                damagedAnimal = true;
+                Farmers.treatAnimal(selectedAnimal);
             } 
             
         }
     }
     
-    /**
-     * Heals damage dealt.
-     */
-    public static void healDamage() {
-        if (damagedAnimal == true) {
-            Farmers.treatAnimal();
-        }
-    }
     
     /**
      * Eat Animals.

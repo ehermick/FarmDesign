@@ -12,7 +12,7 @@ import state.StateContext;
 
 public abstract class Crops {
 
-    protected static int health;
+    public int health;
     //private int productWorth;
     //private int dayLastHarvested;
     //private CropFarm cropFarm;
@@ -93,7 +93,7 @@ public abstract class Crops {
         this.age = age;
     }
     
-    public static void damageHealth(int damage) {
+    public void damageHealth(int damage) {
         int newHealth = health - damage;
         setHealth(newHealth);
     }
@@ -102,16 +102,16 @@ public abstract class Crops {
      * Health getter.
      * @return health Crop's health
      */
-    public static int getHealth() {
+    public  int getHealth() {
         return health;
     }
     
     /**
      * Health setter.
-     * @param health Crop's health
+     * @param healthInput Crop's health
      */
-    public static void setHealth(int health) {
-        Crops.health = health;
+    public  void setHealth(int healthInput) {
+        health = healthInput;
     }
     
     /**

@@ -68,20 +68,20 @@ public class Farmers {
     /**
      * Treat animals that are injured - $10.
      */
-    public static void treatAnimal() {
+    public static void treatAnimal(Animal animal) {
 
         Farm.setCurrency(-10);
         Farm.setCurrencyChange(-10);
         System.out.println("You treated an injured animal (-$10)");
                 
         //Reset animal's health
-        Animal.setHealth(100); 
+        animal.setHealth(100); 
     }
 
     /**
      * Treat crops that are damaged - $5.
      */
-    public static void treatCrop() {
+    public static void treatCrop(Crops crop) {
     
         Farm.setCurrency(-5);
         Farm.setCurrencyChange(-5);
@@ -89,7 +89,7 @@ public class Farmers {
         System.out.println("You treated a damaged crop (-$5)");
             
         //Reset crop's health
-        Crops.setHealth(100);
+        crop.setHealth(100);
 
     }
 
