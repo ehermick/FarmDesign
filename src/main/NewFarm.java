@@ -29,6 +29,7 @@ public class NewFarm {
         
         Farmers farmer = new Farmers("farmer", 1, 1, 1);
         
+        
         //Start with 1 hybrid farm
         //HybridFarm hbFarm = new HybridFarm(10, 0, 0);//Start with 10 acres
         System.out.println("Congratulations on purchasing your first farm!");

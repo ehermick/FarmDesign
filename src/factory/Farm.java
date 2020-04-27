@@ -228,7 +228,8 @@ public abstract class Farm {
                 int superChance = rand.nextInt(10); //Random number for chance of SUPER animal
                 
                 //If the birth cycle is atleast 4 and the chance occurs (high chance of even number)
-                if (selectedAnimal.birthCycle >= 4 && (chance % 2 == 0)) {
+                if (selectedAnimal.birthCycle >= 4 && (chance == 0 || chance == 2 
+                        || chance == 4 || chance == 6 || chance == 8)) {
                     selectedAnimal.birthCycle = 0; //Reset to 0
                     
                     //If it's a chicken
@@ -238,16 +239,16 @@ public abstract class Farm {
                             DecoratorHealthChicken superHealthChicken = new 
                                     DecoratorHealthChicken("Chicken", 150, 0, 0, 0, 1);
                             addAnimal(superHealthChicken);
-                            System.out.println("You gained one SUPER healthy Chicken!");
+                            System.out.println("A new SUPER healthy Chicken was born!");
                         } else if (superChance == 6) {
                             DecoratorProdChicken superProdChicken = 
                                     new DecoratorProdChicken("Chicken", 100, 0, 0, 0, 2);
                             addAnimal(superProdChicken);
-                            System.out.println("You gained one SUPER producing Chicken!");
+                            System.out.println("A new SUPER producing Chicken was born!");
                         } else {
                             Chicken chicken = new Chicken();
                             addAnimal(chicken);
-                            System.out.println("You gained one " + animalName);
+                            System.out.println("A new " + animalName + " was born!");
                         }
                     }
                     
@@ -258,16 +259,16 @@ public abstract class Farm {
                             DecoratorHealthCow superHealthCow = 
                                     new DecoratorHealthCow("Cow", 150, 0, 0, 0, 1);
                             addAnimal(superHealthCow);
-                            System.out.println("You gained one SUPER healthy Cow!");
+                            System.out.println("A new SUPER healthy Cow was born!");
                         } else if (superChance == 6) {
                             DecoratorProdCow superProdCow = 
                                     new DecoratorProdCow("Cow", 100, 0, 0, 0, 2);
                             addAnimal(superProdCow);
-                            System.out.println("You gained one SUPER producing Cow!");
+                            System.out.println("A new SUPER producing Cow was born!");
                         } else {
                             Cow cow = new Cow();
                             addAnimal(cow);
-                            System.out.println("You gained one " + animalName);
+                            System.out.println("A new " + animalName + " was born!");
                         }
                     }
                     
@@ -277,16 +278,16 @@ public abstract class Farm {
                             DecoratorHealthSheep superHealthSheep = 
                                     new DecoratorHealthSheep("Sheep", 150, 0, 0, 0, 1);
                             addAnimal(superHealthSheep);
-                            System.out.println("You gained one SUPER healthy Sheep!");
+                            System.out.println("A new SUPER healthy Sheep was born!");
                         } else if (superChance == 6) {
                             DecoratorProdSheep superProdSheep = new 
                                     DecoratorProdSheep("Sheep", 100, 0, 0, 0, 2);
                             addAnimal(superProdSheep);
-                            System.out.println("You gained one SUPER producing Sheep!");
+                            System.out.println("A new SUPER producing Sheep was born!");
                         } else {
                             Sheep sheep = new Sheep();
                             addAnimal(sheep);
-                            System.out.println("You gained one " + animalName);
+                            System.out.println("A new " + animalName + " was born!");
                         }
                     }
                     

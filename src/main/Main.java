@@ -26,7 +26,8 @@ public class Main {
         for (int i = 0; i < 1000; i++) {
             
             //Heal crops and animals injured from last night
-            //Predators.healDamage();
+            Farmers.treatAnimal();
+            Farmers.treatCrop();
             
             //Check for births 
             Farm.birth();

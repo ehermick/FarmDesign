@@ -33,9 +33,10 @@ public class Fox extends Predators {
      * Damage Animals.
      */
     public static void damage() {
-        int chance = rand.nextInt(10); //Generate random number for chance
         
         for (int i = 0; i < animals.size(); i++) {
+            int chance = rand.nextInt(10); //Generate random number for chance
+            
             Animal selectedAnimal = animals.get(i);
             
             if ((selectedAnimal instanceof Chicken 
@@ -43,20 +44,20 @@ public class Fox extends Predators {
                     || selectedAnimal instanceof DecoratorHealthChicken) && chance == 2) {
                 selectedAnimal.damageHealth(Predators.getDamage());
                 System.out.println("A Fox injured a chicken");
-                Farmers.treatAnimal(selectedAnimal);
+                Farmers.numInjuredAnimals++;
             } else if ((selectedAnimal instanceof Cow 
                     || selectedAnimal instanceof DecoratorAgeHarvestCow 
                     || selectedAnimal instanceof DecoratorHealthCow) && chance == 4) {
                 selectedAnimal.damageHealth(Predators.getDamage());
                 System.out.println("A Fox injured a cow");
-                Farmers.treatAnimal(selectedAnimal);
+                Farmers.numInjuredAnimals++;
             } else if ((selectedAnimal instanceof Sheep 
                     || selectedAnimal instanceof DecoratorAgeHarvestSheep 
                     || selectedAnimal instanceof DecoratorHealthSheep) && chance == 6) {
                 selectedAnimal.damageHealth(Predators.getDamage());
                 System.out.println("A Fox injured a sheep");
-                Farmers.treatAnimal(selectedAnimal);
-            } 
+                Farmers.numInjuredAnimals++;
+            }
             
         }
     }
@@ -66,10 +67,11 @@ public class Fox extends Predators {
      * Eat Animals.
      */
     public static void eatAnimal() {
-        
-        int chance = rand.nextInt(10); //Generate random number for chance
+       
         
         for (int i = 0; i < animals.size(); i++) {
+            int chance = rand.nextInt(10); //Generate random number for chance
+            
             Animal selectedAnimal = animals.get(i);
             
             //Attack Chicken

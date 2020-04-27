@@ -27,39 +27,40 @@ public class Wolf extends Predators {
      * Damage Animals.
      */
     public static void damage() {
-        int chance = rand.nextInt(10); //Generate random number for chance
         
         for (int i = 0; i < animals.size(); i++) {
+            int chance = rand.nextInt(10); //Generate random number for chance
+            
             Animal selectedAnimal = animals.get(i);
             
             if (selectedAnimal instanceof Chicken && chance == 2) {
                 selectedAnimal.damageHealth(Predators.getDamage());
                 System.out.println("A Wolf injured a chicken");
-                Farmers.treatAnimal(selectedAnimal);
+                Farmers.numInjuredAnimals++;
                 damagedAnimal = true;
             } else if (selectedAnimal instanceof Cow && chance == 4) {
                 selectedAnimal.damageHealth(Predators.getDamage());
                 System.out.println("A Wolf injured a cow");
-                Farmers.treatAnimal(selectedAnimal);
+                Farmers.numInjuredAnimals++;
                 damagedAnimal = true;
             } else if (selectedAnimal instanceof Sheep && chance == 6) {
                 selectedAnimal.damageHealth(Predators.getDamage());
                 System.out.println("A Wolf injured a sheep");
-                Farmers.treatAnimal(selectedAnimal);
+                Farmers.numInjuredAnimals++;
                 damagedAnimal = true;
             } 
         }
     }
-    
+
     
     /**
      * Eat Animals.
      */
     public static void eatAnimal() {
         
-        int chance = rand.nextInt(10); //Generate random number for chance
-        
         for (int i = 0; i < animals.size(); i++) {
+            int chance = rand.nextInt(10); //Generate random number for chance
+            
             Animal selectedAnimal = animals.get(i);
             
             //Attack Chicken
@@ -79,6 +80,7 @@ public class Wolf extends Predators {
                 Farm.removeAnimal(selectedAnimal);
                 System.out.println("A Wolf ate a sheep");
             }
+
         }
             
         

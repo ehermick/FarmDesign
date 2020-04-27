@@ -102,7 +102,7 @@ public abstract class Crops {
      * Health getter.
      * @return health Crop's health
      */
-    public  int getHealth() {
+    public int getHealth() {
         return health;
     }
     

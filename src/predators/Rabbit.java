@@ -32,30 +32,31 @@ public class Rabbit extends Predators {
      * Damage Crops.
      */
     public static void damage() {
-        int chance = rand.nextInt(10); //Generate random number for chance
         
         for (int i = 0; i < crops.size(); i++) {
+            int chance = rand.nextInt(10); //Generate random number for chance
+            
             Crops selectedCrop = crops.get(i);
             
             if ((selectedCrop instanceof Corn 
                     || selectedCrop instanceof DecoratorHealthCorn) 
                     && chance == 2) {
                 selectedCrop.damageHealth(Predators.getDamage());
-                System.out.println("A Rabbit damaged corn");
-                Farmers.treatCrop(selectedCrop);
+                System.out.println("A Rabbit damaged a plot of corn");
+                Farmers.numDamagedCrops++;
             } else if ((selectedCrop instanceof Rice 
                     || selectedCrop instanceof DecoratorHealthRice) 
                     && chance == 4) {
                 selectedCrop.damageHealth(Predators.getDamage());
-                System.out.println("A Rabbit damaged rice");
-                Farmers.treatCrop(selectedCrop);
+                System.out.println("A Rabbit damaged a plot of rice");
+                Farmers.numDamagedCrops++;
             } else if ((selectedCrop instanceof Wheat 
                     || selectedCrop instanceof DecoratorHealthWheat) 
                     && chance == 6) {
                 selectedCrop.damageHealth(Predators.getDamage());
-                System.out.println("A Rabbit damaged wheat");
-                Farmers.treatCrop(selectedCrop);
-            } 
+                System.out.println("A Rabbit damaged a plot of wheat");
+                Farmers.numDamagedCrops++;
+            }
         }
     }
 
@@ -65,9 +66,9 @@ public class Rabbit extends Predators {
      */
     public static void eatCrop() {
         
-        int chance = rand.nextInt(10); //Generate random number for chance
-        
         for (int i = 0; i < crops.size(); i++) {
+            int chance = rand.nextInt(10); //Generate random number for chance
+            
             Crops selectedCrop = crops.get(i);
             
             //Eat Corn
@@ -86,7 +87,8 @@ public class Rabbit extends Predators {
             if (selectedCrop instanceof Wheat && chance == 6) {
                 Farm.removeCrop(selectedCrop);
                 System.out.println("A Rabbit ate a plot of wheat");
-            }
+            } 
+
         }
             
         
