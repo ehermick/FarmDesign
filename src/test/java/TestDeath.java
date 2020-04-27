@@ -2,15 +2,10 @@ package test.java;
 
 import static org.junit.Assert.assertEquals;
 
-import animals.Animal;
 import animals.Chicken;
-import animals.Cow;
-import animals.Sheep;
-import factory.AnimalFarm;
-import factory.Farm;
-import factory.HybridFarm;
 
-import org.junit.Before;
+import factory.Farm;
+
 import org.junit.Test;
 
 import state.StateContext;
@@ -19,7 +14,6 @@ import state.StateContext;
 public class TestDeath {
     
     private Chicken chicken;
-    private Cow cow;
     
     StateContext contextDeath;
     
@@ -28,11 +22,7 @@ public class TestDeath {
     public void deathTest2() {
         //Too old
         chicken = new Chicken();
-        
-        //Not old enough
-        cow = new Cow();
-        
-        
+         
         Farm.resetAnimals();
         
         Farm.addAnimal(chicken);
