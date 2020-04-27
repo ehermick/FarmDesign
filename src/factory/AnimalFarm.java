@@ -1,4 +1,4 @@
-package farm;
+package factory;
 
 //import animals.Animal;
 
@@ -11,9 +11,8 @@ public class AnimalFarm extends Farm {
 
     //private ArrayList<Animal> animals;
 
-    public AnimalFarm(int size, int currency, int currencyChange) {
-        super(size, currency, currencyChange);
-        // TODO Auto-generated constructor stub
+    public AnimalFarm() {
+        super(FarmType.ANIMAL, 0, 0);
     }
 
 

@@ -8,7 +8,7 @@ import animals.Sheep;
 import crops.Corn;
 import crops.Rice;
 import crops.Wheat;
-import farm.Farm;
+import factory.Farm;
 
 import org.junit.Before;
 import org.junit.Test;

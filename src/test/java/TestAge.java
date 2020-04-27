@@ -10,9 +10,8 @@ import animals.Cow;
 import animals.Sheep;
 import crops.Corn;
 import crops.Rice;
-
-import farm.Farm;
-import farm.HybridFarm;
+import factory.Farm;
+import factory.HybridFarm;
 
 import org.junit.Test;
 
@@ -39,7 +38,7 @@ public class TestAge {
     @Test
     public void regularCropsTest() {
         
-        hf = new HybridFarm(10, 0, 0);
+        hf = new HybridFarm();
         
         //Old enough crops
         DecoratorHarvestCorn corn1 = new DecoratorHarvestCorn("Corn", 100, 0, 3, 1);
@@ -68,7 +67,7 @@ public class TestAge {
     @Test
     public void ageCropsTest() {
         
-        hf = new HybridFarm(10, 0, 0);
+        hf = new HybridFarm();
         
         //Too young crops
         corn2 = new Corn();
@@ -95,7 +94,7 @@ public class TestAge {
     @Test
     public void ageAnimalsTest() {
         
-        hf = new HybridFarm(10, 0, 0);
+        hf = new HybridFarm();
         
         //Animals with too young ages
         chicken1 = new Chicken();
@@ -120,7 +119,7 @@ public class TestAge {
     @Test
     public void harvestCycleAnimalsTest() {
         
-        hf = new HybridFarm(10, 0, 0);
+        hf = new HybridFarm();
 
         
         //Animals with too young harvest cycles
@@ -146,7 +145,7 @@ public class TestAge {
     @Test
     public void lowBothAnimalsTest() {
         
-        hf = new HybridFarm(10, 0, 0);
+        hf = new HybridFarm();
         
         //Animals with too young ages & harvest cycles
         cow3 = new Cow();

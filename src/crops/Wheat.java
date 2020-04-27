@@ -1,6 +1,6 @@
 package crops;
 
-import farm.Farm;
+import factory.Farm;
 
 public class Wheat extends Crops {
     

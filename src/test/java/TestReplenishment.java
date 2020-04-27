@@ -8,9 +8,8 @@ import animals.Sheep;
 import crops.Corn;
 import crops.Rice;
 import crops.Wheat;
-
-import farm.Farm;
-import farm.HybridFarm;
+import factory.Farm;
+import factory.HybridFarm;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -31,7 +30,7 @@ public class TestReplenishment {
     
     @Test
     public void replenishCropsTest1() {
-        hf = new HybridFarm(10, 0, 0);
+        hf = new HybridFarm();
         
         corn = new Corn();
         rice = new Rice();
@@ -72,7 +71,7 @@ public class TestReplenishment {
     
     @Test
     public void replenishCropsTest2() {
-        hf = new HybridFarm(10, 0, 0);
+        hf = new HybridFarm();
         
         corn = new Corn();
         rice = new Rice();
@@ -113,7 +112,7 @@ public class TestReplenishment {
     
     @Test
     public void replenishCropsTest3() {
-        hf = new HybridFarm(10, 0, 0);
+        hf = new HybridFarm();
         
         corn = new Corn();
         rice = new Rice();
@@ -154,7 +153,7 @@ public class TestReplenishment {
     
     @Test
     public void replenishAnimalsTest1() {
-        hf = new HybridFarm(10, 0, 0);
+        hf = new HybridFarm();
         
         corn = new Corn();
         rice = new Rice();
@@ -195,7 +194,7 @@ public class TestReplenishment {
     
     @Test
     public void replenishAnimalsTest2() {
-        hf = new HybridFarm(10, 0, 0);
+        hf = new HybridFarm();
         
         corn = new Corn();
         rice = new Rice();
@@ -236,7 +235,7 @@ public class TestReplenishment {
     
     @Test
     public void replenishAnimalsTest3() {
-        hf = new HybridFarm(10, 0, 0);
+        hf = new HybridFarm();
         
         corn = new Corn();
         rice = new Rice();

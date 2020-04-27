@@ -5,9 +5,8 @@ import static org.junit.Assert.assertEquals;
 import affinities.DecoratorAgeHarvestChicken;
 import affinities.DecoratorAgeHarvestCow;
 import affinities.DecoratorAgeHarvestSheep;
-
-import farm.AnimalFarm;
-import farm.Farm;
+import factory.AnimalFarm;
+import factory.Farm;
 
 import org.junit.Test;
 
@@ -25,7 +24,7 @@ public class TestHarvestProduce {
     @Test
     public void harvestEggsTest() {
       
-        af = new AnimalFarm(10, 0, 0);
+        af = new AnimalFarm();
         
         DecoratorAgeHarvestChicken chicken = 
                 new DecoratorAgeHarvestChicken("Chicken", 100, 3, 0, 5, 1);
@@ -57,7 +56,7 @@ public class TestHarvestProduce {
     
     @Test
     public void harvestMilkTest() {
-        af = new AnimalFarm(10, 0, 0);
+        af = new AnimalFarm();
 
         DecoratorAgeHarvestCow cow = new DecoratorAgeHarvestCow("Cow", 100, 3, 0, 2, 1);
         
@@ -79,7 +78,7 @@ public class TestHarvestProduce {
     
     @Test
     public void harvestWoolTest() {
-        af = new AnimalFarm(10, 0, 0);
+        af = new AnimalFarm();
        
         DecoratorAgeHarvestSheep sheep = new DecoratorAgeHarvestSheep("Sheep", 100, 3, 0, 2, 1);
         

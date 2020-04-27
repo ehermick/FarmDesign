@@ -5,8 +5,8 @@ import static org.junit.Assert.assertEquals;
 import crops.Corn;
 import crops.Rice;
 import crops.Wheat;
-import farm.CropFarm;
-import farm.Farm;
+import factory.CropFarm;
+import factory.Farm;
 
 import org.junit.After;
 import org.junit.Before;
@@ -27,7 +27,7 @@ public class TestHarvestCrops {
     @Test
     public void harvestCornTest() {
         
-        cf = new CropFarm(10, 0, 0);
+        cf = new CropFarm();
 
         corn = new Corn();
 
@@ -50,7 +50,7 @@ public class TestHarvestCrops {
     
     @Test
     public void harvestRiceTest() {
-        cf = new CropFarm(10, 0, 0);
+        cf = new CropFarm();
         rice = new Rice();
         
         Farm.resetCurrencyChange();
@@ -72,7 +72,7 @@ public class TestHarvestCrops {
     
     @Test
     public void harvestWheatTest() {
-        cf = new CropFarm(10, 0, 0);
+        cf = new CropFarm();
         wheat = new Wheat();
         
         Farm.resetCurrencyChange();

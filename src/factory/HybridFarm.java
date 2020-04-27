@@ -1,4 +1,4 @@
-package farm;
+package factory;
 
 import animals.Animal;
 //import animals.Chicken;
@@ -12,8 +12,8 @@ import java.util.ArrayList;
 
 public class HybridFarm extends Farm {
 
-    public HybridFarm(int size, int currency, int currencyChange) {
-        super(size, currency, currencyChange);
+    public HybridFarm() {
+        super(FarmType.HYBRID, 0, 0);
     }
 
     //private int numAnimals;

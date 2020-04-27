@@ -1,6 +1,6 @@
 package animals;
 
-import farm.Farm;
+import factory.Farm;
 
 public class Cow extends Animal {
     

@@ -11,8 +11,7 @@ import animals.Animal;
 import animals.Chicken;
 import animals.Cow;
 import animals.Sheep;
-
-import farm.Farm;
+import factory.Farm;
 
 import java.util.ArrayList;
 import java.util.Random;

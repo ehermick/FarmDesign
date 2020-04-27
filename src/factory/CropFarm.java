@@ -1,4 +1,4 @@
-package farm;
+package factory;
 
 //import crops.Crops;
 
@@ -11,9 +11,8 @@ public class CropFarm extends Farm {
     //private int maxNumCrops;
     //private ArrayList<Crops> crops;
 
-    public CropFarm(int size, int currency, int currencyChange) {
-        super(size, currency, currencyChange);
-        // TODO Auto-generated constructor stub
+    public CropFarm() {
+        super(FarmType.CROP, 0, 0);
     }
 
 }

@@ -6,9 +6,9 @@ import animals.Animal;
 import animals.Chicken;
 import animals.Cow;
 import animals.Sheep;
-import farm.AnimalFarm;
-import farm.Farm;
-import farm.HybridFarm;
+import factory.AnimalFarm;
+import factory.Farm;
+import factory.HybridFarm;
 
 import org.junit.Before;
 import org.junit.Test;

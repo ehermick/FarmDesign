@@ -1,7 +1,7 @@
 package affinities;
 
 import animals.Animal;
-import farm.Farm;
+import factory.Farm;
 
 //DECORATOR PATTERN
 public class DecoratorProdChicken extends Animal {

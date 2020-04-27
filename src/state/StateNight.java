@@ -22,7 +22,9 @@ public class StateNight implements Statelike {
 
     @Override
     public void updateState(StateContext context) {
+        System.out.println();
         System.out.println("--------------Night Time Summary--------------"); //Night time
+        System.out.println();
         context.setCurrentState(StateDay.instance());//Switch to day time
     }
     

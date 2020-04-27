@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 import affinities.DecoratorAgeHarvestChicken;
 
 import animals.Chicken;
-import farm.Farm;
+import factory.Farm;
 
 import org.junit.Test;
 

@@ -1,7 +1,7 @@
 package affinities;
 
 import crops.Crops;
-import farm.Farm;
+import factory.Farm;
 
 public class DecoratorProdWheat extends Crops {
     

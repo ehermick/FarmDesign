@@ -8,8 +8,7 @@ import crops.Corn;
 import crops.Crops;
 import crops.Rice;
 import crops.Wheat;
-
-import farm.Farm;
+import factory.Farm;
 
 import java.util.ArrayList;
 import java.util.Random;

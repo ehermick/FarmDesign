@@ -3,7 +3,7 @@ package main;
 import animals.Animal;
 import animals.Chicken;
 import crops.Crops;
-import farm.Farm;
+import factory.Farm;
 
 import java.util.ArrayList;
 
@@ -72,7 +72,9 @@ public class Farmers {
 
         Farm.setCurrency(-10);
         Farm.setCurrencyChange(-10);
-        System.out.println("You treated an injured animal (-$10)");
+        
+        
+        System.out.println("You treated an injured " + animal.getName() +  " (-$10)");
                 
         //Reset animal's health
         animal.setHealth(100); 

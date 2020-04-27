@@ -8,9 +8,9 @@ import affinities.DecoratorProdCow;
 import affinities.DecoratorProdRice;
 import affinities.DecoratorProdSheep;
 import affinities.DecoratorProdWheat;
-import farm.AnimalFarm;
-import farm.CropFarm;
-import farm.Farm;
+import factory.AnimalFarm;
+import factory.CropFarm;
+import factory.Farm;
 
 import org.junit.Test;
 
@@ -30,7 +30,7 @@ public class TestExtraProd {
         Farm.addCrop(corn);
         Farm.harvestCrops();
         
-        CropFarm cf = new CropFarm(10, 0, 0);
+        CropFarm cf = new CropFarm();
         currencyChange = cf.getCurrencyChange();
         
         int expected = 12;
@@ -52,7 +52,7 @@ public class TestExtraProd {
         Farm.addCrop(rice);
         Farm.harvestCrops();
         
-        CropFarm cf = new CropFarm(10, 0, 0);
+        CropFarm cf = new CropFarm();
         currencyChange = cf.getCurrencyChange();
         
         int expected = 6;
@@ -72,7 +72,7 @@ public class TestExtraProd {
         Farm.addCrop(wheat);
         Farm.harvestCrops();
         
-        CropFarm cf = new CropFarm(10, 0, 0);
+        CropFarm cf = new CropFarm();
         currencyChange = cf.getCurrencyChange();
         
         int expected = 18;
@@ -93,7 +93,7 @@ public class TestExtraProd {
         Farm.addAnimal(chicken);
         Farm.harvestProduce();
         
-        AnimalFarm af = new AnimalFarm(10, 0, 0);
+        AnimalFarm af = new AnimalFarm();
         currencyChange = af.getCurrencyChange();
         
         int expected = 10;
@@ -114,7 +114,7 @@ public class TestExtraProd {
         Farm.addAnimal(cow);
         Farm.harvestProduce();
         
-        AnimalFarm af = new AnimalFarm(10, 0, 0);
+        AnimalFarm af = new AnimalFarm();
         currencyChange = af.getCurrencyChange();
         
         int expected = 20;
@@ -135,7 +135,7 @@ public class TestExtraProd {
         Farm.addAnimal(sheep);
         Farm.harvestProduce();
         
-        AnimalFarm af = new AnimalFarm(10, 0, 0);
+        AnimalFarm af = new AnimalFarm();
         currencyChange = af.getCurrencyChange();
         
         int expected = 40;

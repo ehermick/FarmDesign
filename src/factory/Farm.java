@@ -1,4 +1,4 @@
-package farm;
+package factory;
 
 import affinities.DecoratorHealthChicken;
 import affinities.DecoratorHealthCorn;
@@ -29,7 +29,7 @@ import main.Farmers;
 import predators.Predators;
 
 
-public class Farm {
+public abstract class Farm {
 
     private static int size;
     //private int numFarmers;
@@ -39,6 +39,7 @@ public class Farm {
     private static ArrayList<Crops> crops = new ArrayList<Crops>();
     private static ArrayList<Animal> animals = new ArrayList<Animal>();
     private static ArrayList<Predators> predators = new ArrayList<Predators>();
+    
 
     static Random rand = new Random();
     private  static int currencyChange;
@@ -47,14 +48,24 @@ public class Farm {
     
     /**
      * Constructor.
-     * @param size Size of farm
+     * @param type Type of farm
      * @param currency Currency on farm
      * @param currencyChange Change in currency each day
      */
-    public Farm(int size, int currency, int currencyChange) {
-        setSize(size);
+    public Farm(FarmType type, int currency, int currencyChange) {
+        this.type = type;
         setCurrency(currency);
         setCurrencyChange(currencyChange);
+    }
+    
+    public FarmType type = null;
+    
+    public FarmType getType() {
+        return type;
+    }
+    
+    public void setType(FarmType type) {
+        this.type = type;
     }
     
     /**
@@ -727,6 +738,5 @@ public class Farm {
     public static ArrayList<Crops> getCrops() {
         return crops;
     }
-
 
 }

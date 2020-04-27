@@ -9,9 +9,8 @@ import crops.Corn;
 //import crops.Crops;
 import crops.Rice;
 import crops.Wheat;
-
-import farm.Farm;
-import farm.HybridFarm;
+import factory.Farm;
+import factory.HybridFarm;
 
 
 public class NewFarm {

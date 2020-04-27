@@ -11,7 +11,7 @@ import affinities.DecoratorHealthWheat;
 import animals.Animal;
 import animals.Cow;
 import crops.Crops;
-import farm.Farm;
+import factory.Farm;
 
 import org.junit.Test;
 

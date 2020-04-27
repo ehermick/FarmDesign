@@ -10,8 +10,8 @@ import crops.Corn;
 import crops.Crops;
 import crops.Rice;
 import crops.Wheat;
-import farm.Farm;
-import farm.HybridFarm;
+import factory.Farm;
+import factory.HybridFarm;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -33,7 +33,7 @@ public class TestRemoveItems {
     
     @Test
     public void removeCropsTest() {
-        hf = new HybridFarm(10, 0, 0);
+        hf = new HybridFarm();
         
         corn = new Corn();
         rice = new Rice();
@@ -74,7 +74,7 @@ public class TestRemoveItems {
     @Test
     public void removeAnimalsTest() {
         
-        hf = new HybridFarm(10, 0, 0);
+        hf = new HybridFarm();
         
         corn = new Corn();
         rice = new Rice();
