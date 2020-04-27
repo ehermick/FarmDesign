@@ -36,17 +36,17 @@ public class Wolf extends Predators {
             if (selectedAnimal instanceof Chicken && chance == 2) {
                 selectedAnimal.damageHealth(Predators.getDamage());
                 System.out.println("A Wolf injured a chicken");
-                Farmers.numInjuredAnimals++;
+                Farmers.setNumInjuredAnimals(1);
                 damagedAnimal = true;
             } else if (selectedAnimal instanceof Cow && chance == 4) {
                 selectedAnimal.damageHealth(Predators.getDamage());
                 System.out.println("A Wolf injured a cow");
-                Farmers.numInjuredAnimals++;
+                Farmers.setNumInjuredAnimals(1);
                 damagedAnimal = true;
             } else if (selectedAnimal instanceof Sheep && chance == 6) {
                 selectedAnimal.damageHealth(Predators.getDamage());
                 System.out.println("A Wolf injured a sheep");
-                Farmers.numInjuredAnimals++;
+                Farmers.setNumInjuredAnimals(1);
                 damagedAnimal = true;
             } 
         }

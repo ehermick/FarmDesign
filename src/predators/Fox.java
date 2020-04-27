@@ -44,19 +44,19 @@ public class Fox extends Predators {
                     || selectedAnimal instanceof DecoratorHealthChicken) && chance == 2) {
                 selectedAnimal.damageHealth(Predators.getDamage());
                 System.out.println("A Fox injured a chicken");
-                Farmers.numInjuredAnimals++;
+                Farmers.setNumInjuredAnimals(1);
             } else if ((selectedAnimal instanceof Cow 
                     || selectedAnimal instanceof DecoratorAgeHarvestCow 
                     || selectedAnimal instanceof DecoratorHealthCow) && chance == 4) {
                 selectedAnimal.damageHealth(Predators.getDamage());
                 System.out.println("A Fox injured a cow");
-                Farmers.numInjuredAnimals++;
+                Farmers.setNumInjuredAnimals(1);
             } else if ((selectedAnimal instanceof Sheep 
                     || selectedAnimal instanceof DecoratorAgeHarvestSheep 
                     || selectedAnimal instanceof DecoratorHealthSheep) && chance == 6) {
                 selectedAnimal.damageHealth(Predators.getDamage());
                 System.out.println("A Fox injured a sheep");
-                Farmers.numInjuredAnimals++;
+                Farmers.setNumInjuredAnimals(1);
             }
             
         }

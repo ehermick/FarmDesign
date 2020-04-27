@@ -1,7 +1,6 @@
 package main;
 
 import animals.Animal;
-import animals.Chicken;
 import crops.Crops;
 import factory.Farm;
 
@@ -19,8 +18,8 @@ public class Farmers {
     private static ArrayList<Crops> crops = Farm.getCrops();
     private static ArrayList<Animal> animals = Farm.getAnimals();
     
-    public static int numDamagedCrops = 0;
-    public static int numInjuredAnimals = 0;
+    private static int numDamagedCrops;
+    private static int numInjuredAnimals;
     
     /**
      * Constructor.
@@ -35,6 +34,15 @@ public class Farmers {
         this.cropSkill = cropSkill;
         this.moneySkill = moneySkill;
     }
+    
+    public static void setNumDamagedCrops(int num) {
+        numDamagedCrops = numDamagedCrops + num;
+    }
+    
+    public static void setNumInjuredAnimals(int num) {
+        numInjuredAnimals = numInjuredAnimals + num;
+    }
+
     
     public void setName(String name) {
         this.name = name;
