@@ -23,29 +23,6 @@ public class TestDeath {
     
     StateContext contextDeath;
     
-    
-    //Not old enough
-    @Test
-    public void deathTest1() {
-        
-        //Too old
-        chicken = new Chicken();
-        
-        //Not old enough
-        cow = new Cow();
-        
-        
-        Farm.resetAnimals();
-        
-        Farm.addAnimal(cow);
-        Farm.death();
-        
-        int expected = 1;
-        int actual = Farm.getAnimalsSize();
-        assertEquals("No Animal Death", expected, actual);
-        
-    }
-    
     //Too old
     @Test
     public void deathTest2() {

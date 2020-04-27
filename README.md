@@ -11,7 +11,7 @@ Utilizing design patterns to construct working farms
 	- Currency earned for each new day
 	- Predators only come out at night
 
-### Factory Pattern : 
+### Factory Pattern : facory Package
  - 3 types of farm can be built : Animal, Crop, and Hybrid
  - Animal farms have animals
  - Crop farms have crops
