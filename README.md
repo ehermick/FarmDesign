@@ -1,5 +1,4 @@
-# FarmDesign
-Utilizing design patterns to construct working farms
+# FarmDesign : Utilizing design patterns to construct working farms
 
 
 ## Design Patterns Used :
