@@ -21,7 +21,7 @@ public class Mole extends Predators {
     
     private static ArrayList<Crops> crops = Farm.getCrops();
     
-    private static boolean damagedCrop = false;
+    private static boolean damagedCrop = false; 
 
     public Mole(String name, int damage) {
         super(name, damage);
