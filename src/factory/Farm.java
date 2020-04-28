@@ -724,6 +724,10 @@ public abstract class Farm {
         return crops.size();
     }
     
+    public static int getFarmersSize() {
+        return farmers.size();
+    }
+    
     public static void resetAnimals() {
         animals.clear();
     }
@@ -738,6 +742,10 @@ public abstract class Farm {
     
     public static ArrayList<Crops> getCrops() {
         return crops;
+    }
+    
+    public static ArrayList<Farmers> getFarmers() {
+        return farmers;
     }
 
 }

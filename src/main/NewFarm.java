@@ -27,7 +27,7 @@ public class NewFarm {
         Rice rice = new Rice();
         Wheat wheat = new Wheat();
         
-        Farmers farmer = new Farmers("farmer", 1, 1, 1);
+        Farmers farmer = new Farmers("farmer");
         
         
         //Start with 1 hybrid farm

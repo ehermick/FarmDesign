@@ -11,6 +11,7 @@ import crops.Crops;
 import crops.Rice;
 import crops.Wheat;
 import factory.Farm;
+import main.Farmers;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -61,9 +62,11 @@ public class TestHeal {
         Predators.damage();
         Predators.damage();
         Predators.damage();
+        
+        Farmers.treatAnimal();
 
         boolean expected = true;
-        boolean actual = (chicken.getHealth() <= 100);
+        boolean actual = (chicken.getHealth() == 100);
         assertEquals("Predator Injures Chicken", expected, actual);
     }
     
@@ -98,10 +101,10 @@ public class TestHeal {
         Predators.damage();
         Predators.damage();
         
-
+        Farmers.treatAnimal();
         
         boolean expected = true;
-        boolean actual = (cow.getHealth() <= 100);
+        boolean actual = (cow.getHealth() == 100);
         assertEquals("Predator Injures Cow", expected, actual);
     }
     
@@ -131,9 +134,10 @@ public class TestHeal {
         Predators.damage();
         Predators.damage();
 
+        Farmers.treatAnimal();
         
         boolean expected = true;
-        boolean actual = (sheep.getHealth() <= 100);
+        boolean actual = (sheep.getHealth() == 100);
         assertEquals("Predator Injures Sheep", expected, actual);
     }
     
@@ -168,9 +172,10 @@ public class TestHeal {
         Predators.damage();
         Predators.damage();
 
+        Farmers.treatCrop();
         
         boolean expected = true;
-        boolean actual = (corn.getHealth() <= 100);
+        boolean actual = (corn.getHealth() == 100);
         assertEquals("Predator Damages Corn", expected, actual);
     }
     
@@ -199,9 +204,10 @@ public class TestHeal {
         Predators.damage();
         Predators.damage();
 
+        Farmers.treatCrop();
         
         boolean expected = true;
-        boolean actual = (rice.getHealth() <= 100);
+        boolean actual = (rice.getHealth() == 100);
         assertEquals("Predator Damages Rice", expected, actual);
     }
     
@@ -231,9 +237,10 @@ public class TestHeal {
         Predators.damage();
         Predators.damage();
 
+        Farmers.treatCrop();
         
         boolean expected = true;
-        boolean actual = (wheat.getHealth() <= 100);
+        boolean actual = (wheat.getHealth() == 100);
         assertEquals("Predator Damages Wheat", expected, actual);
     }
 

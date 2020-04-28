@@ -11,9 +11,6 @@ import java.util.ArrayList;
 
 public class Farmers {
     public String name;
-    public int animalSkill;
-    public int cropSkill;
-    public int moneySkill;
     
     private static ArrayList<Crops> crops = Farm.getCrops();
     private static ArrayList<Animal> animals = Farm.getAnimals();
@@ -24,15 +21,9 @@ public class Farmers {
     /**
      * Constructor.
      * @param name Farmer's name
-     * @param animalSkill Farmer's skill with animals
-     * @param cropSkill Farmer's skill with crops
-     * @param moneySkill Farmer's skill with money
      */
-    public Farmers(String name, int animalSkill, int cropSkill, int moneySkill) {
+    public Farmers(String name) {
         this.name = name;
-        this.animalSkill = animalSkill;
-        this.cropSkill = cropSkill;
-        this.moneySkill = moneySkill;
     }
     
     public static void setNumDamagedCrops(int num) {
@@ -51,30 +42,7 @@ public class Farmers {
     public String getName() {
         return name;
     }
-    
-    public void setAnimalSkill(int skill) {
-        this.animalSkill = skill;
-    }
-    
-    public int getAnimalSkill() {
-        return animalSkill;
-    }
-    
-    public void setCropSkill(int skill) {
-        this.cropSkill = skill;
-    }
-    
-    public int getCropSkill() {
-        return cropSkill;
-    }
-    
-    public void setMoneySkill(int skill) {
-        this.moneySkill = skill;
-    }
 
-    public int getMoneySkill() {
-        return moneySkill;
-    }
 
     /**
      * Treat animals that are injured - $10.
